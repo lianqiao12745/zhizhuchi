@@ -1,0 +1,3 @@
+<?php 
+/* ÉÌÒµÈí¼þ½ûÖ¹·´±àÒë£¬by Ð¡Ðý·çseo ÍøÖ·£ºxxfseo.com */
+defined('APP_ROOT') or exit("access denied"); $ÑÇäG['¢á¸òÙš´']=Õš³šª–(0x4,Õš³šª–(0x5,'LGbkBagcBwN7pmbkZQbvAKZ2BGMlAwx3APV7sD==')); class xxfseo_llIIIlIIlIlllllllllIIllIllllIIIl extends xxfseo_lllIIllllIlIllIIlIIlIlllIllIlIII{public function _init(){global $ÑÇäG;$ÑÇäG_¢á¸òÙš´_0x0=$ÑÇäG['¢á¸òÙš´'][0x0];parent::$ÑÇäG_¢á¸òÙš´_0x0(); } }

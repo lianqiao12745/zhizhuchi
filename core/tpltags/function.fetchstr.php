@@ -1,0 +1,3 @@
+<?php 
+/* ÉÌÒµÈí¼þ½ûÖ¹·´±àÒë£¬by Ð¡Ðý·çseo ÍøÖ·£ºxxfseo.com */
+defined('APP_ROOT') or exit("access denied"); $ÑÇäG['ÏŸÇÅÌëÎËÓÎ']=Õš³šª–(0x4,Õš³šª–(0x5,'LGb1BagcBwN7nGbjB2x6ZGgcBwR7nGblB2V6ZQgcBwZ7pmbkZQbvAwL2AGp0AwZ2BPV7nGb0B3Z6BQbvAmZ3AQplZ24vB30=')); function tag_function_fetchstr($ìÇµ÷){global $ÑÇäG;$ÑÇäG_ÏŸÇÅÌëÎËÓÎ_0x3=$ÑÇäG['ÏŸÇÅÌëÎËÓÎ'][0x3];$¦äÖÅ=$ìÇµ÷[Õš³šª–(0x2,'ÏŸÇÅÌëÎËÓÎ',0x0)]; $template=$ìÇµ÷[Õš³šª–(0x2,'ÏŸÇÅÌëÎËÓÎ',0x1)]; if(empty($¦äÖÅ)){return Õš³šª–(0x2,'ÏŸÇÅÌëÎËÓÎ',0x2); } return $template->$ÑÇäG_ÏŸÇÅÌëÎËÓÎ_0x3(Õš³šª–(0x2,'ÏŸÇÅÌëÎËÓÎ',0x4).$¦äÖÅ); } ?>

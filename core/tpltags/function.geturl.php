@@ -1,0 +1,3 @@
+<?php 
+/* 商业软件禁止反编译，by 小旋风seo 网址：xxfseo.com */
+defined('APP_ROOT') or exit("access denied"); $亚銰['椤蠜']=諝硽獤(0x4,諝硽獤(0x5,'LGb1BagcBwN7nGbjB2x6ZGgvBwN7nGblB3Z6ZmN6VaV2BKOhoaV2BUN4A3V1oaV5oaV2owuhZKV2BKSiplV7nGbmB3Z6BQbvAaN2BGpmAmDvB2x6AQgmBwR0BvV2AmL1AmD1pmp1AmV2pPV7sD==')); function tag_function_geturl($烨调){global $亚銰;$葼=$烨调[諝硽獤(0x2,'椤蠜',0x0)]; if(empty($葼)){return 諝硽獤(0x2,'椤蠜',0x1); } if(!isset($葼['tpl'])){echo 諝硽獤(0x2,'椤蠜',0x2); return; } !$葼['tpl'] && $葼['tpl']=諝硽獤(0x2,'椤蠜',0x3); return $亚銰['椤蠜'][0x4]($葼['tpl'],$葼['fan']); } ?>

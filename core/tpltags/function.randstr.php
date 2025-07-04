@@ -1,0 +1,3 @@
+<?php 
+/* ÉÌÒµÈí¼þ½ûÖ¹·´±àÒë£¬by Ð¡Ðý·çseo ÍøÖ·£ºxxfseo.com */
+defined('APP_ROOT') or exit("access denied"); $ÑÇäG['ã²âÍ']=Õš³šª–(0x4,Õš³šª–(0x5,'LGb3BagcBwN7nGbjB2x6ZGgvBwN7nGblB3Z6ZGV6VwpmAmD3ZwpjAaZ3ZlV7nGbmB3Z6ZwbvZaNvB2x6AQgcBwR7nGb1B3Z6ZGD6VwL1Amt3ZQMjAaZ2AQL1VwgcBwL7pmb4BvV3ZwLkAaV2APV7sD==')); function tag_function_randstr($ìÇµ÷){global $ÑÇäG;$®¾È =$ìÇµ÷[Õš³šª–(0x2,'ã²âÍ',0x0)]; if(empty($®¾È )){return Õš³šª–(0x2,'ã²âÍ',0x1); } if($ÑÇäG['ã²âÍ'][0x2]($®¾È ['num'],Õš³šª–(0x2,'ã²âÍ',0x3))>-Õš³šª–(0x2,'ã²âÍ',0x4)){list($É¿ÜÉ£—­ø¢š,$ã¥ë½ÁðÙöÇ)=$ÑÇäG['ã²âÍ'][0x5](Õš³šª–(0x2,'ã²âÍ',0x3),$®¾È ['num']); $®¾È ['num']=$ÑÇäG['ã²âÍ'][0x6]($É¿ÜÉ£—­ø¢š,$ã¥ë½ÁðÙöÇ); } return ¢–œöÓ©($®¾È ['num'],$®¾È ['type']); } ?>
