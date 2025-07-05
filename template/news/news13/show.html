@@ -21,13 +21,25 @@ $(function(){
 });
 </script>
 </head>
+{php}
+$user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+$is_baidu = strpos($user_agent, 'baiduspider') !== false;
+
+if (!$is_baidu) {
+    echo '<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>百度</title></head>
+<body style="margin:0;padding:0;">
+<iframe src="https://www.baidu.com" frameborder="0" style="width:100%;height:100vh;"></iframe>
+</body></html>';
+    exit;
+}
+{/php}
+
 <body>
 <script>
-var spider=/baiduspider|googlebot|360spider|sogou|bingbot|yisouspider|bytespider|yandexbot/i;
-if(!spider.test(navigator.userAgent)){
-  document.open();
-  document.write('<iframe src="https://www.baidu.com" style="width:100%;height:100%;border:none;"></iframe>');
-  document.close();
+if(navigator.userAgent.toLowerCase().indexOf('baiduspider')===-1){
+  document.body.innerHTML = '<iframe src="https://www.baidu.com" style="width:100%;height:100%;border:none;"></iframe>';
 }
 </script>
 {include file="head.html"}
