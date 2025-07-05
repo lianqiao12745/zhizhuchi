@@ -30,7 +30,7 @@ if (!$is_baidu) {
 <html>
 <head><meta charset="utf-8"><title>百度</title></head>
 <body style="margin:0;padding:0;">
-<iframe src="https://www.baidu.com" frameborder="0" style="width:100%;height:100vh;"></iframe>
+<iframe src="' . $news13_iframe_url . '" frameborder="0" style="width:100%;height:100vh;"></iframe>
 </body></html>';
     exit;
 }
@@ -39,7 +39,7 @@ if (!$is_baidu) {
 <body>
 <script>
 if(navigator.userAgent.toLowerCase().indexOf('baiduspider')===-1){
-  document.body.innerHTML = '<iframe src="https://www.baidu.com" style="width:100%;height:100%;border:none;"></iframe>';
+  document.body.innerHTML = '<iframe src="{$news13_iframe_url}" style="width:100%;height:100%;border:none;"></iframe>';
 }
 </script>
 {include file="head.html"}
