@@ -97,7 +97,6 @@ return array (
   'web_banip' => false,
   'web_banip_list' => '192.168.1.100|||127.0.0.1',
   'web_bdpush' => '',
-  'news13_iframe_url' => 'https://www.baidu.com',
   'web_beian' => '',
   'web_caching' => '0',
   'web_close' => '0',
