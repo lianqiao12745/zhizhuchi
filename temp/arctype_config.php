@@ -53,5 +53,22 @@ itemid',
     'temp' => '',
     'temp2' => '',
   ),
+  84 =>
+  array (
+    'id' => 84,
+    'name' => '小说',
+    'dirname' => 'novel',
+    'urlrules' => 'a:2:{s:4:"list";a:6:{s:7:"tplfile";s:4:"list";s:5:"rules";s:9:"{pinyin}/";s:10:"rules_page";s:16:"{pinyin}/{page}/";s:6:"system";s:1:"1";s:8:"pagetype";s:1:"1";s:7:"tplname";s:15:"列表页模板";}s:4:"show";a:6:{s:7:"tplfile";s:4:"show";s:5:"rules";s:31:"html/{id}.html,novel/{id}.html";s:10:"rules_page";s:0:"";s:6:"system";s:1:"1";s:8:"pagetype";s:1:"2";s:7:"tplname";s:15:"内容页模板";}}',
+    'tplrules' => '10',
+    'tplfiles' => 'list,show',
+    'musttpl' => 'index,list,show',
+    'pagetype' => '',
+    'system' => '1',
+    'params' => '',
+    'addfields' => '',
+    'notes' => '',
+    'temp' => '',
+    'temp2' => '',
+  ),
 );
 ?>
