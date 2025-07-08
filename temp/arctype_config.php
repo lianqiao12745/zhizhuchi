@@ -65,7 +65,13 @@ itemid',
     'pagetype' => '',
     'system' => '1',
     'params' => '',
-    'addfields' => '',
+    'addfields' => 'bookname
+author
+intro
+cover
+update_time
+wordcount
+status',
     'notes' => '',
     'temp' => '',
     'temp2' => '',

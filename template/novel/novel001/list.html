@@ -34,6 +34,7 @@
                 <h3 ><a href="{$vo.url}">{$vo.title}</a></h3>
                 <p >时间：{$vo.postdate}&nbsp;&nbsp;{$vo.hits}人阅读</p>
                 <p >{$vo.info}...<a href="{$vo.url}" class="u-4">[详细]</a></p>
+                    <p>作者：{$vo.add_data.author} 更新：{$vo.add_data.update_time}</p>
             </li>
             {/loop}
         </ul>

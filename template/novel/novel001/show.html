@@ -29,6 +29,15 @@
     <div class="left-3 fl">
         <div class="g-con">
             <h1 class="u-5">{$title}</h1>
+            <div class="novel-meta">
+                <p>书名：{$add_data.bookname}</p>
+                <p>作者：{$add_data.author}</p>
+                <p>简介：{$add_data.intro}</p>
+                <p>封面：<img src="{$add_data.cover}" alt="{$add_data.bookname}" /></p>
+                <p>更新时间：{$add_data.update_time}</p>
+                <p>字数：{$add_data.wordcount}</p>
+                <p>状态：{$add_data.status}</p>
+            </div>
             <div class="info">{$postdate}  {loop type="catelog" row="1"}<a href="{$vo.typeurl}" target="_blank">[{$vo.typename}]</a>{/loop}  来源：<a href="{$web_url}">{$web_name}</a> </div>
             <div class="b-box11">
                 {$body}
