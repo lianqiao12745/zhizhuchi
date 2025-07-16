@@ -1,0 +1,16 @@
+/* Calculator specific styles */
+body{background:#e6f2ff;}
+.cal-container{display:flex;gap:20px;width:960px;margin:20px auto;font-family:'微软雅黑', sans-serif;}
+.cal-left,.cal-right{background:white;padding:20px;border-radius:8px;box-shadow:0 0 5px rgba(0,0,0,0.1);}
+.cal-left{flex:1;max-width:360px;}
+.cal-right{flex:1.5;}
+.cal-card{margin-bottom:15px;border:1px solid #d9d9d9;padding:15px;border-radius:5px;background:#f9f9f9;}
+.cal-card label{display:block;margin-bottom:8px;font-weight:bold;}
+.cal-card input[type="text"],.cal-card select{width:100%;padding:6px;border:1px solid #ccc;border-radius:4px;}
+.cal-rate-controls{display:flex;align-items:center;gap:5px;}
+.cal-rate-controls span{cursor:pointer;padding:4px 8px;background:#ddd;border-radius:4px;}
+.cal-button{width:100%;padding:10px;font-size:16px;color:#fff;background:#4e8100;border:none;border-radius:4px;cursor:pointer;}
+.cal-results{font-size:16px;line-height:28px;}
+.cal-results .highlight{color:#0066cc;}
+.cal-results .green{color:#339933;}
+#chart{margin-top:20px;height:300px;}

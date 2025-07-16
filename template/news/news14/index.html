@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>智能车贷计算器</title>
+    <link rel="stylesheet" href="{$theme_path}/style/style.css" />
+    <link rel="stylesheet" href="{$theme_path}/style/calculator.css" />
+    <script type="text/javascript" src="{$web_path}/static/js/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="{$theme_path}/style/js/jquery1.42.min.js"></script>
+</head>
+<body>
+{include file="head.html"}
+<div class="cal-container">
+    <div class="cal-left">
+        <h2>智能车贷计算器</h2>
+        <div class="cal-card">
+            <label>车辆价格（元）</label>
+            <input type="text" id="price" value="10000" />
+        </div>
+        <div class="cal-card">
+            <label>首付比例（%）</label>
+            <select id="down"></select>
+        </div>
+        <div class="cal-card">
+            <label>贷款期限（年）</label>
+            <select id="years"></select>
+        </div>
+        <div class="cal-card">
+            <label>年利率（%）</label>
+            <div class="cal-rate-controls">
+                <input type="text" id="rate" value="5.88" style="flex:1" />
+                <span id="rate-dec">-</span>
+                <span id="rate-inc">+</span>
+            </div>
+            <small>当前银行基准利率为5.88%</small>
+        </div>
+        <div class="cal-card">
+            <label>还款方式</label>
+            <select id="method">
+                <option value="equal_interest">等额本息</option>
+                <option value="equal_principal">等额本金</option>
+            </select>
+        </div>
+        <button class="cal-button" id="calc">开始计算</button>
+    </div>
+    <div class="cal-right">
+        <div class="cal-results" id="results">
+            贷款金额：￥0<br/>
+            首付：￥0<br/>
+            <span class="highlight">月供范围：￥0 ~ ￥0</span><br/>
+            <span class="green">还款总额：￥0</span><br/>
+            <span class="green" style="font-size:14px;">利息总额：￥0</span>
+        </div>
+        <div id="chart"></div>
+    </div>
+</div>
+{include file="footer.html"}
+<script type="text/javascript">
+var downOptions=[20,30,40,50,60];
+var yearOptions=[1,2,3,4,5];
+$(function(){
+    downOptions.forEach(function(v){$('#down').append('<option value="'+v+'">'+v+'%</option>');});
+    $('#down').val(30);
+    yearOptions.forEach(function(v){$('#years').append('<option value="'+v+'">'+v+'年</option>');});
+    $('#years').val(1);
+    $('#rate-inc').click(function(){var r=parseFloat($('#rate').val())||0;$('#rate').val((r+0.01).toFixed(2));});
+    $('#rate-dec').click(function(){var r=parseFloat($('#rate').val())||0;$('#rate').val((r-0.01).toFixed(2));});
+    $('#calc').click(calculate);
+});
+function formatMoney(n){return n.toFixed(2).replace(/\d(?=(\d{3})+\.)/g,'$&,');}
+function calculate(){
+    var price=parseFloat($('#price').val());
+    var down=parseFloat($('#down').val())/100;
+    var years=parseInt($('#years').val());
+    var rate=parseFloat($('#rate').val())/100;
+    var method=$('#method').val();
+    var loan=price*(1-down);
+    var months=years*12;
+    var mRate=rate/12;
+    var payments=[],acc=[];
+    var total=0;
+    if(method==='equal_interest'){
+        var monthly=loan*mRate*Math.pow(1+mRate,months)/(Math.pow(1+mRate,months)-1);
+        for(var i=1;i<=months;i++){payments.push(monthly);total+=monthly;acc.push(total);}    
+    }else{
+        var principal=loan/months;
+        for(var i=1;i<=months;i++){
+            var monthly=principal+(loan-principal*(i-1))*mRate;
+            payments.push(monthly);total+=monthly;acc.push(total);
+        }
+    }
+    var min=payments[payments.length-1],max=payments[0];
+    var interest=total-loan;
+    $('#results').html('贷款金额：￥'+formatMoney(loan)+'<br/>首付：￥'+formatMoney(price-loan)+'<br/><span class="highlight">月供范围：￥'+formatMoney(min)+' ~ ￥'+formatMoney(max)+'</span><br/><span class="green">还款总额：￥'+formatMoney(total)+'</span><br/><span class="green" style="font-size:14px;">利息总额：￥'+formatMoney(interest)+'</span>');
+    renderChart(payments,acc);
+}
+function renderChart(payments,acc){
+    Highcharts.chart('chart',{
+        title:{text:'还款情况'},
+        xAxis:{title:{text:'月份'},categories:payments.map(function(v,i){return '第'+(i+1)+'月';}).filter(function(v,i){return i%3===0;})},
+        yAxis:{title:{text:'金额(元)'}},
+        series:[{name:'月供金额',data:payments},{name:'累计还款',data:acc}]
+    });
+}
+</script>
+</body>
+</html>
