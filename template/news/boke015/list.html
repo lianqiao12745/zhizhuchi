@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform"/>  
+  <meta name="applicable-device" content="pc,mobile"/>    
+  <link type="text/css" media="all" href="{$theme_path}/style/css/autoptimize_ca6ff68ee21f85836d11f9bbcb0b9aac.css" rel="stylesheet" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+  <script type="text/javascript" src="{$theme_path}/style/js/jquery.js?ver=1.12.4"></script> 
+  <style>
+  .bqlink{float:right;}
+  .thumbnail-wrap img{height:auto;max-height:245px;min-height:96px;}
+  </style>   
+ </head>
+ <body class="archive category category-food category-9 wp-custom-logo hfeed">
+  <div id="page" class="site">
+    {include file="head.html"}
+   <div id="content" class="site-content site_container container clear">
+    <div id="primary" class="content-area">
+     <main id="main" class="site-main clear">
+      <div class="breadcrumbs no_zhuanti clear">
+       <h1><span class="title">{当前栏目}</span></h1>
+      </div>
+      <div id="recent-content" class="content-list">
+       {loop type="arclist" row="8"  image=1 info=1}
+ <div class="clear post type-post status-publish format-standard has-post-thumbnail hentry category-finance tag-28 tag-30 tag-39"> 
+    <a class="thumbnail-link" href="{$vo.url}">
+     <div class="thumbnail-wrap"> 
+      <img width="243" height="200" src="{$vo.pic}" class="attachment-boke_x_list_thumb size-boke_x_list_thumb wp-post-image"  alt="{$vo.title}"/>
+     </div> </a>
+    <h2 class="entry-title"><a href="{$vo.url}">{$vo.title}</a></h2>
+    <div class="entry-overview">
+     <div class="entry-summary">
+      <p>{$vo.info}</p>
+     </div>
+     <div class="entry-meta"> 
+      <span class="entry-category">  <a href="{随机栏目URL}" rel="category tag">{随机栏目}</a></span> 
+      <span class="entry-date"> {$vo.postdate} </span> 
+     </div>
+    </div>
+   </div>
+{/loop}
+      </div>
+     </main>
+     <nav class="navigation pagination" role="navigation">
+      <h2 class="screen-reader-text">文章导航</h2>
+      <div class="nav-links">
+          {loop type="typename" }<a href="{$vo.typeurl}" class="page-numbers">{$k+1}</a> {/loop}
+      </div>
+     </nav>
+    </div>
+        <aside id="secondary" class="widget-area sidebar">
+     <div class="sidebar__inner">
+      <div id="boke_x-popular-2" class="widget widget-boke-x-popular widget_posts_thumbnail">
+       <h2 class="widget-title">浏览最多的文章</h2>
+       <ul>
+        {loop type="arclist" row="15" image=1}
+			<li class="post-list"><a href="{$vo.url}" rel="bookmark">{$vo.title}</a></li>
+		 {/loop}
+       </ul>
+      </div>
+     </div>
+    </aside>
+   </div>
+   <footer id="colophon" class="site-footer">
+    <div class="clear"></div>
+   {include file="footer.html" }
+   </footer>
+  </div>
+  <script type="text/javascript" src="{$theme_path}/style/js/autoptimize_b8dc4cbbf751779fffa66dd03ddbe033.js"></script> 
+ </body>
+</html>

@@ -1,0 +1,21 @@
+  <header id="header">
+    <div class="box-md">
+      <h1 class="logo" id=""> <a href="/">{网站名称}</a> </h1>
+      <nav class="menu header-menu-box" role="navigation" itemscope="" itemtype="#">
+        <ul id="header_menu">
+          <li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-40"><a href="/">首页</a></li> 
+		 {loop type="typename" row="6"}
+		<li id="menu-item-35" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-35"><a href="{$vo.typeurl}">{$vo.typename}</a></li>  
+		{/loop}
+        </ul>
+      </nav>
+      <ul class="control">
+        <li class="previous"> <a class="dashicons dashicons-arrow-left-alt" href="javascript:history.go( -1 );" title="后退"></a> </li>
+        <li class="next"> <a class="dashicons dashicons-arrow-right-alt" href="javascript:history.go( 1 );" title="前进"></a> </li>
+        <li class="refresh"> <a class="dashicons dashicons-image-rotate" href="javascript:location.reload();" title="刷新"></a> </li>
+      </ul>
+    </div>
+    <div id="mobile-header"> <a href="javascript:history.go( -1 );" class="mobile-return"> <span class="dashicons dashicons-arrow-left-alt2"></span>返回 </a>
+      <div class="mobile-title"> {网站名称} </div>
+    </div>
+  </header>

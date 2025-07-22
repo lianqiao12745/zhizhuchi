@@ -1,0 +1,11 @@
+<header class="header">
+  <div class="container">
+    <h1 class="logo" id=""><a href="/">{网站名称}</a></h1>
+    <ul class="site-nav site-navbar">
+      <li class="navto-home "><a href="/">首页</a></li> 
+	{loop type="typename" row="6"}
+	<li class="navto-front "><a href="{$vo.typeurl}">{$vo.typename}</a></li>
+	{/loop}
+    </ul>
+  <i class="fa fa-bars m-icon-nav"></i> </div>
+</header>

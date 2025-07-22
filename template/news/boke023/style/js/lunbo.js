@@ -1,0 +1,6 @@
+﻿document.writeln("<div id=\"lunbo\">");
+document.writeln("<li><a href=\"http://vzhuan.cn.2.89378.net/ad/adurl/lunbo2.html\" target=\"_blank\" rel=\"nofollow\"><img src=\"http://www.gateios.com/zb_users/upload/2018/09/20180923220444153771148436527.jpg\" alt=\"??????\" width=\"470\" height=\"230\"></a><p>????????????...</p></li>");
+document.writeln("<li><a href=\"http://wpa.qq.com/msgrd?v=3&uin=929634305&site=qq&menu=yes\" target=\"_blank\" rel=\"nofollow\"><img src=\"http://www.gateios.com/zb_users/upload/2018/08/ads2.png\" alt=\"??????\" width=\"470\" height=\"230\"></a><p>????????????...</p></li>");
+document.writeln("<li><a href=\"http://vzhuan.cn/post/722.html\" target=\"_blank\" rel=\"nofollow\"><img src=\"http://vzhuan.cn/zb_users/upload/2019/03/20190321110230155313735027452.png\" alt=\"??????\" width=\"470\" height=\"230\"></a><p>????????????????????????????????????100???</p></li>");
+document.writeln("<li><a href=\"http://vzhuan.cn.2.89378.net/ad/adurl/lunbo5.html\" target=\"_blank\" rel=\"nofollow\"><img src=\"http://www.gateios.com/zb_users/upload/2019/04/20190426212409155628504965707.gif\" alt=\"??????\" width=\"470\" height=\"230\"></a><p>????????????...</p></li>");
+document.writeln("</div>");

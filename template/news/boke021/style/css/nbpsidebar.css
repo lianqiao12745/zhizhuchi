@@ -1,0 +1,31 @@
+﻿.nb-photo-sidebar li {
+    background: none;
+    float: left;
+    list-style: none;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+    width: 31.3%;
+}
+.nb-photo-sidebar img {
+    height: auto;
+    padding-right: 1px;
+    width: 100%;
+}
+
+.nbptitle {
+    display: inline-block;
+    height: 12px;
+    line-height: 12px;
+    overflow: hidden;
+}
+.nb-photo-sidebar li:hover {
+    background-color: #d8fcfe;
+}
+
+
+#Nobird_Photo_Sidebar {
+    clear: both;
+    margin-bottom: 20px;
+    overflow: hidden;
+}

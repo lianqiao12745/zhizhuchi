@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="sheli">
+    <div class="logo" id=""> <a href="/" title="{网站名称}"><img src="{$theme_path}/style/img/logo.png" alt="{网站名称}"/></a> </div>
+    <div class="logo-wz">
+      <ul>
+      </ul>
+    </div>
+    <div class="icon-navicon" data-target="#mnav"></div>
+  </div>
+</div>
+<div class="nav-navicon" id="mnav">
+  <div class="slnav">
+    <ul class="bar">
+        <div class="item"> 
+		<div class="current"><a href="/" title="">首页</a></div> 
+		</div> 
+		{loop type="typename" row="6"}
+		<div class="item"> 
+		<div class="common">
+		<a href="{$vo.typeurl}">{$vo.typename}</a>
+		</div> 
+		</div> 
+		{/loop}
+    </ul>
+  </div>
+</div>

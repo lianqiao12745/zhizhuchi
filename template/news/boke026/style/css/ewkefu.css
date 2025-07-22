@@ -1,0 +1,30 @@
+﻿@charset "utf-8";
+/*
+For: ???????????????????????????
+Author: ????????????-??????
+Author Email: erx@qq.com
+Author URL: http://www.ewceo.com/
+*/
+.ewkf-box{width:110px;color:#333;z-index:99999;}
+.ewkf-box .qq-a{position:relative;display:block;width:106px;height:118px;font-size:14px;text-align:center;text-decoration:none}
+.ewkf-box .qq-a span{position:absolute;bottom:5px;left:10px;width:90px;color:#9C0;-moz-transition:all 0.5s;-webkit-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;text-shadow:1px 1px 0 #fff,2px 2px 0 #eee}
+.ewkf-box .qq-a:hover span{color:#0484cd}
+.ewkf-box .qq-hover-c{position:absolute;left:18px;top:10px;width:70px;height:70px;border-radius:50%;overflow:hidden;z-index:9;}
+.ewkf-box .qq-con{position:absolute;top:0;left:0;width:109px;height:118px;border-bottom:1px solid #ddd;background:url(img/qq-icon-bg.png) center 8px no-repeat;z-index:99;}
+.ewkf-box .img-qq{position:absolute;left:6px;top:3px;max-width:60px;display:block;-moz-transition:all 0.5s;-webkit-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}
+.ewkf-box .im-qq:hover .img-qq{position:absolute;top:8px;left:1px;max-width:70px;}
+.ewkf-box .im-box{border:1px solid #ddd;border-radius:10px;background:#F9FAFB;}
+.ewkf-box .im-tel{text-align:center;width:109px;line-height:22px;border-bottom:1px solid #ddd;padding:12px 0}
+.ewkf-box .tel-ti{font-weight:bold;font-size:12px;}
+.ewkf-box div.tel-num{font-size:14px;font-family:Arial;font-weight:bold;color:#f30;text-shadow:1px 1px 0 #fff,2px 2px 0 #ccc}
+.ewkf-box .im-foot{overflow:hidden}
+.ewkf-box .wx-con{float:left;width:55px;height:47px;border-right:1px solid #ddd;background:#f5f5f5;background:url(img/weixing-icon.png) center center no-repeat;cursor:pointer}
+.ewkf-box .wx-show{display:none;position:absolute;bottom:0;left:-165px;width:152px;height:192px;background:#fff;border-radius:10px;border:1px solid #ddd;}
+.ewkf-box .wx-arrow{position:absolute;bottom:13px;left:152px;width:0;height:0;border-style:solid;border-color:transparent transparent transparent #fff;border-width:6px;z-index:2;}
+.ewkf-box .wx-arrow-big{position:absolute;bottom:11px;left:152px;width:0;height:0;border-style:solid;border-color:transparent transparent transparent #ddd;border-width:8px;}
+.ewkf-box .wx-pic{width:144px;height:144px;padding:5px 0 0 4px;}
+.ewkf-box .wx-txt{position:absolute;top:150px;left:27px;width:100px;line-height:18px;text-align:center;font-size:12px}
+.ewkf-box .go-top{float:right;width:50px;height:47px;background: #f5f5f5;background:url(img/toTop-icon.png) no-repeat center center;cursor:pointer}
+.ewkf-box .ewclose{position:absolute;right:10px;top:-12px;z-index:100;width:24px;height:24px;background:url(img/close_im.png) no-repeat;cursor:pointer}
+.ewkf-box .open-im{width:40px;height:133px;background:url(img/open_im.png) no-repeat;cursor:pointer;}
+

@@ -1,0 +1,33 @@
+ <header id="masthead" class="site-header">
+    <div id="header-main" class="header-main">
+      <!-- #top-header -->
+      <div id="menu-box">
+        <div id="top-menu">
+          <h1 class="logo-sites" id=""> <a href="/" title="{网站名称}" rel="home">{网站名称}</a> </h1>
+          <!-- .logo-site -->
+          <div id="site-nav-wrap">
+            <div id="sidr-close"> <a href="#sidr-close" class="toggle-sidr-close">&times;</a> </div>
+            <div id="sidr-menu">
+              <div class="toggle-sidr-menu"> MENU </div>
+            </div>
+            <nav id="site-nav" class="main-nav"> <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="be be-menu"></i></a>
+              <div class="menu-navi-container">
+                <ul id="menu-navi" class="down-menu nav-menu">
+                 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><i class="zm zm-shouye"></i><span class="font-text">网站首页</span></a></li> 
+				 {loop type="typename" row="6"}
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{$vo.typeurl}">{$vo.typename}</a></li> 
+				{/loop}
+                </ul>
+              </div>
+            </nav>
+            <!-- #site-nav -->
+          </div>
+          <!-- #site-nav-wrap -->
+          <div class="clear"></div>
+        </div>
+        <!-- #top-menu -->
+      </div>
+      <!-- #menu-box -->
+    </div>
+    <!-- #menu-box -->
+  </header>

@@ -1,0 +1,18 @@
+﻿div.nbcvlock{
+	text-indent: 0em !important;
+	color: #7da33c;
+	background: #ecf2d6;
+	border: 1px solid #aac66d;
+	overflow: hidden;
+	margin: 10px 0;
+	padding: 15px 15px 15px 35px;
+}
+div.nbcvantilock{
+	text-indent: 0em !important;
+	color: #c66;
+	background: #ffecea;
+	border: 1px solid #ebb1b1;
+	overflow: hidden;
+	margin: 10px 0;
+	padding: 15px 15px 15px 35px;
+}

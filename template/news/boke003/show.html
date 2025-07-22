@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<meta name="applicable-device" content="pc,mobile"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta name="generator" content="emlog" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link rel="stylesheet" href="{$theme_path}/style/css/font_228781_v0kbuphltovo0f6r.css" />
+<link rel="stylesheet" href="{$theme_path}/style/css/style.css?version=v1.1" />
+<script src="{$theme_path}/style/js/common_tpl.js" type="text/javascript"></script>
+</head>
+<body>
+<!--[if lte IE 8]>
+<div id="browsehappy">
+    您正在使用的浏览器版本过低，请<a href="http://{longshao_weburl}" target="_blank">
+    <strong>升级您的浏览器</strong></a>，获得最佳的浏览体验！
+</div>
+<![endif]-->
+{include file="head.html"}
+<!--导航 ／-->
+<!--面包屑导航-->
+<div class="breadthumb">
+  <div class="container"> <a href="/" class="bread-item" title="返回首页">首页</a>
+    <!-- 首页 -->
+   <a class="bread-item" href="{当前栏目URL}">{当前栏目} </a> >
+    <!-- 分类 -->
+    正文 </div>
+</div>
+<!--面包屑导航-->
+<div class="main container">
+  <div class="content-wrap">
+    <div class="content" id="content">
+      <div class="panel echo_log">
+        <div class="panel-body">
+          <h1 class="log-title">{$title}</h1>
+          <div class="log-info"> <span><i class="iconfont icon-user"></i>{随机关键词}</span> <span><i class="iconfont icon-time"></i>{$postdate}</span> <span><i class="iconfont icon-user"></i>本站</span> </div>
+          <div class="log-body" id="log-body"> {$body} </div>
+          <div style="border-top: 1px solid #eee;padding-top: 10px;"> 文章地址：{当前地址} (转载请注明出处)
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-body"> 免责声明：本文仅代表作者个人观点，与本网站无关。其原创性以及文中陈述文字和内容未经本站证实，对本文以及其中全部或者部分内容、文字的真实性、完整性、及时性本站不作任何保证或承诺，请读者仅作参考，并请自行核实相关内容。 </div>
+      </div>
+      <div class="panel">
+	  
+	  <div class="panel-body neighbor"> 
+	    {loop type="arclist" row="1"}
+		上一篇：<a href='{$vo.url}'>{$vo.title}</a>
+		{/loop}
+		</div>
+		<div class="panel-body neighbor"> 
+		{loop type="arclist" row="1"}
+		下一篇：<a href='{$vo.url}'>{$vo.title}</a>
+		{/loop}
+		</div>
+	  </div>
+    </div>
+  </div>
+  <div class="sidebar" id="sidebar">
+    <div class="widget widget-newlog">
+      <h3>推荐文章</h3>
+      <ul id="newlog">
+        {loop type="arclist" row="20" }
+		<li><a href="{$vo.url}">{$vo.title}</a></li> 
+		{/loop}
+      </ul>
+    </div>
+  </div>
+  <!--end #siderbar-->
+  <div class="clearfix"></div>
+</div>
+<!--相册-->
+<div class="album" id="album">
+  <div class="shadow"></div>
+  <div class="pic" id="album-pic"></div>
+  <div class="ctrl" id="album-ctrl"> <i class="iconfont icon-left" id="prev"></i> <i class="iconfont icon-right" id="next"></i> <i class="iconfont icon-close" id="close-album"></i> </div>
+</div>
+<!--相册 /-->
+<!--版权信息-->
+{include file="footer.html" }
+<!--版权信息 ／-->
+<!--网站小工具-->
+<div class="site-tools">
+  <div class="item active gotoup" id="gotoup"> <i class="iconfont icon-up"></i> </div>
+</div>
+<!--网站小工具 ／-->
+<script src="{$theme_path}/style/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/style/js/main.min.js"></script>
+</body>
+</html>

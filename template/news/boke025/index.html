@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>{$toptitle}</title>
+    <meta name="description" content="{$description}" />
+    <meta name="keywords" content="{$keywords}" />
+    <!--[if lt IE 9]><script src="{$theme_path}/style/js/html5-css3.js"></script><![endif]-->
+    <link rel="stylesheet" id="nfgc-main-style-css" href="{$theme_path}/style/css/style.css" type="text/css" media="all" />
+    <script type="text/javascript" src="{$theme_path}/style/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="{$theme_path}/style/js/scrollmonitor.js"></script>
+    <script type="text/javascript" src="{$theme_path}/style/js/wow.js"></script>
+    <script type="text/javascript" src="{$theme_path}/style/js/slides.js"></script>
+    <script></script>
+    <!--[if IE]>
+    <div class="tixing"><strong>温馨提示：感谢您访问本站，经检测您使用的浏览器为IE浏览器，为了获得更好的浏览体验，请使用Chrome、Firefox或其他浏览器。</strong></div>
+    <![endif]-->
+    <link rel="stylesheet" id="font-awesome-four-css" href="{$theme_path}/style/css/font-awesome.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="wp-block-library-css" href="{$theme_path}/style/css/style.min.css?ver=5.1.1" type="text/css" media="all" />
+    <link rel="stylesheet" id="contact-form-7-css" href="{$theme_path}/style/css/styles.css?ver=5.1.1" type="text/css" media="all" />
+    <link rel="stylesheet" id="fancybox-style-css" href="{$theme_path}/style/css/jquery.fancybox.css?ver=5.1.1" type="text/css" media="all" />
+    <link rel="stylesheet" id="wp-pagenavi-css" href="{$theme_path}/style/css/pagenavi-css.css?ver=2.70" type="text/css" media="all" />
+    <script type="text/javascript" src="{$theme_path}/style/js/jquery.js?ver=1.12.4"></script>
+    <script type="text/javascript" src="{$theme_path}/style/js/jquery-migrate.min.js?ver=1.4.1"></script>
+    <script type="text/javascript" src="{$theme_path}/style/js/script.js?ver=1.0"></script>
+</head>
+<body class="home blog">
+<div id="page" class="hfeed site">
+    {include file="head.html"}
+    <div id="content" class="site-content">
+        <div class="clear"></div>
+        <div id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
+                <div id="post_list_box" class="border_gray">
+                    {loop type="arclist" row="10"  image=1 info=1}
+                    <article class="archive-list">
+                        <figure class="thumbnail">
+                            <a href="{$vo.url}"><img src="{$vo.pic}" alt="{$vo.title}" /></a>
+                        </figure>
+                        <header class="entry-header">
+                            <h2 class="entry-title"><a href="{$vo.url}" target="_blank">{$vo.title}</a></h2>
+                        </header>
+                        <!-- .entry-header -->
+                        <div class="entry-content">
+                            <span class="entry-meta">
+                                <span class="post_cat">
+                                    <a href="{随机栏目URL}" title="查看 {随机栏目} 分类下的更多文章" target="_blank">{随机栏目}</a>
+                                </span>
+                                &nbsp;&nbsp;
+                                <span class="date" title="{longshao_posttime}">{$vo.postdate}</span>
+                            </span>
+                            <div class="archive-content">
+                                {$vo.info}...
+                            </div>
+                            <div class="archive-tag">
+                                <span class="views"><a href="{$vo.url}">阅读全文</a></span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <!-- .entry-content -->
+                    </article>
+                    {/loop}
+                </div>
+                <div class="clear"></div>
+            </main>
+            <nav class="navigation pagination" role="navigation">
+                <div class="nav-links">{loop type="typename"} <a href="{$vo.typeurl}" class="page-numbers">{$k+1}</a>{/loop}</div>
+            </nav>
+            <!-- .site-main -->
+        </div>
+        <!-- .content-area -->
+        <div id="sidebar" class="widget-area">
+            <aside id="zonghe_post-2" class="widget widget_zonghe_post">
+                <div id="top_post" class="right_box border_gray">
+                    <div class="right_box_content">
+                        <ul id="top_post_filter">
+                            <li id="zhan_post" class="top_post_filter_active">重点关注</li>
+                            <div class="clear"></div>
+                        </ul>
+                        {loop type="arclist" row="15"  image=1 info=1}
+                        <a class="top_post_item zhan_post" href="{$vo.url}">
+                            <img src="{$vo.pic}" alt="{$vo.title}" />
+                            <div class="news-inner">
+                                <p>{$vo.title}</p>
+                                <span class="comment">{$vo.postdate}</span>
+                            </div>
+                            <div class="clear"></div>
+                        </a>
+                        {/loop}
+                    </div>
+                </div>
+                <div class="sjwu index-y">
+                    <dl class="function" id="divPrevious">
+                        <dt class="function_t">
+                            <h3><span>友情链接</span></h3>
+                        </dt>
+                        <dd class="function_c">
+                            <ul id="friendlinks">
+                                {loop type="domain" row=10}
+                               
+<li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+{/loop}
+{if $links_open}
+{loop type="link" row=10}
+<li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+{/loop}
+{/if}
+</ul>
+<div class="clear"></div>
+
+
+</div>
+</aside>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+{include file="footer.html" }
+<!-- .site-content -->
+<script type="text/javascript" src="{$theme_path}/style/js/superfish.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/scripts.js?ver=5.1.1"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jquery.fancybox.pack.js?ver=5.1.1"></script>
+</body>
+</html>

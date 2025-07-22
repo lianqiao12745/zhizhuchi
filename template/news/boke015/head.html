@@ -1,0 +1,22 @@
+  <header id="masthead" class="site-header clear">
+    <div class="container">
+     <div class="site-branding">
+      <div id="logo"> 
+       <span class="helper"></span> 
+       <a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="190" height="110" src="{$theme_path}/style/img/logo.png" class="custom-logo" id=""  alt="{网站名称}"/></a>
+      </div>
+     </div>
+     <nav id="primary-nav" class="primary-navigation tablet_menu_col_5 phone_menu_col_5">
+      <div class="menu-primary-container">
+       <ul id="primary-menu" class="sf-menu">
+
+       <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page">首页</a></li> 
+			 {loop type="typename" row="6"}
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{$vo.typeurl}">{$vo.typename}</a></li> 
+			{/loop}
+
+       </ul>
+      </div>
+     </nav>
+    </div>
+   </header>

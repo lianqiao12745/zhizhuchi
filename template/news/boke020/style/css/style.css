@@ -1,0 +1,118 @@
+﻿i{
+	font-style: normal;
+}
+body{margin:0; padding:0; background:#F2F2F2;font-family:'????????????'; font-weight:100; letter-spacing: 0px; color:#666666;}
+p,ul,li,dl,dt,dd,form{ margin:0; padding:0; list-style:none}
+img{ border:none;}
+a{color:#333333; text-decoration:none}
+.btn{display: inline-block;margin-bottom: 0px;padding: 0;font-size: 16px;font-weight:normal;line-height:28px;text-align: center;white-space: nowrap;background-image: none;border: 1px solid transparent;border-radius: 0px;cursor: pointer;outline: 0px none;transition: background-color 300ms ease-out 0s, border-color 300ms ease-out 0s; display:block;border-radius: 1000px; background:none; border:1px #8C8C8C solid}
+
+.disno{display:none;}
+.dis{display:block;}
+.ad{ margin:0;}
+
+.weishow{width:40px; height:225px; position:fixed; z-index:1; margin-left:-40px; top:285px}
+.weishow li{margin-bottom:5px}
+.weishow .sinawb{ background:url(img/weipic.png) left top no-repeat #BBBBBB; width:40px; height:40px; display:block;}
+.weishow .sinawb:hover{background:url(img/weipic.png) left top no-repeat #E6152F}
+.weishow .txwx{ background:url(img/weipic.png) left -40px no-repeat #BBBBBB; width:40px; height:40px; display:block;}
+.weishow .txwx:hover{background:url(img/weipic.png) left -40px no-repeat #E6152F}
+.weishow .xiaolian{ background:url(img/weipic.png) left -80px no-repeat #BBBBBB; width:40px; height:40px; display:block;}
+.weishow .xiaolian:hover{background:url(img/weipic.png) left -80px no-repeat #E6152F}
+.weishow .pinglun{ background:url(img/weipic.png) left -120px no-repeat #BBBBBB; width:40px; height:40px; display:block;}
+.weishow .pinglun:hover{background:url(img/weipic.png) left -120px no-repeat #E6152F}
+.weishow .love{ background:url(img/weipic.png) left -160px no-repeat #BBBBBB; width:40px; height:40px; display:block;}
+.weishow .love:hover{background:url(img/weipic.png) left -160px no-repeat #E6152F}
+
+/* ???????????? */
+.footer{ width:100%; min-width:1200px; overflow:hidden; background:#2D3237; margin-top:25px}
+.footer .footert{width:100%; min-width:1200px;height:160px; text-align:center; margin:0 auto}
+.footer .footert .footertw{width:1200px; height:130px; overflow:hidden; text-align:center; margin:0 auto; padding-top:25px;}
+.footer .footert .footertl{ float:left; width:1200px; height:130px; overflow:hidden; padding-top:5px; text-align:left}
+.footer .footert .footertl .fabout{width:380px; height:100px; padding-left:35px; float:left; border-right:1px #575B5F solid}
+.footer .footert .footertl .fabout dt{background:url(img/fico1.jpg) left center no-repeat; text-indent:25px; line-height:35px}
+.footer .footert .footertl .ftousu{ width:375px; height:100px; padding-left:35px; float:left; border-right:1px #575B5F solid}
+.footer .footert .footertl .ftousu dt{ background:url(img/fico2.jpg) left center no-repeat; text-indent:25px; line-height:35px}
+.footer .footert .footertl .flianxi{width:320px; height:100px; padding-left:45px; float:left;}
+.footer .footert .footertl .flianxi dt{background:url(img/fico3.jpg) left center no-repeat; text-indent:25px; line-height:35px}
+.footer .footert .footertl dt{color:#fff; font-size:16px}
+.footer .footert .footertl dd{color:#ABA6A6; font-size:14px; line-height:28px; margin-right:28px; }
+.footer .footert .footertl dd a{color:#ABA6A6; font-size:14px; padding:0 7px}
+.footer .footert .footertl dd a:hover{color:#fff}
+/*
+.footer .footert .footertr{float:left; width:300px; height:145px; overflow:hidden}
+.footer .footert .footertr li{float:left; text-align:right; width:150px; height:145px; overflow:hidden}
+*/
+.footer .footerb{width:100%; min-width:1200px; height:50px; text-align:center; margin:0 auto; background:#23282D; line-height:50px; color:#BBBABA; font-size:14px}
+.footer .footerb .footerbtxt{width:1200px; text-align:center; margin:0 auto; background:url(../images/cmstop.jpg) right center no-repeat}
+.footer .footerb .footerbtxt .footerbtxts{ text-align:center; }
+.footer .footerb a{color: #BBBABA;}
+#moquu_top,#moquu_wxin,#moquu_wshare,#moquu_wmaps {
+	z-index:2;
+	width:50px;
+	height:50px;
+	right:10px;
+	position:fixed;
+	cursor:pointer;
+	_position:absolute;
+	_bottom:auto;
+	_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)))
+}
+
+#moquu_wxin {
+	top:360px;
+	_margin-top:360px
+}
+#moquu_wxin a {
+	background:url(img/gotop.png) 0 -0px #ADB0B5;
+	right:0;
+	float:left;
+	width:50px;
+	height:50px;
+	text-indent:-9999px
+}
+#moquu_wxin a:hover {
+	background:url(img/gotop.png) 0px -0px #666666
+}
+
+#moquu_wmaps {
+	top:412px;
+	_margin-top:412px
+}
+#moquu_wmaps a {
+	background:url(img/gotop.png) 0 -50px #ADB0B5;
+	width:50px;
+	height:50px;
+	right:0;
+	float:left;
+	text-indent:-9999px
+}
+#moquu_wmaps a:hover {
+	background:url(img/gotop.png) -0px -50px #666666
+}
+#moquu_top {
+	top:464px;
+	_margin-top:464px;
+	background:url(img/gotop.png) 0 -100px #ADB0B5;
+	width:50px;
+	height:50px
+}
+#moquu_top:hover {
+	background:url(img/gotop.png) -0px -100px #666666
+}
+.moquu_wxin,.moquu_wshare {
+	position:relative;
+	z-index:2
+}
+.moquu_wxin a:hover .moquu_wxinh,.moquu_wshare a:hover .moquu_wshareh {
+	display:block
+}
+.moquu_wxin .moquu_wxinh {
+	position:absolute;
+	display:none;
+	left:-120px;
+	top:-1px;
+	width:115px;
+	height:115px;
+	background:url(img/h2img.jpg) 0 -2px no-repeat
+}

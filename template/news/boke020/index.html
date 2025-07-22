@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="wordpress" />
+<meta name="applicable-device" content="pc,mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link rel="stylesheet" type="text/css" href="{$theme_path}/style/css/style.css" />
+<link rel="stylesheet" type="text/css" href="{$theme_path}/style/css/index.css" />
+<link rel="stylesheet" type="text/css" href="{$theme_path}/style/css/right.css" />
+<link rel="stylesheet" type="text/css" href="{$theme_path}/style/css/weinav.css" />
+<link href="{$theme_path}/style/css/skitter.styles.css" type="text/css" media="all" rel="stylesheet" />
+<script type="text/javascript" src="{$theme_path}/style/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/nav2.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/top.js"></script>
+<script type="text/javascript" language="javascript" src="{$theme_path}/style/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" language="javascript" src="{$theme_path}/style/js/jquery.skitter.min.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jinritoutiao.js"></script>
+
+<style>
+  .footerb_t{text-align:center;margin:0 auto;font-size:14px;}
+  </style>
+<script type="text/javascript">
+$(document).ready(function() {
+$('.box_skitter_large').skitter({
+theme: 'clean',
+dots: true, 
+preview: false,
+numbers_align: 'right'
+});
+});
+</script>
+</head>
+<body>
+<div class="warp">
+ {include file="head.html"}
+  <div class="content">
+    <div class="content_home">
+      <div class="home_left">
+        <div class="hlrmtj">
+          <div class="hlrmtj-title">
+            <div class="hlrmtjttxt"> 最新 </div>
+            <hr />
+          </div>
+          <div class="hlrmtj-content" id="mainList">
+            <ul>
+             {loop type="arclist" row="6"  image=1 info=1}
+			 <li class="rtmj-box"> 
+				  <dl> 
+				   <dt>
+					<a href="{$vo.url}" target="_blank" title="{$vo.title}"> <img src="{$vo.pic}" alt="{$vo.url}" width="250" height="165" /> </a>
+				   </dt> 
+				   <dd> 
+					<h3><a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a></h3> 
+					<p>{$vo.info} ...</p> 
+					<span><a href="{当前栏目URL}">{当前栏目}</a></span> 
+				   </dd> 
+				  </dl> </li> 
+				{/loop}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--??-->
+      <div class="newsr">
+        <!--????-->
+        <div class="read read2">
+          <div class="rigth-title rwtj-title"> 热文排行 </div>
+          <hr class="hengxian" />
+          <div class="htitle"></div>
+         {loop type="arclist" row="8  image=1 info=1}
+		<div class="readbox"> 
+		<div class="readimg"> 
+		<a href="{$vo.url}" target="_blank"> <img src="{$vo.pic}" alt="{$vo.title}" width="90" height="59" /> </a> 
+		</div> 
+		<p><a href="{$vo.url}" target="_blank">{$vo.title}</a></p> 
+		<div class="floatfix">{$vo.postdate}</div> 
+		</div>
+		{/loop}
+		 </div>
+<div class="read read2">
+  <div class="rigth-title rwtj-title"> 友情链接 </div>
+  <hr class="hengxian" />
+  <div class="htitle"></div>
+  <div class="readbox">
+    <ul>
+      {loop type="domain" row=8}
+      <li>
+        <a href="{$vo.url}" target="_blank">
+
+          <p>{$vo.title}</p>
+        </a>
+      </li>
+      {/loop}
+      {if $links_open}
+      {loop type="link" row=10}
+      <li>
+        <a href="{$vo.url}" target="_blank">
+
+          <p>{$vo.title}</p>
+        </a>
+      </li>
+      {/loop}
+      {/if}
+    </ul>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+<!--??t???????-->
+{include file="footer.html" }
+</body>
+</html>

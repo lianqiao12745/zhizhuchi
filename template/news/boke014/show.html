@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="applicable-device" content="pc,mobile"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link rel="stylesheet" href="{$theme_path}/style/css/abfd8944128f94fbeb49d2910c11d49e.css" data-minify="1" />
+<link rel="alternate" type="application/rss+xml" href="{$theme_path}/style/css/feed02.css/" />
+<style type="text/css">
+img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important}.tzwb-has-thumbnail img{height:auto;max-height:90px;min-height:90px;}
+</style>
+<style id="maxwell-stylesheet-inline-css" type="text/css">
+.site-description{position:absolute;clip:rect(1px,1px,1px,1px);width:1px;height:1px;overflow:hidden}
+</style>
+<!--[if lt IE 9]> <script type='text/javascript' src='http://{longshao_weburl}/style/js/html5shiv.min.js?ver=3.7.3'></script> <![endif]-->
+<link rel="https://api.w.org/" href="{$theme_path}/style/css/wp-json.css/" />
+<noscript>
+<style id="rocket-lazyload-nojs-css">
+.rll-youtube-player,[data-lazy-src]{display:none!important}
+</style>
+</noscript>
+</head>
+<body class="post-template-default single single-post postid-2006 single-format-standard post-layout-one-column">
+<div id="page" class="hfeed site">
+   {include file="head.html"}
+  <div id="content" class="site-content container clearfix">
+    <section id="primary" class="content-single content-area">
+      <main id="main" class="site-main" role="main">
+        <article id="post-2006" class="post-2006 post type-post status-publish format-standard has-post-thumbnail hentry category-architecture category-city tag-flexible tag-posts tag-settings tag-user-friendly tag-wordpress">
+          <header class="entry-header">
+            <div class="entry-meta"> <span class="meta-date">{$postdate}</span> <span class="meta-category"> <a href="/" rel="category tag">首页</a> / <a href="{当前栏目URL}">{当前栏目}</a></span> </div>
+            <h2 class="entry-title">{$title}</h2>
+          </header>
+          <div class="entry-content clearfix">  {$body} </div>
+        </article>
+        <div id="comments" class="comments-area">
+          <div id="respond" class="comment-respond">
+            <h3 id="reply-title" class="comment-reply-title"><span>发表评论</span> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/" style="display:none;">取消回复</a></small></h3>
+            <form action="{随机内容URL}" method="post" id="commentform" class="comment-form" novalidate="">
+              <p class="comment-notes"><span id="email-notes">您的电子邮件地址不会被公开.</span> 必需的地方已做标记 <span class="required">*</span></p>
+              <p class="comment-form-comment">
+                <label for="comment">评论</label>
+                <textarea autocomplete="nope" id="c3cd87ad76" name="c3cd87ad76" cols="45" rows="8" maxlength="65525" required="required"></textarea>
+                <textarea id="comment" aria-hidden="true" name="comment" autocomplete="nope" style="padding:0;clip:rect(1px, 1px, 1px, 1px);position:absolute !important;white-space:nowrap;height:1px;width:1px;overflow:hidden;" tabindex="-1"></textarea>
+              </p>
+              <p class="comment-form-author">
+                <label for="author">姓名 <span class="required">*</span></label>
+                <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required" />
+              </p>
+              <p class="comment-form-email">
+                <label for="email">邮件 <span class="required">*</span></label>
+                <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required" />
+              </p>
+              <p class="comment-form-url">
+                <label for="url">网站</label>
+                <input id="url" name="url" type="url" value="" size="30" maxlength="200" />
+              </p>
+              <p class="form-submit">
+                <input name="submit" type="submit" id="submit" class="submit" value="立即发布" />
+                <input type="hidden" name="comment_post_ID" value="{随机字符}" id="comment_post_ID" />
+                <input type="hidden" name="comment_parent" id="comment_parent" value="{随机字符}" />
+              </p>
+            </form>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section id="secondary" class="sidebar widget-area clearfix" role="complementary">
+      <aside class="widget tzwb-tabbed-content clearfix">
+        <div class="widget-header">
+          <h3 class="widget-title">推荐阅读</h3>
+        </div>
+        <div id="tzwb-tabbed-content-1-tab-0" class="tzwb-tabcontent">
+          <ul class="tzwb-tabcontent-recent-posts tzwb-posts-list">
+           {loop type="arclist" row="6" image=1}
+			<li class="tzwb-has-thumbnail"> 
+			<a href="{$vo.url}" title="Responsive Layout"> <img width="90" height="65" src="{$vo.pic}" class="attachment-tzwb-thumbnail size-tzwb-thumbnail wp-post-image" alt="{$vo.title}" /> </a> 
+			<a href="{$vo.url}" title="Responsive Layout">{$vo.title}</a>
+			<div class="tzwb-entry-meta entry-meta"> 
+			<span class="tzwb-meta-date meta-date">{$vo.postdate}</span>
+			</div>
+			</li>
+			{/loop}
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </div>
+  {include file="footer.html" }
+</div>
+</body>
+</html>

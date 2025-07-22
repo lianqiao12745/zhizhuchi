@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="wordpress" />
+<meta name="applicable-device" content="pc,mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<script type="text/javascript" src="{$theme_path}/style/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/nav2.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/top.js"></script>
+<link rel="stylesheet" type="text/css" href="{$theme_path}/style/css/style.css" />
+<link rel="stylesheet" type="text/css" href="{$theme_path}/style/css/weinav.css" />
+<link rel="stylesheet" type="text/css" href="{$theme_path}/style/css/right.css" />
+<link rel="stylesheet" type="text/css" href="{$theme_path}/style/css/list.css" />
+<style>
+  .footerb_t{text-align:center;margin:0 auto;font-size:14px;}
+  </style>
+</head>
+<body>
+<div class="warp">
+<!--头部开始-->
+{include file="head.html"}
+<!--头部结束-->
+<!--主体开始-->
+<div class="content">
+  <div class="content_home">
+    <div class="home_left">
+      <div class="hl_content">
+        <div class="hl_c_title">
+          <h1>{$title}</h1>
+        </div>
+        <div class="hl_c_twid"> {$postdate} · {随机关键词} <a href="{当前栏目URL}">{当前栏目}</a> </div>
+        <div class="hl_c_wcid"> {随机句子} </div>
+        <div class="hl_body">{$body} </div>
+        <div class="hl_c_ad">
+          <!-- 科技快报内容页底部 -->
+        </div>
+      </div>
+    </div>
+    <!--右侧开始-->
+    <!--右侧-->
+    <div class="newsr">
+      <!--精彩导读-->
+      <div class="read read2">
+        <div class="rigth-title rwtj-title"> 热文排行 </div>
+        <hr class="hengxian" />
+        <div class="htitle"></div>
+       
+	   {loop type="arclist" row="6"  image=1 info=1}
+		<div class="readbox"> 
+		<div class="readimg"> 
+		<a href="{$vo.url}" target="_blank"> <img src="{$vo.pic}" alt="{$vo.title}" width="90" height="59" /> </a> 
+		</div> 
+		<p><a href="{$vo.url}" target="_blank">{$vo.title}</a></p> 
+		<div class="floatfix">{$vo.postdate}</div> 
+		</div>
+		{/loop}
+	   
+	   </div>
+      <!--达人快报-->
+    </div>
+    <!--右侧结束-->
+  </div>
+  <div class="weishow">
+    <ul>
+    </ul>
+  </div>
+</div>
+<!--
+主体结束
+-->
+{include file="footer.html" }
+<!--底部结束-->
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform"/>  
+  <meta name="applicable-device" content="pc,mobile"/>    
+  <link type="text/css" media="all" href="{$theme_path}/style/css/autoptimize_ca6ff68ee21f85836d11f9bbcb0b9aac.css" rel="stylesheet" />
+  <link rel='https://api.w.org/' href='{$theme_path}/style/css/wp-json.css/' />  
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+  <script type="text/javascript" src="{$theme_path}/style/js/jquery.js?ver=1.12.4"></script> 
+  <style>
+  .bqlink{float:right;}
+  .wp-post-image{height:auto;max-height:188px;min-height:188px;}
+  </style>   
+ </head>
+ <body class="post-template-default single single-post postid-383 single-format-standard wp-custom-logo">
+
+  <div id="page" class="site">
+   {include file="head.html"}
+   <div id="content" class="site-content site_container container clear">
+    <div id="primary" class="content-area">
+     <div class="content-wrapper">
+      <main id="main" class="site-main">
+       <article id="post-383" class="post-383 post type-post status-publish format-standard has-post-thumbnail hentry category-food tag-28 tag-30 tag-38">
+        <div class="single-breadcrumbs"> 
+         <span>您的位置</span> 
+         <i class="fa fa-angle-right"></i> 
+         <a href="/">首页</a> 
+         <i class="fa fa-angle-right"></i> 
+        <a href="{当前栏目URL}">{当前栏目}</a>
+         <i class="fa fa-angle-right"></i> 
+         <a href="{longshao_fenleiurl}">正文</a>		 
+        </div>
+        <header class="entry-header">
+         <h1 class="entry-title">{$title}</h1>
+         <div class="entry-meta"> 
+          <span class="entry-author">作者: {随机关键词}</span> 
+          <span class="entry-date">发布: {$postdate} </span>           
+         </div>
+        </header>
+        <div class="entry-content"> 
+         {$body}
+        </div>
+        <div class="single-credit">
+          本文来自网络，不代表{网站名称}立场，转载请注明出处：{当前地址}
+        </div>
+       </article>
+
+       <div class="related-content">
+        <h3 class="section-title">相关文章</h3>
+        <ul class="clear">
+
+      {loop type="arclist" row="6" image=1}
+		<li class="hentry ht_grid_1_3"> 
+		<a class="thumbnail-link" href="{$vo.url}">
+		<div class="thumbnail-wrap"> 
+		<img width="243" height="156" src="{$vo.pic}" class="attachment-boke_x_list_thumb size-boke_x_list_thumb wp-post-image" alt="{$vo.title}" />
+		</div> 
+		</a>
+		<h2 class="entry-title"><a href="{$vo.url}">{$vo.title}</a></h2>
+		</li>
+	   {/loop}
+        </ul>
+       </div>
+       <div id="comments" class="comments-area">
+        <div id="respond" class="comment-respond">
+         <h3 id="reply-title" class="comment-reply-title">发表评论 <small><a rel="nofollow" id="cancel-comment-reply-link" href="javascript:click();" style="display:none;">取消回复</a></small></h3>
+         <div class="comment-form">
+          <div class="comment-must-login">
+           请登录后参与评论...
+          </div>
+          <div class="form-submit">
+           <a id="must-login" class="submit" href="#">发布</a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </main>
+     </div>
+    </div>
+        <aside id="secondary" class="widget-area sidebar">
+     <div class="sidebar__inner">
+      <div id="boke_x-popular-2" class="widget widget-boke-x-popular widget_posts_thumbnail">
+       <h2 class="widget-title">浏览最多的文章</h2>
+       <ul>
+         {loop type="arclist" row="15" image=1}
+			<li class="post-list"><a href="{$vo.url}" rel="bookmark">{$vo.title}</a></li>
+		 {/loop}
+       </ul>
+      </div>
+     </div>
+	 <div id="post-nav" class="clear">
+	 
+	  {loop type="arclist" row="1" image=1}
+	 <div class="post-previous"> <a class="previous" href="{$vo.url}"> <span><i class="fa fa-angle-left"></i> 上一篇</span>
+  <div class="thumbnail-wrap"> <img width="300" height="150" src="{$vo.pic}" class="attachment-boke_x_widget_thumb size-boke_x_widget_thumb wp-post-image" alt="" /></div>
+  <h4>{$vo.title}</h4>
+  <small> {$vo.postdate}</small>
+  <div class="gradient"></div>
+  </a></div>
+   {/loop}
+  
+   {loop type="arclist" row="1" image=1}  
+<div class="post-next"> <a class="next" href="{$vo.url}"> <span>下一篇 <i class="fa fa-angle-right"></i></span>
+  <div class="thumbnail-wrap"> <img width="300" height="150" src="{$vo.pic}" class="attachment-boke_x_widget_thumb size-boke_x_widget_thumb wp-post-image" alt="" /></div>
+  <h4>{$vo.title}</h4>
+  <small> {$vo.postdate}</small>
+  <div class="gradient"></div>
+  </a></div>
+ {/loop}
+	 </div>
+    </aside>
+   </div>
+   <footer id="colophon" class="site-footer">
+    <div class="clear"></div>
+     {include file="footer.html" }
+   </footer>
+  </div>   
+ </body>
+</html>

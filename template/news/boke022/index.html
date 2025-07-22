@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<meta name="generator" content="wordpress" />
+<meta name="applicable-device" content="pc,mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link href="{$theme_path}/style/css/style.css?ver=201810031507" rel="stylesheet" type="text/css" />
+<script src="{$theme_path}/style/js/jquery.min.js"></script>
+<script src="{$theme_path}/style/js/common_tpl.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/em_ad_common.js"></script>
+</head>
+<body>
+<div id="wrap">
+  {include file="head.html"}
+  <div id="content">
+    <div id="main">
+	
+	 {loop type="arclist" row="6"  image=1 info=1}
+	 <div class="post_list"> 
+	  <h2><a href="{$vo.url}" target="_blank"><img src="{$vo.pic}" alt="{$vo.title}" width="90" height="59">{$vo.title}</a></h2> 
+	  <div class="info">
+	   <a href="{随机栏目URL}" >{随机栏目}</a>  | {$vo.postdate}
+	  </div> 
+	  <div class="excerpt">
+		{$vo.info}...
+	   <span class="more">[<a href="{$vo.url}" class="more-link" style="opacity: 1;">阅读全文</a>]</span> 
+	  </div> 
+	  <div class="meta"> 
+	   <span class="meat_span"><i class="iconfont"></i>{随机数字}{随机数字}条浏览</span> 
+	   <span class="meat_span"><i class="iconfont"></i>{随机数字}条评论</span> 
+	  </div> 
+	 </div> 
+	 {/loop}
+	
+      <div class="navigation">
+        <div class="pagination"> 
+		{loop type="typename"} <a href="{$vo.typeurl}" class="page-numbers">{$k+1}</a>{/loop}
+		 </div>
+   </div>
+</div>
+<div id="sidebar">
+  <div class="sidebar">
+    <div class="widget nowrap">
+      <h3><span>一周热门</span></h3>
+      <ul id="hotlog">
+        {loop type="arclist" row="16"}
+<li><a href="{$vo.url}" target="_blank"><img src="{$vo.pic}" alt="{$vo.title}" width="90" height="59">{$vo.title}</a></li>
+
+        
+        {/loop}
+      </ul>
+    </div>
+    <div class="widget nowrap">
+      <h3><span>友情链接</span></h3>
+      <ul id="friendlinks">
+        {loop type="domain" row=10}
+        <li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+        {/loop}
+        {if $links_open}
+        {loop type="link" row=10}
+        <li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+        {/loop}
+        {/if}
+      </ul>
+    </div>
+  </div>
+</div>
+<div style="clear:both;"></div>
+<div id="totop" class="totop"> <i class="iconfont"></i>回顶部 </div>
+<script type="text/javascript">
+  $(window).scroll(function () {
+    var dt = $(document).scrollTop();
+    var wt = $(window).height();
+    if (dt <= 0) {
+      $("#totop").hide();
+      return;
+    }
+    $("#totop").show();
+    if ($.browser.msie && $.browser.version == 6.0) {
+      $("#totop").css("top", wt + dt - 110 + "px");
+    }
+  });
+  $("#totop").click(function () { $("html,body").animate({ scrollTop: 0 }, 200) });
+</script>
+</div>
+<div style="clear:both;"></div>
+<div id="footer">
+  <div style="display:none">
+    <script></script>
+  </div>
+  <p></p>
+</div>
+<div align="center" id="yqid">
+{include file="footer.html" }
+</body>
+</html>

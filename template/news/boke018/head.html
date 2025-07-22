@@ -1,0 +1,23 @@
+ <header id="masthead" class="site-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-xs-12"> <a id="slide-out-open" class="slide-out-open" href="#"><span></span></a>
+            <div class="site-branding">
+              <div class="site-logo" id=""> <a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="177" height="44" src="{$theme_path}/style/img/wpdx-logo.png" id="" class="custom-logo" alt="{网站名称}" /></a> </div>
+            </div>
+            <!-- .site-branding -->
+          </div>
+          <div class="col-md-8 col-xs-12">
+            <nav id="site-navigation" class="main-navigation">
+              <ul id="primary-menu" class="menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><i class="zm zm-shouye"></i><span class="font-text">网站首页</span></a></li> 
+				 {loop type="typename" row="4"}
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{$vo.typeurl}">{$vo.typename}</a></li> 
+				{/loop}
+              </ul>
+            </nav>
+            <!-- #site-navigation -->
+          </div>
+        </div>
+      </div>
+    </header>

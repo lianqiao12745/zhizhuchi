@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="containe">
+    <div class="blog-info">
+      <div class="blog-name">
+        <h1 id=""><a href="/">{网站名称}博客</a></h1>
+      </div>
+    </div>
+  </div>
+  <menu id="monavber" class="header-nav right" data-type="index">
+  <div class="container">
+    <ul id="nav" class="navbar">
+     <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><span>首页</span></a></li> 
+	 {loop type="typename" row="6"}
+    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{$vo.typeurl}"><span>{$vo.typename}</span></a></li> 
+	{/loop}
+    </ul>
+    <a class="moble-bars" id="btn-bars"><i class="fa fa-bars"></i></a> </div>
+  </menu></header>

@@ -1,0 +1,665 @@
+﻿.zcenter_reward_menu .weibo_reward {
+  width: 100%;
+  margin-top:50px;
+  text-align: center;
+}
+
+
+.zcenter_reward_menu .webo_reward_btn_p{
+  text-align: center;
+}
+
+.zcenter_reward_menu .webo_reward_btn{
+  color: rgb(235,115,80);
+  background-image: url(img/longwb_btn.png);
+  background-size: auto;
+  background-position-x:0px;
+  background-position-y:-99px;
+  width: 62px;
+  height: 62px;
+  display: inline-block;
+  border: 0px;
+}
+.zcenter_reward_menu a.webo_reward_btn:hover{
+  color: rgb(235,115,80);
+  background-image: url(img/longwb_btn.png);
+  background-size: auto;
+  background-position-x:0px;
+  background-position-y:-169px;
+  width: 62px;
+  height: 62px;
+  display: inline-block;
+}
+
+
+.zcenter_reward table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.zcenter_reward fieldset,.zcenter_reward  img {
+    border: 0
+}
+
+.zcenter_reward address,.zcenter_reward  caption,.zcenter_reward  cite,.zcenter_reward  code,.zcenter_reward  dfn, .zcenter_reward em, .zcenter_reward i, .zcenter_reward th,.zcenter_reward  var {
+    font-style: normal;
+    font-weight: 400
+}
+
+.zcenter_reward ol,.zcenter_reward  ul {
+    list-style: none
+}
+
+.zcenter_reward caption, .zcenter_reward th {
+    text-align: left
+}
+
+.zcenter_reward q:after, .zcenter_reward q:before {
+    content: ''
+}
+
+.zcenter_reward a:focus {
+    outline-style: none
+}
+
+.zcenter_reward abbr, .zcenter_reward acronym {
+    border: 0;
+    font-variant: normal
+}
+
+.zcenter_reward sup {
+    vertical-align: text-top
+}
+
+.zcenter_reward sub {
+    vertical-align: text-bottom
+}
+
+.zcenter_reward input,.zcenter_reward  select,.zcenter_reward  textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-size: 100%
+}
+
+.zcenter_reward textarea {
+    resize: none
+}
+
+.zcenter_reward input::-ms-clear {
+    display: none
+}
+
+.zcenter_reward .feed_app_btn_a .fend_app_reward_persons li {
+    float: none;
+    margin: 0
+}
+
+.zcenter_reward .feed_app_btn_a .fend_app_reward_person .face_reward {
+    width: 30px;
+    height: 30px;
+    padding-left: 12px
+}
+
+.zcenter_reward .endzy-reward-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99998;
+    top: 0;
+    left: 0;
+    display: table;
+    text-align: center
+}
+
+.zcenter_reward .endzy-reward-layer .reward-bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background: rgba(0, 0, 0, .6);
+    filter: alpha(opacity=60)
+}
+
+.zcenter_reward .endzy-reward-layer .reward-box {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.zcenter_reward .endzy-reward-layer .reward-content {
+    background: #fff;
+    width: 460px;
+    border-top: 2px solid #fa7d3c;
+    border-radius: 2px;
+    font-family: "????????????";
+    margin: 0 auto
+}
+
+.zcenter_reward .endzy-reward-layer .reward-title {
+    font-size: 14px;
+    height: 46px;
+    line-height: 46px;
+    position: relative;
+    text-align: left;
+    text-indent: 16px;
+    font-weight: 700;
+    color: #333
+}
+
+.zcenter_reward .endzy-reward-layer .reward-close {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url(img/close.png) center no-repeat;
+    right: 16px;
+    top: 15px;
+    cursor: pointer
+}
+
+.zcenter_reward .reward_w .reward-user-head {
+    border-top: 1px solid #f2f2f5
+}
+/*
+{
+    border-top: 1px solid #f2f2f5
+}
+*/
+.zcenter_reward .endzy-reward-layer .reward-tip, .zcenter_reward .reward_w .reward-tip {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 204px;
+    height: 42px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    margin: 6px auto 0 auto;
+    background: url(img/tip.jpg) center no-repeat
+}
+
+.zcenter_reward .endzy-reward-layer .reward-img-box,.zcenter_reward  .reward_w .reward-img-box {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    border: 1px solid #ccc;
+    text-align: center
+}
+
+.zcenter_reward .endzy-reward-layer .reward-head-img,.zcenter_reward  .reward_w .reward-head-img {
+    margin-top: 2px;
+    width: 76px;
+    height: 76px;
+    border-radius: 76px
+}
+
+.zcenter_reward .endzy-reward-layer .reward-user-name, .zcenter_reward .reward_w .reward-user-name {
+    margin: 10px;
+    font-size: 14px;
+    color: #333
+}
+
+.zcenter_reward .endzy-reward-layer .reward-in,.zcenter_reward  .reward_w .reward-in {
+    position: relative;
+    width: 316px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Arial;
+    box-shadow: 1px 1px 1px 1px #ececec inset;
+    vertical-align: middle
+}
+
+.zcenter_reward .endzy-reward-layer .reward-in .W_layer_pop,.zcenter_reward  .reward_w .reward-in .W_layer_pop {
+    display: none;
+    font-size: 12px;
+    top: -40px;
+    left: 20px;
+    font-weight: 400
+}
+
+.zcenter_reward .endzy-reward-layer .zcenter_reward_icon-mon, .zcenter_reward .reward_w .zcenter_reward_icon-mon {
+    font-size:18px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px
+}
+
+.zcenter_reward .endzy-reward-layer .reward-num,.zcenter_reward  .reward_w .reward-num {
+    width: 224px !important;
+    background: 0 0 !important;
+    outline: 0 !important;
+    border: none !important;
+    border-radius: 0;
+    color: #000;
+    display: inline-block;
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 0px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.zcenter_reward .endzy-reward-layer .reward-random,.zcenter_reward  .reward_w .reward-random {
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    width: 50px;
+    height: 26px;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    line-height: 1;
+    margin:0;
+    background: url(img/random.png) center no-repeat
+}
+
+.zcenter_reward .endzy-reward-layer .reward-pay-bt,.zcenter_reward  .reward_w .reward-pay-bt {
+    height: 54px;
+    background: #f2f2f5
+}
+
+.zcenter_reward .endzy-reward-layer .reward-pay-box,.zcenter_reward  .reward_w .reward-pay-box {
+    display: inline-block;
+    position: relative;
+    width: 104px;
+    height: 34px;
+    line-height: 34px;
+    margin: 10px auto
+}
+
+.zcenter_reward .endzy-reward-layer .reward-pay,.zcenter_reward  .reward_w .reward-pay {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ff8140;
+    text-align: center;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px
+}
+
+.zcenter_reward .endzy-reward-layer .reward-pay-war,.zcenter_reward  .reward_w .reward-pay-war {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    color: #979797;
+    font-size: 12px;
+    right: -120px
+}
+
+.zcenter_reward .endzy-reward-layer-feed {
+    text-align: center
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-content {
+    background: #fff;
+    width: 460px;
+    border-radius: 2px;
+    font-family: "????????????";
+    margin: 0 auto
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-title {
+    font-size: 14px;
+    height: 46px;
+    line-height: 46px;
+    position: relative;
+    text-align: left;
+    text-indent: 16px;
+    font-weight: 700;
+    color: #333
+}
+
+
+.zcenter_reward .endzy-reward-layer-feed .reward-img-box {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    border: 1px solid #ccc;
+    text-align: center
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-head-img {
+    margin-top: 2px;
+    width: 76px;
+    height: 76px;
+    border-radius: 76px
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-user-name {
+    margin: 10px;
+    font-size: 14px;
+    color: #333
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-in {
+    position: relative;
+    width: 316px;
+    margin: 40px auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Arial;
+    box-shadow: 1px 1px 1px 1px #ececec inset;
+    vertical-align: middle
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-in .W_layer_pop {
+    display: none;
+    font-size: 12px;
+    top: -40px;
+    left: 20px;
+    font-weight: 400
+}
+
+.zcenter_reward .endzy-reward-layer-feed .zcenter_reward_icon-mon {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-num {
+    width: 224px;
+    background: 0 0;
+    position: relative;
+    top: -2px;
+    height: 32px;
+    line-height: 28px;
+    outline: 0;
+    border: none;
+    font-size: 18px;
+    font-weight: 700
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-random {
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    width: 50px;
+    height: 26px;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    line-height: 1;
+    background: url(img/random.png) center no-repeat
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-pay-bt {
+    height: 54px;
+    background: #f2f2f5
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-pay-box {
+    display: inline-block;
+    position: relative;
+    width: 104px;
+    height: 34px;
+    line-height: 34px;
+    margin: 10px auto
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-pay {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ff8140;
+    text-align: center;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none
+}
+
+.zcenter_reward .endzy-reward-layer-feed .reward-pay-war {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    color: #979797;
+    font-size: 12px;
+    right: -120px
+}
+
+.zcenter_reward .fend_app_reward {
+    margin: 0 !important
+}
+
+.zcenter_reward .rewardcomponent.feed_app_btn_a {
+    margin: 0 0 20px;
+    text-align: center
+}
+
+.zcenter_reward .rewardcomponent.feed_app_btn_a .feed_app_reward_title {
+    padding-bottom: 16px;
+    color: #9d9d9d;
+    font-size: 14px
+}
+
+.zcenter_reward .rewardcomponent.fend_app_reward .fend_app_reward_btn {
+    line-height: 0;
+    margin: 0 !important
+}
+
+.zcenter_reward .feed_app_btn_a .btn .btn_b {
+    width: 62px;
+    height: 62px;
+    background-position: 0 -100px
+}
+
+.zcenter_reward.feed_app_btn_a .btn .btn_a,.zcenter_reward .feed_app_btn_a .btn .btn_b {
+    display: inline-block;
+    background: url(img/longwb_btn01.png) no-repeat;
+    overflow: hidden;
+    text-indent: -999px
+}
+
+.zcenter_reward .feed_app_btn_a .fend_app_reward_persons_number {
+    background: url(img/reward_line.png) no-repeat center;
+    margin-top: 21px
+}
+
+.zcenter_reward .feed_app_btn_a .fend_app_reward_persons {
+    width: 527px;
+    margin: 15px auto;
+    overflow: hidden;
+    padding: 0
+}
+
+.zcenter_reward .feed_app_btn_a .fend_app_reward_persons_real {
+    text-align: center;
+    width: 542px;
+    line-height: 0;
+    margin: 0 0 0 -12px
+}
+
+.zcenter_reward .feed_app_btn_a .fend_app_reward_persons li {
+    float: none;
+    margin: 0
+}
+
+.zcenter_reward .feed_app_btn_a .fend_app_reward_person {
+    display: inline
+}
+
+.zcenter_reward .feed_app_btn_a li {
+    _display: inline;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 0 11px
+}
+
+.zcenter_reward .feed_app_btn_a .btn .btn_b {
+    width: 62px;
+    height: 62px;
+    background-position: 0 -100px
+}
+
+.zcenter_reward .feed_app_btn_a .btn .btn_b:hover {
+    background-position: 0 -170px
+}
+
+.zcenter_reward .W_layer_pop .content {
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 20px 1px rgba(0, 0, 0, .2)
+}
+
+.zcenter_reward .feed_app_btn_a .layer_mini_info .main_txt {
+    line-height: 18px
+}
+
+.zcenter_reward .feed_app_btn_a .layer_mini_info {
+    padding: 6px 13px 6px 16px
+}
+
+.zcenter_reward .W_layer {
+    position: absolute;
+    z-index: 9999
+}
+
+
+.zcenter_reward .feed_app_btn_a .layer_mini_info .W_icon {
+    vertical-align: middle;
+    margin-right: 5px
+}
+
+.zcenter_reward .feed_app_btn_a .layer_mini_info .main_txt .ficon_close {
+    padding-left: 8px
+}
+
+.zcenter_reward .W_layer .S_ficon {
+    color: #696e78
+}
+
+.zcenter_reward .W_layer_pop .W_layer_arrow .W_arrow_bor_b {
+    bottom: -14px;
+    left: 20px;
+    line-height: 14px
+}
+
+.zcenter_reward .W_layer_pop .W_layer_arrow .W_arrow_bor {
+    position: absolute;
+    overflow: hidden;
+    display: block
+}
+
+.zcenter_reward .W_layer .W_arrow_bor_b .S_line3 {
+    border-color: #ccc transparent transparent transparent
+}
+
+.zcenter_reward .W_arrow_bor em,.zcenter_reward  .rewardcomponent.feed_app_btn_a .W_arrow_bor i {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 7px;
+    border-style: solid;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top
+}
+
+.zcenter_reward .W_layer .W_arrow_bor_b .S_bg2_br {
+    border-color: #fff transparent transparent transparent
+}
+
+.zcenter_reward .W_arrow_bor_b em {
+    margin: -1px 0 0 -14px
+}
+
+.zcenter_reward .W_arrow_bor_b em,.zcenter_reward  .W_arrow_bor_b i {
+    _border-style: solid dashed dashed dashed;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent
+}
+
+.zcenter_reward .W_arrow_bor em,.zcenter_reward  .W_arrow_bor i {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 7px;
+    border-style: solid;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top
+}
+
+.zcenter_reward .endzy-reward-page {
+    text-align: center
+}
+
+.zcenter_reward .endzy-reward-page a {
+    text-decoration: none
+}
+
+.zcenter_reward .endzy-reward-page .reward-content {
+    border: none
+}
+
+.zcenter_reward .endzy-reward-page .reward-content {
+    background: #fff;
+    width: 460px;
+    border-radius: 2px;
+    font-family: "????????????";
+    margin: 0 auto
+}
+
+.zcenter_reward #S_CSS_payReward_css_rewardModule {
+    height: 42px
+}
+
+.zcenter_reward #reward-plugin{
+    display:none;
+}
+
+
+.zcenter_reward .background{
+    position: fixed;
+    margin-top: -10px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    background : white;
+}
+.zcenter_reward div.reward-content-pagecenter{
+    position: fixed;
+    left: 30%;
+    top: 30%;
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.zcenter_reward div#reward-plugin{
+    display: none;
+}
+
+.zcenter_reward .center{
+    margin: 0 auto;
+}
+
+.zcenter_reward a.reward-pay{
+    text-decoration:none;
+}
+.zcenter_reward h3.reward-title{
+    margin : 0;
+}
+.zcenter_reward .reward-content-pagecenter h3 {
+    font-size: 18px;
+}
+.zcenter_reward  p{
+text-indent:0 !important;
+}

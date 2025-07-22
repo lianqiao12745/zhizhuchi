@@ -1,0 +1,11 @@
+<div class="navbar-wrap">
+  <div class="navbar">
+    <h1 class="logo" id=""><a title="{网站名称}" href="/">{网站名称}</a></h1>
+    <ul class="nav">
+	  <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><i class="zm zm-shouye"></i><span class="font-text">网站首页</span></a></li> 
+			 {loop type="typename" row="5"}
+			<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{$vo.typeurl}">{$vo.typename}</a></li> 
+			{/loop}
+    </ul>
+  </div>
+</div>

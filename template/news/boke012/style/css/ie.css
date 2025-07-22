@@ -1,0 +1,9 @@
+﻿.widget .search-form input.search-field,
+.not-found .search-form .search-field {
+	padding: 10px;
+	height: 40px;
+}
+.search-form .search-submit {
+	padding: 14px;
+	height: 40px;
+}

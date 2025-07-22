@@ -1,0 +1,26 @@
+  <header id="masthead" class="site-header">
+    <div id="menu-box">
+      <div id="top-menu">
+        <hgroup class="logo-site">
+          <h1 class="site-title" id=""> <a href="/" title="{网站名称}"> <img src="{$theme_path}/style/img/logo.png" width="220" height="50" alt="{网站名称}" /> <span>{网站名称}</span> </a> </h1>
+        </hgroup>
+        <!-- .logo-site -->
+        <div id="site-nav-wrap">
+          <div id="sidr-close"> <a href="{网站地址}/#sidr-close" class="toggle-sidr-close">X</a> </div>
+          <nav id="site-nav" class="main-nav"> <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa fa-bars"></i></a>
+            <div class="menu-%e8%8f%9c%e5%8d%951-container">
+              <ul id="menu-%e8%8f%9c%e5%8d%951" class="down-menu nav-menu">
+                 <li><a href="/">首页</a></li>
+				 {loop type="typename" row="6"}
+				<li><a href="{$vo.typeurl}">{$vo.typename}</a></li>
+				 {/loop}
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- #site-nav-wrap -->
+      </div>
+      <!-- #top-menu -->
+    </div>
+    <!-- #menu-box -->
+  </header>

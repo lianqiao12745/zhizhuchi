@@ -1,0 +1,27 @@
+  <header id="masthead" class="site-header" role="banner">
+    <div class="site-branding">
+      <div class="inner clearfix">
+        <div class="site-title logo">
+          <meta itemprop="logo" content="{$theme_path}/style/img/mekanews-logo.png">
+          <h1 class="image-logo" itemprop="headline"> <a itemprop="url" href="/" rel="home" title="{longshao_webkeywords}" id=""> <img src="{$theme_path}/style/img/mekanews-logo.png" id="" alt="{网站名称}"/> </a> </h1>
+        </div>
+      </div>
+      <!-- inner -->
+    </div>
+    <!-- site-branding -->
+    <div  id="sticky" class="menu-container">
+      <div class="inner clearfix">
+        <nav id="site-navigation" class="secondary-navigation" role="navigation"> <span class="mobile-only mobile-menu menu-toggle" aria-controls="menu-main-menu" aria-expanded="false">Menu</span>
+          <ul id="menu-main-menu" class="menu">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><i class="fa fa-home"></i>首页</a></li> 
+			 {loop type="typename" row="8"}
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{$vo.typeurl}">{$vo.typename}</a></li> 
+			{/loop}
+          </ul>
+        </nav>
+        <!-- #site-navigation -->
+      </div>
+      <!-- inner -->
+    </div>
+    <div id="catcher"></div>
+  </header>

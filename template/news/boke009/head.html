@@ -1,0 +1,27 @@
+  <header id="masthead" class="site-header" role="banner">
+      <div class="header">
+        <div class="inner clearfix">
+          <div class="site-branding">
+            <meta itemprop="logo"/>
+            <h1 class="site-title logo" itemprop="headline"> <a itemprop="url" href="/" rel="home"> <img src="{$theme_path}/style/img/Themecountry_New.png" id="{网站名称}" /> </a></h1>
+          </div>
+          <!-- .site-branding -->
+          <nav id="site-navigation" class="main-navigation" role="navigation"> <span class="toggle-mobile-menu mobile-only"><i class="fa fa-bars"></i>导航</span>
+            <ul id="menu-main-menu" class="menu clearfix">
+              <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><span>首页</span></a></li> 
+			 {loop type="typename" row="5"}
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{$vo.typeurl}"><span>{$vo.typename}</span></a></li> 
+			{/loop}
+            </ul>
+          </nav>
+          <!-- #site-navigation -->
+        </div>
+      </div>
+    </header>
+    <!-- #masthead -->
+    <div id="content" class="site-content">
+      <header class="page-header">
+        <div class="inner">
+          <div class="page-title">这里是「{随机关键词}」的博客,一个有趣、特别、认真de地方</div>
+        </div>
+      </header>
