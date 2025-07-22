@@ -1,0 +1,21 @@
+<header>
+  <div class="cap-top">
+    <div class="container"> <span>欢迎来到{网站名称}官网</span> </div>
+  </div>
+  <div class="lo-yx-logo">
+    <div class="container"> <a href="/" title="{网站名称}"> <img  class="lo-yx-logo_img" src="{$theme_path}/images/lo-yx-logo.png"  alt="{随机关键词}"/> </a> </div>
+  </div>
+  <div class="dao-dh">
+    <div class="container navFlex">
+      <div class="flexItem hiden"> <img class="btnImg" src="{$theme_path}/images/navBtn.png"  alt="{随机关键词}"/> </div>
+      <div class="flexItem show dao-dh_li">
+        <ul>
+          <li><a href="/">首页</a></li>
+           {loop type="typename" type1="top" row="8"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <![endif]-->
+<script>
+    $(document).ready(function(){
+      $('#carousel').carousel({interval:3000});  //每隔5秒自动轮播
+    });
+  </script>
+</head>
+<body>
+{include file="head.html"}
+<div class="container news_n">
+  <div class="col-md-8 col-sm-12">
+    <ul class="breadcrumb">
+       <span>位置：</span>
+          <li><a href="/">{网站名称}</a></li>
+          <li class="active">{当前栏目}</li>
+    </ul>
+    <h4 class="text-center"><strong>{$title}</strong></h4>
+    <div class="ti"> <span>来源：{随机关键词}</span> <span>时间：{$postdate}</span> </div>
+    <div class="news_n_ml">
+      <p style="line-height: 30px;">{$body} </p>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-12">
+    <div class="side_con">
+      <h5 class="side">热点文章</h5>
+      <div class="line"></div>
+      <ul class="side_ml">
+        {loop type="arclist" row="6" info=1 }
+        <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}"</a></li>
+		 {/loop}
+      </ul>
+    </div>
+    <div class="ipc_text">
+      <h5 class="side">精彩图文</h5>
+      <div class="line"></div>
+      <ul>
+		
+		  {loop type="arclist" row="4" info=1 image=1 }
+            <li><a href="{$vo.url}" title="{$vo.title}"><img src="{$vo.pic}" width="120" height="100"><span>{$vo.title}</span></a></li>
+			 {/loop}
+      </ul>
+    </div>
+  </div>
+</div>
+{include file="footer.html" }
+<script type="text/javascript" src="{$theme_path}/js/pgwNav.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.pgwNav').pgwMenu({
+      dropDownLabel: '更多' +
+      '<li><a href="">首页</a></li>',
+      viewMoreLabel: '更多<span class="icon"></span>'
+    });
+  });
+</script>
+</body>
+</html>

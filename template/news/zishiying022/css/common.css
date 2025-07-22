@@ -1,0 +1,89 @@
+/*2019-11-27*/
+*{margin: 0;padding: 0}
+.container a:hover{ text-decoration:none;}
+ul{list-style-type: none;margin: 0;padding: 0}
+h1{margin: 0;padding: 0;font-weight: bold;width:100%;}
+.main_logo{font-size: 3rem;padding: 30px 10px;text-align:left;float:left;}
+.top_nav .show{display:inline-block;}
+.top_nav .hiden{display:none;}
+.top_nav{width:100%;background-color:#f2f2f2;margin-bottom: 5px;border-top:2px solid #003399;}
+.top_nav .navFlex {display: flex;color: white;display: -webkit-flex;/* justify-content: space-between;-webkit-justify-content: space-between; align-items: center; -webkit-align-content: center; */}
+.top_nav ul{list-style:none;margin-bottom:0px;padding-left:0px;}
+.top_nav ul li{padding:10px 15px;display:inline-block;}
+.top_nav ul li a{padding-bottom:2px;text-decoration:none;border-bottom:3px solid transparent;font-weight: bold;}
+.top_nav ul li a:hover{}
+.top_nav .btnImg{height:20px;width:25px;padding:3px 8px 3px 8px;box-sizing:content-box;border:1px solid transparent;}
+.main_ban img{width: 100%;height: 85px;}
+
+.main_conter{margin-top: 10px;}
+.main_items h4 {text-align:left;border-bottom:1px solid #014d98;font-weight:bold;padding: 10px;margin: 0;font-size: 16px;color: #014db3}
+.main_items-ms{padding: 8px 5px 5px;margin-bottom: 0;}
+.main_items-ms>li{line-height: 28px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left:12px; background:url(../images/dd.png) no-repeat scroll 1px center;}
+.main_items-ms li a {color:#333;}
+.main_items-ms li a:hover {color:#014db3;}
+.main_items-ms li span{float:right; padding-right:5px; font-size:12px;color:#0090ff;}
+.won_pt{border: 1px solid #e4e4e4;display: inline-block; margin-top:10px; margin-bottom:10px; padding-bottom:10px;}
+.won_pt_news .pic{display:block;margin-bottom:10px;}
+.won_pt_news .pic img{width: 100%;}
+.won_pt_news .sTit{text-align:left;line-height:22px;padding:0 5px;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;}
+.won_pt_news{margin-top: 10px; padding-bottom:10px;}
+.won_pt_news_i{padding: 0;margin: 0;}
+.won_pt_news_i h4 {padding: 10px;margin: 0;text-align:left;border-bottom:1px solid #014d98;font-weight:bold;font-size: 16px;color: #014db3}
+.main_links h4 {text-align:left;border-bottom:1px solid #014d98;font-weight:bold;padding: 10px;margin: 0;font-size: 16px;color: #014db3}
+.main_links_ks{padding: 15px 0;}
+.main_links_ks li{display: inline-block;padding-right: 10px;padding-left: 10px;font-size: 16px;font-weight: 600;}
+.main_links_ks li a{font-weight: normal;font-size: 14px;}
+.main_bottom{padding: 5px;color: #333;font-size: 12px;background:#f2f2f2;line-height:14px;}
+.main_bottom p:first-child{margin-top: 10px;}
+.main_news{padding: 8px 0;border-bottom: 1px solid #e4e4e4;}
+.main_news span{float: right;color: #a1a1a1;padding-right: 10px; font-size:12px; font-weight:normal;}
+.main_news>li{font-size:14px;line-height: 32px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left: 18px;background: url("../images/dd.png") no-repeat 6px center;}
+.main_news_ws h2{font-size:16px;font-weight: bold;padding: 15px 10px 15px 20px;border-bottom:1px solid #014d98;color:#014d98; margin:0px;}
+.main_hot{border: 1px solid #e4e4e4;margin-bottom: 10px;margin-top: 46px;height:100%;}
+.main_hot h4{background:#014d98;color:#fff;margin:0; height:100%; line-height:38px;font-size:16px;padding-left: 10px;}
+.main_hot_ot{padding-bottom: 10px;padding-top: 8px;}
+.main_hot_ot>li{line-height: 28px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left: 10px;}
+.main_details{padding: 10px 20px;border: solid 1px #e4e4e4;margin-top: 6px;}
+.main_details h2{font-size: 2.2rem;font-weight: 600;line-height: 30px;text-align: center; margin-top:10px;}
+.main_details_ls{color:#999;text-align:center;margin:10px 40px 20px 40px;overflow:hidden;padding:5px 10px;font-size: 12px;border-bottom: 1px solid #e4e4e4;}
+.main_details_ls a,.page_details_ls span{margin-right:15px}
+.main_details_ls a{color:#949494}
+.main_details_ls a:hover{color:#0090ff}
+.main_details_con {line-height: 22px;text-indent: 2em;}
+.main_details_con img{max-width: 100%;margin: 0 auto;vertical-align: middle;display: block;}
+.main_details_ud{padding: 10px 0;border: solid 1px #e4e4e4;margin-top: 10px;margin-bottom: 10px;}
+.main_details_ud a{font-size: 12px;}
+.main_details_ud a:hover{color: #0090ff;}
+.main_details_ud li{line-height: 23px;padding-left: 5px;padding-right: 5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.mt5{margin-top: 5px;}
+.breadcrumb span{font-size: 12px;color: #6B6B6B;}
+.pagination>li>a, .pagination>li>span{padding: 1px 4px;margin-left: 1px;}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover{background: none;border: none;font-weight: bold;}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{color: #ff0000;background: none;border: none;font-weight: bold;}
+.pagination>li>a, .pagination>li>span{border:none;font-size: 12px;}
+@media screen and (max-width:1200px){.top_nav ul li{margin-left:20px;}}
+@media screen and (max-width:992px){.top_nav ul li{margin-left:10px;}}
+@media screen and (max-width:768px){
+	.top_nav ul li:nth-child(4),.top_nav ul li:nth-child(5){display:none;}
+}
+@media screen and (max-width:576px){
+	.top_nav{background-color:#f2f2f2;padding:5px 0px 5px 0px;opacity:0.9;}
+	.top_nav .navFlex{flex-wrap:wrap;font-size:20px;justify-content:space-between;}
+	.top_nav .logo{height:30px;}
+	.top_nav ul li{padding-top:10px;margin-left:0px;display:block;}
+	.top_nav ul li a{border-bottom:3px solid transparent;}
+	.top_nav ul a:hover{border-bottom:3px solid #003399;}
+	.top_nav ul li:nth-child(4),.top_nav ul li:nth-child(5){display:block;}
+	.top_nav .hiden{display:block;}
+	.top_nav .show{width:100%;font-size:14px;text-align:center;display:none;}
+	.breadcrumb{padding-left: 10px;}
+	.main_hot_div>li{padding-left: 0;}
+	.main_news span{display: none;}
+	.main_news{margin-right: 10px;}
+    .won_pt_news .sTit{text-align:left;line-height:22px;padding:0 5px;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;}	
+	.won_pt_news .pic{margin-left:5px;margin-right: 5px;}
+	.main_ban img{height: 35px;}
+	.main_hot{margin-top: 10px;}
+    .main_logo{font-size: 2.2rem;padding: 20px 10px;font-weight: bold;}	
+    .main_details h2{font-size: 1.5rem;}	
+}

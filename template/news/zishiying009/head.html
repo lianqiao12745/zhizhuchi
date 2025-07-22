@@ -1,0 +1,15 @@
+<div class="toubu">
+  <div class="container"> <a href="/" title="{网站名称}">
+    <div class="biaozhi text-left">{网站名称}</div>
+    </a> </div>
+</div>
+<div class="daohang">
+  <div class="container">
+    <ul class="daohangLi">
+      <li><a class="selected" href="/">首页</a></li>
+       {loop type="typename" type1="top" row="10"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+    </ul>
+  </div>
+</div>

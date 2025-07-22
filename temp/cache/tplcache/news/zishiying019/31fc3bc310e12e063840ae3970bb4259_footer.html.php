@@ -1,0 +1,2 @@
+<?php if(!defined('INI_XXFSEO')){define('INI_XXFSEO',true);} ?><p>copyright &copy; 2016 powered by <a href="<?php echo $this->_var['web_url']; ?>"><?php echo $this->_var['web_name']; ?></a>&nbsp;&nbsp;<?php echo $this->_var['web_tongji']; ?> <a href="http://<?php echo $this->_var['host']; ?>/sitemap.xml">sitemap</a></p>
+  <p><?php echo $this->_var['web_share']; ?><?php echo $this->_var['web_bdpush']; ?><?php echo $this->_var['web_tongji']; ?><?php echo $this->_var['web_bdpush']; ?><?php echo $this->_var['web_share']; ?></p>

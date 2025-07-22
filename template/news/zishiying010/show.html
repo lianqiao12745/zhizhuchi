@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+</head>
+<body>
+{include file="head.html" }
+<div class="container">
+  <div class="col-md-8 col-sm-12">
+    <ul class="breadcrumb">
+      <li><a href="{网站地址}">{网站名称}</a></li>
+      <li><a href="{当前栏目URL}">{当前栏目}</a></li>
+      <li class="active">正文</li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="col-md-8 col-sm-12">
+    <div class="xqxq">
+      <h3 class="text-center xwxq-ti"><strong>{$title}</strong></h3>
+      <div class="xwxq-ti-fu"> <span>时间:{$postdate}</span> <span>分类：{当前栏目}</span> <span>编辑：{随机关键词}</span> </div>
+      <div class="xwxq-ti-c"> {$body} </p>
+      </div>
+      <div class="xqxq-lj">本文地址：{当前地址}</div>
+      <div class="xwxq-m">
+        <ul>
+          {loop type="arclist" row="1" }
+        <li><a href="{$vo.url}" title="">【上一篇】{$vo.title}</a></li>
+		{/loop}
+		{loop type="arclist" row="1"}
+        <li><a href="{$vo.url}" title="">【下一篇】{$vo.title}</a></li>
+		{/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-12">
+    <div class="xwlb">
+      <h4>关注焦点</h4>
+      <ul class="xwlb-xw">
+         {loop type="arclist" row="5"  image=1}
+          <li class="xwlb-xw-xx">
+            <div class="xwlb-xw-xxm">
+              <div class="xwlb-xw-xxi"> <a href="{$vo.url}" title="{$vo.title}"> <img src="{$vo.pic}" alt="{$vo.title}"> </a> </div>
+              <div class="xwlb-xw-xxc"> <a href="{$vo.url}" title="{$vo.title}"> {$vo.title} </a> <span class="rq">{$vo.postdate}</span> </div>
+            </div>
+          </li>
+          {/loop}
+      </ul>
+    </div>
+    <div class="rdzx">
+      <h4>热点资讯</h4>
+      <ul class="rdzx-rd">
+        {loop type="arclist" row="5"}
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a>
+            <p class="rq">{$vo.postdate}</p>
+          </li>
+		   {/loop}
+      </ul>
+    </div>
+  </div>
+</div>
+{include file="footer.html" }
+<script src="{$theme_path}/js/jquery.min.js"></script>
+<script type="text/javascript">
+  //用于判断导航栏的状态
+  var toggle = true;
+
+  //导航栏按钮
+  $('.btnImg').click(function() {
+    if (toggle) {
+      $('.btnImg').css("border", "1px solid #b0ccf3");
+      toggle = false
+    } else {
+      $('.btnImg').css("border", "1px solid transparent");
+      toggle = true;
+    }
+    $(".show").slideToggle(300);
+  })
+
+  //窗口大小发生改变
+  $(window).resize(function() {
+    //获取窗口宽度
+    var windSize = $(window).width();
+
+    if (windSize > 576) {
+      $(".show").slideDown(0);
+    } else {
+      $(".show").slideUp(0);
+    }
+  });
+</script>
+</body>
+</html>

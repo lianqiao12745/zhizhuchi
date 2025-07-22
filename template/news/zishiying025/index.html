@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="applicable-device" content="pc,mobile">
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/frame.css">
+<script src="{$theme_path}/js/jquery.js"></script>
+<script type="text/javascript" src="{$theme_path}/js/index.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      $('.nav_yls').pgwMenu({
+        mainClassName: 'nav_yls',
+        dropDownLabel: '导航',
+        viewMoreLabel: '更多<span class="icon"></span>'
+      });
+    });
+  </script>
+</head>
+<body>
+{include file="head.html" }
+<div class="container news_yl">
+  <div class="row clearfix">
+    <div class="col-md-8 col-sm-12">
+      <div class="row clearfix">
+        <div class="col-md-6 col-sm-12">
+          <div class="n_news_yl">
+            <div class="row clearfix">
+              <h4 class="text-left">{随机栏目}</h4>
+              <ul class="n_news_yli">
+                {loop type="arclist" row="8" }
+				<li><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+				{/loop} 
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="n_news_yl">
+            <div class="row clearfix">
+              <h4 class="text-left">{随机栏目}</h4>
+              <ul class="n_news_yli">
+                {loop type="arclist" row="8" }
+				<li><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+				{/loop} 
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="n_news_yl">
+            <div class="row clearfix">
+              <h4 class="text-left">{随机栏目}</h4>
+              <ul class="n_news_yli">
+                {loop type="arclist" row="8" }
+				<li><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+				{/loop} 
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="n_news_yl">
+            <div class="row clearfix">
+              <h4 class="text-left">{随机栏目}</h4>
+              <ul class="n_news_yli">
+                {loop type="arclist" row="8" }
+				<li><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+				{/loop} 
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="n_news_yl">
+            <div class="row clearfix">
+              <h4 class="text-left">{随机栏目}</h4>
+              <ul class="n_news_yli">
+                {loop type="arclist" row="8" }
+				<li><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+				{/loop} 
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="n_news_yl">
+            <div class="row clearfix">
+              <h4 class="text-left">{随机栏目}</h4>
+              <ul class="n_news_yli">
+                {loop type="arclist" row="8" }
+				<li><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+				{/loop} 
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="news_list_r">
+        <div class="Intro">
+          <h5 class="text-left">今日关注</h5>
+          <ul class="Intro_yl">
+             {loop type="arclist" row="8" }
+				<li><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+				{/loop} 
+          </ul>
+        </div>
+        <div class="r_recomm clearfix">
+          <h5 class="text-left">热门推荐</h5>
+          <div class="r_recomm_yl">
+		  {loop type="arclist" row="4"  image=1}
+            <div class="sl"> <a href="{$vo.url}" title="{$vo.title}"> <img  src="{$vo.pic}" alt="{$vo.title}">
+              <p>{$vo.title}</p>
+              </a> </div>
+			{/loop} 
+          </div>
+        </div>
+        <div class="c_contact clearfix">
+          <h5 class="text-left">关于本站</h5>
+          <ul class="c_contact_yl">
+            <li id="">网站名称：{网站名称}</li>
+            <li id="">网址：{网站地址}</li>
+            <li id="">网站类型：{随机关键词}</li>
+          </ul>
+        </div>
+        <div class="l_links clearfix">
+          <h5 id="">友情链接</h5>
+          <ul class="l_links_yl">
+            {loop type="link"}
+		  <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+		  {/loop}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="container foot_yl text-center">
+    {include file="footer.html" }
+</footer>
+</body>
+</html>

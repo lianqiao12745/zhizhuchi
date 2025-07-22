@@ -1,0 +1,13 @@
+<div class="container"> <a href="/" title="{网站名称}">
+  <div class="ta_tag text-left">{网站名称}</div>
+  </a> </div>
+<div class="na_nav">
+  <div class="container">
+    <ul class="nar_nav">
+      <li><a class="selected" href="/">首页</a></li>
+       {loop type="typename" type1="top" row="8"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+    </ul>
+  </div>
+</div>

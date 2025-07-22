@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+<script>
+      $(document).ready(function(){
+        $('#carousel-374500').carousel({interval:3000});
+      });
+    </script>
+</head>
+<body>
+<div id="" class="top">
+  <div id="" class="container"> <span>&#72;&#105;&#44;&#24744;&#29616;&#22312;&#35775;&#38382;&#30340;&#26159;{网站名称}&#39318;&#39029;&#46;</span>
+    <ul id="top-login" id="">
+    <a οnclick="setHome(this,window.location)">&#35774;&#20026;&#39318;&#39029;</a>
+    <script>
+			   function setHome(obj,vrl){
+        try{
+            obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+            if(window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }
+                catch (e) {
+                    alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage',vrl);
+            }
+        }
+    }
+</script>
+    | <a href="javascript:addFavorite()">&#21152;&#20837;&#25910;&#34255;</a>
+    <script>
+ function addFavorite() {
+        var url = window.location;
+        var title = document.title;
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("msie 8") > -1) {
+            external.AddToFavoritesBar(url, title, '');//IE8
+        } else {
+            try {
+                window.external.addFavorite(url, title);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(title, url, "");//firefox
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+    }
+</script>
+    </ul>
+  </div>
+</div>
+{include file="head.html"}
+<div id="" class="container banner"> <img id="" class="banner-img" src="{$theme_path}/images/banner.png" alt="{网站名称}"> </div>
+<div id="" class="container home-list">
+<div id="" class="row clearfix">
+<div id="" class="col-md-6 col-sm-12">
+  <h2 id="" class="text-left">热点推荐</h2>
+  <div id="" class="col-md-12 col-sm-12 column t1">
+    <div id="" class="carousel slide" id="carousel-374500">
+    <div id="" class="carousel-inner">
+    {loop type="arclist" row="1"  image='1'}
+      <div class="item active"> <a href="{$vo.url}" id="" title="{$vo.title}"> <img alt="{$vo.title}" src="{$vo.pic}" />
+        <p>{$vo.title}</p>
+        </a> </div>
+	{/loop}
+    </div>
+  </div>
+</div>
+<div id="" class="list-ul">
+<ul id="">
+{loop type="arclist" row="4"  image='1' info=1}
+<li id="" class="list-li"> <a href="{$vo.url}" title="{$vo.title}"><strong>{$vo.title}</strong></a>
+  <div id="" class="home-list-left">
+    <div id="" class="home-list-left1"><a href="{$vo.url}" id=""><img src="{$vo.pic}" alt="{$vo.title}"></a></div>
+    <div id="" class="home-list-left2">{$vo.info}..[<a href="" id=""><b>详细</b></a>]</div>
+  </div>
+</li>
+ {/loop}
+<ul>
+</div>
+<div id="" class="home-list-1 dis">
+  <h2 id="" class="text-left">关于本站</h2>
+  <ul id="" class="about">
+    <li id="">域名：{网站地址}</li>
+    <li id="">名称：{网站名称}</li>
+  </ul>
+</div>
+{include file="footer.html" }
+<div id="" class="home-list-1 dis">
+  <h2 id="">友情链接</h2>
+  <ul id="" class="links-list">
+      {loop type="link"}
+	<li ><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+	  {/loop}
+  </ul>
+</div>
+</div>
+<div id="" class="col-md-6 col-sm-12">
+  <div id="" class="home-list-1">
+    <h2 id="" class="text-left"><a href="{随机栏目URL}">{随机栏目}</a></h2>
+    <ul id="" class="home-a">
+      {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}<span>{$vo.postdate}</span></a></li>
+      {/loop}
+    </ul>
+  </div>
+  <div class="home-list-1">
+    <h2 class="text-left"><a href="{随机栏目URL}">{随机栏目}</a></h2>
+    <ul class="home-a">
+      {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}<span>{$vo.postdate}</span></a></li>
+      {/loop}
+    </ul>
+  </div>
+  <div class="home-list-1">
+    <h2 class="text-left"><a href="{随机栏目URL}">{随机栏目}</a></h2>
+    <ul class="home-a">
+       {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}<span>{$vo.postdate}</span></a></li>
+      {/loop}
+    </ul>
+  </div>
+  <div class="home-list-1">
+    <h2 class="text-left"><a href="{随机栏目URL}">{随机栏目}</a></h2>
+    <ul class="home-a">
+       {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}<span>{$vo.postdate}</span></a></li>
+      {/loop}
+    </ul>
+  </div>
+ 
+</div>
+</div>
+</div>
+<div id="" class="container footer text-center">
+  <p>copyright &copy; 2016 powered by <a href="{$web_url}">{$web_name}</a>&nbsp;&nbsp;{$web_tongji} <a href="http://{$host}/sitemap.xml">sitemap</a></p>
+  <p>{$web_share}{$web_bdpush}{统计代码}{百度推送代码}{分享代码}</p>
+</div>
+<script type="text/javascript" src="/tj.js"></script>
+</body>
+</html>

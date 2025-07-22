@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+<script>
+        $(document).ready(function(){
+            $('#carousel').carousel({interval:3000});  //每隔5秒自动轮播
+        });
+    </script>
+</head>
+<body>
+{include file="head.html" }
+<div class="container list-left">
+  <div class="row clearfix">
+    <div class="container">
+      <ul class="breadcrumb">
+        <span>位置：</span>
+        <li><a href="/">{网站名称}</a></li>
+        <li class="active">{当前栏目}</li>
+      </ul>
+    </div>
+    <div class="container ba2">
+      <div class="col-md-8 col-sm-12 xinwen">
+        <h4 class="redian">{当前栏目}</h4>
+        <div class="line"></div>
+        <ul>
+         {loop type="arclist"  image=1 row=10 info=1}
+		  <li class="xinwen_l">
+            <div class="xinwen_xw">
+              <div class="xinwen_img"> <a href="{$vo.url}" title=""> <img src="{$vo.pic}" alt="{$vo.title}"> </a> </div>
+              <div class="xinwen_tit"> <a href="{$vo.url}" title=""> <strong>{$vo.title}</strong> </a> </div>
+              <div class="xinwen_con">{$vo.info}</div>
+              <div class="xinwen_date"><i class="glyphicon glyphicon-list-alt"></i>{$vo.postdate}</div>
+            </div>
+          </li>
+		   {/loop}
+        </ul>
+        <div class="yema">{loop type="typename" }<a href="{$vo.typeurl}">{$k+1}</a>{/loop}</div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="redian_con">
+          <h4 class="redian">一周热点</h4>
+          <div class="line"></div>
+          <ul class="redian_m">
+		  {loop type="arclist" row="6" }
+            <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+          {/loop}
+          </ul>
+        </div>
+        <div class="recomm">
+          <h4>编辑推荐</h4>
+          <ul class="recomm-ul">
+		  
+		  
+		  {loop type="arclist" row="6" image=1 }
+            <li class="xinwen_li">
+              <div class="xinwen_m">
+                <div class="xinwen_i"> <a href="{$vo.url}" title="{$vo.title}"> <img src="{$vo.pic}" alt="{$vo.title}"> </a> </div>
+                <div class="xinwen_c"> <a href="{$vo.url}" title="{$vo.title}"> {$vo.title} </a> </div>
+              </div>
+            </li>
+             {/loop}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="footer.html" }
+<script type="text/javascript" src="{$theme_path}/js/daohang.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('.daohangLi').pgwMenu({
+            dropDownLabel: '更多' +
+            '<li><a href="">首页</a></li>',
+            viewMoreLabel: '更多<span class="icon"></span>'
+        });
+    });
+</script>
+</body>
+</html>

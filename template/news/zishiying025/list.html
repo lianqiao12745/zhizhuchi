@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link rel="" type="image/x-icon" href="">
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/frame.css">
+<script src="{$theme_path}/js/jquery.js"></script>
+<script type="text/javascript" src="{$theme_path}/js/index.min.js"></script>
+<script type="text/javascript">
+        $(function() {
+            $('.nav_yls').pgwMenu({
+                mainClassName: 'nav_yls',
+                dropDownLabel: '导航',
+                viewMoreLabel: '更多<span class="icon"></span>'
+            });
+        });
+    </script>
+</head>
+<body>
+{include file="head.html" }
+<div class="container">
+  <div class="clearfix">
+    <div class="col-md-8 col-sm-12">
+      <div class="d_dynamic">
+        <h2>{当前栏目}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="clearfix">
+    <div class="col-md-8 col-sm-12">
+      <div class="d_dynamic">
+        <ul class="d_dynamic_yl">
+         
+		 {loop type="arclist" row="20"  }		 
+		  <li><a href="{$vo.url}" title="{$vo.title}">
+            <div class="d_dynamic_ylt">{$vo.title}</div>
+            </a><span>{$vo.postdate}</span> </li>
+           {/loop} 
+        </ul>
+        <div class="text-center">
+          <ul class="pagination">
+            <li><span>上一页</span></li>
+             {loop type="typename" }
+            <li><a href="{$vo.typeurl}">{$k+1}</a></li>
+			{/loop}
+            <li><a href="#">下一页</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="news_list_r">
+        <div class="Intro">
+          <h5 class="text-left">一周热点</h5>
+          <ul class="Intro_yl">
+            {loop type="arclist" row="8" }
+          <li > <a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a> </li>
+           {/loop}
+          </ul>
+        </div>
+        <div class="r_recomm clearfix">
+          <h5 class="text-left">精彩推荐</h5>
+          <div class="r_recomm_yl">
+           {loop type="arclist" row="4"  image=1}
+            <div class="sl"> <a href="{$vo.url}" title="{$vo.title}"> <img  src="{$vo.pic}" alt="{$vo.title}">
+              <p>{$vo.title}</p>
+              </a> </div>
+			{/loop} 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="container foot_yl text-center">
+  {include file="footer.html" }
+</footer>
+</body>
+</html>

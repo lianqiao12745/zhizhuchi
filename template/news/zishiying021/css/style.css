@@ -1,0 +1,80 @@
+/*2019-11-27*/
+ul{list-style-type: none;margin: 0;padding: 0}
+@media(min-width:1200px){.container{width: 1180px;}}
+a,a:visited{}
+a:hover{ text-decoration:none;}
+.sign-mark{padding: 20px 10px;font-weight: bold;}
+.sign-mark h1{margin:0; padding:0; line-height:50px;font-size:3rem;font-weight:bold;}
+.nav-column .show{display:inline-block;}
+.nav-column .hiden{display:none;}
+.nav-column{width:100%;background-color:#3888eb;}
+.nav-column .navFlex {display: flex;color: white;display: -webkit-flex;/* justify-content: space-between;-webkit-justify-content: space-between; align-items: center; -webkit-align-content: center; */}
+.nav-column ul{list-style:none;margin-bottom:0px;padding-left:0px;}
+.nav-column ul li{padding:10px 15px;display:inline-block;}
+.nav-column ul li a{color:white;padding-bottom:2px;text-decoration:none;border-bottom:3px solid transparent;font-weight: bold;}
+.nav-column ul li a:hover{border-bottom:3px solid #3888eb;}
+.nav-column .btnImg{height:20px;width:25px;padding:3px 8px 3px 8px;box-sizing:content-box;border:1px solid transparent;}
+.mian-c{margin-top: 10px;}
+.news-xw_list h4 {text-align:left;border-bottom:1px solid #e4e4e4;font-weight:bold;padding: 10px;margin: 0;font-size: 16px;color: #6b6b83}
+.news-xw_list-ms{padding: 5px;margin-bottom: 0;}
+.news-xw_list-ms>li{color:#0090ff;line-height: 35px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left:15px; background:url(../images/ico.png) no-repeat scroll 1px center;}
+.news-xw_list-ms li a {color:#0090ff;}
+.news-xw_list-ms li a:hover {color:#0090ff; text-decoration:underline;}
+.news-xw_p .pic{display:block;margin-bottom:10px;border: 1px solid #e4e4e4;}
+.news-xw_p .pic img{width: 100%;}
+.news-xw_p .s12Tit{text-align:left;line-height:22px;padding:0 5px;height: 48px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.news-xw_p{margin-top: 10px;}
+.news-xw_pic{width:100%; overflow:hidden; margin:0px; padding:0px;}
+.news-xw_pic h4 {text-align:left;border-bottom:1px solid #e4e4e4;font-weight:bold;padding: 10px;margin: 0;font-size: 16px;color: #6b6b83}
+.friend-ship{padding: 10px;margin-top: 10px;border:1px dotted #e4e4e4; height:100%; line-height:32px; overflow:auto;}
+.friend-ship li{display: inline-block;padding-right: 10px;font-size: 16px;}
+.friend-ship li a{color: #0090ff;font-weight: normal;font-size: 14px;}
+.tail-end{padding: 6px;color: #333;font-size: 12px;border-top:1px solid #e4e4e4;margin-top: 10px; line-height:14px;}
+.tail-end p:first-child{margin-top: 10px;}
+.trends-united{padding-top:2px; padding-bottom:10px;}
+.trends-united span{float: right;color: #a1a1a1;font-size: 12px;}
+.trends-united>li{font-size:14px;line-height: 44px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border-bottom: 1px dotted #e4e4e4;padding-left: 10px;}
+.trends-unite h2{font-size:18px; margin:0;font-weight: bold; height:60px; line-height:60px; padding-left:10px;border-bottom:2px solid #e4e4e4;}
+.about-syner{border: 1px solid #e4e4e4;margin-bottom: 10px;margin-top: 58px;}
+.about-syner h4 {background:#f2f2f2;font-size: 16px;padding-left: 10px; height:40px; line-height:40px; margin:0}
+.about-syner_div{padding-bottom: 10px;padding-left: 4px;padding-right: 10px;padding-top: 8px;}
+.about-syner_div>li{line-height: 28px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-left: 10px;}
+.news-xw_news{padding: 10px 0;border: solid 1px #e4e4e4;margin-top: 16px;}
+.news-xw_news h2{font-size: 22px;font-weight: 600;line-height: 26px;text-align: center; margin-top:15px;}
+.news-xw_news_div{color:#999;text-align:center; margin:15px auto; width:60%;padding:5px 10px;font-size: 12px;}
+.news-xw_news_div a{color:#949494}
+.news-xw_news_div a:hover{color:#0090ff}
+.news-xw_news_con{line-height: 22px; margin:0; padding:0 20px;}
+.news-xw_news_con p{}
+.news-xw_news_con img{max-width: 100%;margin: 0 auto;vertical-align: middle;display: block;}
+.ls-m{padding: 10px;border: solid 1px #e4e4e4;margin-top: 10px;margin-bottom: 10px;}
+.ls-m a{}
+.ls-m a:hover{color: #0090ff;}
+.ls-m li{line-height: 23px;color: #949494;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.mt-5{margin-top: 6px; padding-left:5px;}
+.breadcrumb span{font-size: 12px;color: #6B6B6B;}
+
+@media screen and (max-width:1200px){.nav-column ul li{margin-left:20px;}}
+@media screen and (max-width:992px){.nav-column ul li{margin-left:10px;}}
+@media screen and (max-width:768px){
+	.nav-column ul li:nth-child(4),.nav-column ul li:nth-child(5){display:none;}
+}
+@media screen and (max-width:576px){
+	.nav-column{background-color:#3888eb;padding:5px 0px 5px 0px;opacity:0.9;}
+	.nav-column .navFlex{flex-wrap:wrap;font-size:20px;justify-content:space-between;}
+	.nav-column .logo{height:30px;}
+	.nav-column ul li{padding-top:10px;margin-left:0px;display:block;}
+	.nav-column ul li a{border-bottom:3px solid transparent;}
+	.nav-column ul a:hover{border-bottom:3px solid #e4c17e;}
+	.nav-column ul li:nth-child(4),.nav-column ul li:nth-child(5){display:block;}
+	.nav-column .hiden{display:block;}
+	.nav-column .show{width:100%;font-size:14px;text-align:center;display:none;}
+	.breadcrumb{padding-left: 5px;}
+	.about-syner_div>li{padding-left: 5px;}
+	.trends-united span{display: none;}
+	.trends-united{margin-right: 10px;}
+	.news-xw_p .pic{margin-left:5px;margin-right: 5px;}
+	.about-syner{margin-top: 0}
+    .sign-mark h1{margin:0;font-size:2.3rem; padding:0;line-height:30px;}	
+    .sign-mark{padding: 15px 10px;font-weight: bold;}	
+}

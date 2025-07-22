@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+<script>
+      $(document).ready(function(){
+        $('#carousel').carousel({interval:3000});  //每隔5秒自动轮播
+       });
+    </script>
+</head>
+<body>
+{include file="head.html" }
+<div class="container mt-20">
+  <div class="row clearfix">
+    <div class="col-md-4 col-sm-12">
+      <div class="loop">
+        <div class="carousel slide" id="carousel">
+          <div class="carousel-inner">
+		   {loop type="arclist" row="3"  image=1}
+            <div class="item {if $vo.i==1} active{else} {/if}"> <a href="{$vo.url}" title="{$vo.title}" target="_blank"> <img alt="{$vo.title}" src="{$vo.pic}" />
+              <div class="carousel-caption">
+                <h4>{$vo.title}</h4>
+              </div>
+              </a> </div>
+			  {/loop}
+          </div>
+        </div>
+      </div>
+      <div class="index_tu mt-20">
+        <h5 class="text-left"><span class="index_news_tit">图说游戏</span></h5>
+        <ul class="index_tu_list">
+		 {loop type="arclist" row="4"  image=1}
+          <li> <a href="{$vo.url}" title="{$vo.title}" class="pic"><img src="{$vo.pic}" alt="{$vo.title}"></a>
+            <div class="sTit"> <a href="{$vo.url}" target="_blank" class="txt">{$vo.title}</a> </div>
+          </li>
+         {/loop}
+        </ul>
+      </div>
+      <div class="index_contact">
+        <h5 class="text-left"><span class="index_news_tit">关于我们</span></h5>
+        <ul>
+          <li>网站域名:{网站地址} </li>
+          <li><a href="{网站地址}" title="">网站名称：{网站名称}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12 index_news_list">
+      <div class="col-md-6 col-sm-12 index_news_list1">
+        <h5 class="text-left"><span class="index_news_tit"><a href="{随机栏目URL}">{随机栏目}</a></span></h5>
+        <ul class="index_news">
+           {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 index_news_list1">
+        <h5 class="text-left"><span class="index_news_tit"><a href="{随机栏目URL}">{随机栏目}</a></span></h5>
+        <ul class="index_news">
+          {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 index_news_list1">
+        <h5 class="text-left"><span class="index_news_tit"><a href="{随机栏目URL}">{随机栏目}</a></span></h5>
+        <ul class="index_news">
+           {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 index_news_list1">
+        <h5 class="text-left"><span class="index_news_tit"><a href="{随机栏目URL}">{随机栏目}</a></span></h5>
+        <ul class="index_news">
+           {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 index_news_list1">
+        <h5 class="text-left"><span class="index_news_tit"><a href="{随机栏目URL}">{随机栏目}</a></span></h5>
+        <ul class="index_news">
+           {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12 index_news_list1">
+        <h5 class="text-left"><span class="index_news_tit"><a href="{随机栏目URL}">{随机栏目}</a></span></h5>
+        <ul class="index_news">
+           {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="footer.html" }
+<script type="text/javascript" src="{$theme_path}/js/pgwNav.js"></script>
+<script type="text/javascript">
+          $(function() {
+            $('.pgwNav').pgwMenu({
+              dropDownLabel: '更多' +
+            '<li><a href="">首页</a></li>',
+              viewMoreLabel: '更多<span class="icon"></span>'
+            });
+          });
+        </script>
+</body>
+</html>

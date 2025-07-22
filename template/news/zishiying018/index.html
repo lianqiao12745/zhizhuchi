@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/main-page.css">
+</head>
+<body>
+{include file="head.html"}
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-4 col-sm-12">
+      <div class="carousel slide" id="carousel-18">
+        <div class="carousel-inner">
+		{loop type="arclist" row="3"  image=1}
+          <div class="item active"> <a href="{$vo.url}" title="{$vo.title}" target="_blank"> <img alt="{$vo.title}" src="{$vo.pic}" />
+            <div class="carousel-caption">
+              <h4>{$vo.title}</h4>
+            </div>
+            </a> </div>
+			{/loop}
+        </div>
+        <a class="left carousel-control" href="#carousel-18" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-18" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <ul class="index_xwlb_items">
+         {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <ul class="ne_newslist ne_newslist_st">
+	  {loop type="arclist" row="2"  image=1}
+        <li class="item">
+          <div class="item-con">
+            <div class="pic"> <a href="{$vo.url}" target="_blank" class="avatar"> <img src="{$vo.pic}" alt="{$vo.title}"> </a> </div>
+            <div class="text"> <a href="{$vo.url}" target="_blank">
+              <div class="tit">{$vo.title}</div>
+              </a>
+              <div class="info">
+                <div class="c2"> <span class="date">{$vo.postdate}</span> </div>
+              </div>
+            </div>
+          </div>
+        </li>
+		{/loop}       
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container lr">
+  <div class="row clearfix">
+    <div class="col-md-4 col-sm-12 home_newslist">
+      <div class="home_newslist_ls">
+        <h5 class="text-left">{随机栏目}</h5>
+        <ul class="home_newslist_lst">
+           {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 home_newslist">
+      <div class="home_newslist_ls">
+        <h5 class="text-left">{随机栏目}</h5>
+        <ul class="home_newslist_lst">
+           {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 home_newslist">
+      <div class="home_newslist_ls">
+        <h5 class="text-left">{随机栏目}</h5>
+        <ul class="home_newslist_lst">
+           {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 home_newslist">
+      <div class="home_newslist_ls">
+        <h5 class="text-left">{随机栏目}</h5>
+        <ul class="home_newslist_lst">
+           {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 home_newslist">
+      <div class="home_newslist_ls">
+        <h5 class="text-left">{随机栏目}</h5>
+        <ul class="home_newslist_lst">
+           {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 home_newslist">
+      <div class="home_newslist_ls">
+        <h5 class="text-left">{随机栏目}</h5>
+        <ul class="home_newslist_lst">
+           {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12 col-sm-12 fr_friend">
+      <div class="fr_friend_nd">
+        <h5 class="text-left">友情链接</h5>
+        <ul class="friend_ndli">
+          {loop type="link"}
+		   <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+		  {/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="container ta_tail text-center">
+  {include file="footer.html" }
+</footer>
+<script src="{$theme_path}/js/jquery.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+<script>
+	  $(document).ready(function(){
+		  $('#carousel-18').carousel({interval:3000});  //每隔5秒自动轮播
+	  });
+  </script>
+<script src="{$theme_path}/js/main.js"></script>
+<script type="text/javascript">
+	  $(function() {
+		  $('.nav_daohang').pgwMenu({
+			  dropDownLabel: '导航',
+			  viewMoreLabel: '更多<span class="icon"></span>'
+		  });
+
+	  });
+  </script>
+</body>
+</html>

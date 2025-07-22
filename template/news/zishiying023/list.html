@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="applicable-device" content="pc,mobile">
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+</head>
+<body>
+{include file="head.html" }
+<div class="container">
+  <div class="clearfix">
+    <div class="col-md-12 col-sm-12">
+      <div class="news_map">
+        <ul class="breadcrumb">
+          <span>当前位置：</span>
+          <li><a href="/">首页</a></li>
+          <li class="active">{当前栏目}</li>
+        </ul>
+      </div>
+      <div class="news">
+        <ul class="news_con">
+          {loop type="arclist" row="20"  }		 
+		  <li><a href="{$vo.url}" title="{$vo.title}">
+            <div class="news_con_tit">{$vo.title}</div>
+            </a><span>{$vo.postdate}</span> </li>
+           {/loop} 
+        </ul>
+        <div class="text-center">
+          <ul class="pagination">
+            <li><span>上一页</span></li>
+            {loop type="typename" }
+            <li><a href="{$vo.typeurl}">{$k+1}</a></li>
+			{/loop}
+            <li><a href="#">下一页</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12">
+      <div class="side_con">
+        <h3 class="text-left">推荐文章</h3>
+        <div class="col-md-6 col-sm-6">
+          <ul class="side_con_slo">
+            {loop type="arclist" row="8" }
+          <li > <a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a> </li>
+           {/loop}
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <ul class="side_con_slo">
+            {loop type="arclist" row="8" }
+          <li > <a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a> </li>
+           {/loop}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container last text-center">
+  {include file="footer.html" }
+</div>
+<script src="{$theme_path}/js/jquery.min.js"></script>
+<script type="text/javascript">
+    //用于判断导航栏的状态
+    var toggle = true;
+
+    //导航栏按钮
+    $('.btnImg').click(function() {
+        if (toggle) {
+            $('.btnImg').css("border", "1px solid #b0ccf3");
+            toggle = false
+        } else {
+            $('.btnImg').css("border", "1px solid transparent");
+            toggle = true;
+        }
+        $(".show").slideToggle(300);
+    })
+
+    //窗口大小发生改变
+    $(window).resize(function() {
+        //获取窗口宽度
+        var windSize = $(window).width();
+
+        if (windSize > 576) {
+            $(".show").slideDown(0);
+        } else {
+            $(".show").slideUp(0);
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<div class="tp">
+  <div class="container"> <span>{网站名称}</span>
+    <div class="tp_r text-right"> <span class="tp_r0"><a href="#">注册</a></span> <span class="tp_r0">|</span> <span class="tp_r0"><a href="#">登录</a></span> </div>
+  </div>
+</div>
+<div class="tp_bz container"> <a href="/" title="{网站名称}"> <img class="tp_bz_p" src="{$theme_path}/images/biao.jpg" alt="{网站名称}"/> </a> </div>
+<div class="c-nav">
+  <div class="container navFlex">
+    <div class="flexItem hiden"> <img class="btnImg" src="{$theme_path}/images/navBtn.png" /> </div>
+    <div class="flexItem show">
+      <ul>
+        <li><a href="/">首页</a></li>
+         {loop type="typename" type1="top" row="10"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container gg"> <a href="/" title="{随机关键词}"> <img class="gg-img" src="{$theme_path}/images/bz.jpg" alt="{随机关键词}"> </a> </div>

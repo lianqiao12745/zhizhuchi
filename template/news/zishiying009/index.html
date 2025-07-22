@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+<script>
+      $(document).ready(function(){
+        $('#carousel').carousel({interval:3000});  //每隔5秒自动轮播
+       });
+    </script>
+</head>
+<body>
+{include file="head.html" }
+<div class="container mt-20">
+  <div class="row clearfix">
+    <div class="col-md-8 col-sm-12">
+      <div class="lunbo">
+        <div class="carousel slide" id="carousel">
+          <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#carousel"> </li>
+            <li data-slide-to="1" data-target="#carousel"> </li>
+            <li data-slide-to="2" data-target="#carousel"> </li>
+          </ol>
+          <div class="carousel-inner">
+            {loop type="arclist" row="3"  image=1}
+			<div class="item {if $vo.i==1} active{else} {/if}"> <a href="{$vo.url}" title="{$vo.title}" target="_blank"> <img alt="{$vo.title}" src="{$vo.pic}" />
+              <div class="carousel-caption">
+                <h4>{$vo.title}</h4>
+              </div>
+              </a> </div>
+			 {/loop}
+          </div>
+        </div>
+      </div>
+      <div class="xinwenlieb_0">
+        <h4 class="text-left">最新资讯</h4>
+        <ul class="xinwenlieb">
+		{loop type="arclist" row="20"}
+          <li><a href="{$vo.url}" title="{$vo.title}">
+            <div class="xinwenlieb_tit">{$vo.title}</div>
+            </a><span>{$vo.postdate}</span> </li>
+           {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 index_news_list">
+      <ul class="xinwenliebiao xinwenliebiao-list">
+	  {loop type="arclist" row="3" image=1}
+        <li class="item">
+          <div class="item-con">
+            <div class="pic"> <a href="{$vo.url}" target="_blank" class="avatar"> <img src="{$vo.pic}" alt="{$vo.title}" > </a> </div>
+            <div class="text">
+              <h5 class="tit"><a href="{$vo.url}" target="_blank">{$vo.title}</a></h5>
+              <div class="info">
+                <div class="c2"> <span class="date"><i class="glyphicon glyphicon-time"></i>{$vo.postdate}</span> </div>
+              </div>
+            </div>
+          </div>
+        </li>
+		{/loop}
+      </ul>
+      <div class="tuijian_img">
+        <h4 class="text-left">精彩推荐</h4>
+        {loop type="arclist" row="3" image=1}
+	    <a href="{$vo.url}" title="{$vo.title}" target="_blank"> <img src="{$vo.pic}" alt="{$vo.title}">
+        <p>{$vo.title}</p>
+        </a>
+		{/loop}		
+		 </div>
+      <div class="guanyu">
+        <h4 class="text-left">关于本站</h4>
+        <ul>
+          <li>网站域名:{网站地址}</li>
+          <li><a href="" title="">网站名称：{网站名称}</a></li>
+          <li><a href="" title="">站点类型：{随机栏目}</a></li>
+        </ul>
+      </div>
+      <div class="youqinglianjie">
+        <h4 class="text-left">友情链接</h4>
+        <ul>
+        {loop type="link"}
+      <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+       {/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="footer.html" }
+<script type="text/javascript" src="{$theme_path}/js/daohang.js"></script>
+<script type="text/javascript">
+          $(function() {
+            $('.daohangLi').pgwMenu({
+              dropDownLabel: '更多' +
+            '<li><a href="">首页</a></li>',
+              viewMoreLabel: '更多<span class="icon"></span>'
+            });
+          });
+        </script>
+</body>
+</html>

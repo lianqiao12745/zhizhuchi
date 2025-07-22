@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>{$toptitle}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="" class="top">
+  <div id="" class="container">
+    <ul id="top-login" id="">
+    <a οnclick="setHome(this,window.location)">&#35774;&#20026;&#39318;&#39029;</a>
+    <script>
+			   function setHome(obj,vrl){
+        try{
+            obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+        }
+        catch(e){
+            if(window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }
+                catch (e) {
+                    alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                }
+                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                prefs.setCharPref('browser.startup.homepage',vrl);
+            }
+        }
+    }
+</script>
+    | <a href="{$theme_path}/javascript:addFavorite()">&#21152;&#20837;&#25910;&#34255;</a>
+    <script>
+ function addFavorite() {
+        var url = window.location;
+        var title = document.title;
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("msie 8") > -1) {
+            external.AddToFavoritesBar(url, title, '');//IE8
+        } else {
+            try {
+                window.external.addFavorite(url, title);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(title, url, "");//firefox
+                } catch (e) {
+                    alert("加入收藏失败，请使用Ctrl+D进行添加");
+                }
+            }
+        }
+    }
+</script>
+    </ul>
+  </div>
+</div>
+{include file="head.html"}
+<div id="" class="container ba2">
+  <div id="" class="col-md-8 col-sm-12">
+    <ul id="" class="breadcrumb">
+      <li><a href="/">首页</a></li>
+      <li><a href="{当前栏目URL}">{当前栏目}</a></li>
+      <li id="" class="active">正文</li>
+    </ul>
+    <div>
+      <h4 class="text-center act-tit"><strong>{$title}</strong></h4>
+      <div id="" class="wenzhang"> <span>{$postdate}</span> <span>来源：{$typename}</span> <span>分类：{$typename}</span> </div>
+      <div id="" class="magr">
+        <p>{$body}</p>
+      </div>
+      <div id="" class="home-list-1">
+        <h5 class="text-left qita">关注了本文的网友还关注：</h5>
+        <ul id="" class="home-a">
+         {loop type="arclist" row="8"}
+        <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		 {/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="" class="col-md-4 col-sm-12">
+    <h5 class="tuijian">相关推荐</h5>
+    <div id="" class="line"></div>
+    <ul id="" class="tuijian-con">
+     {loop type="arclist" row="8"}
+        <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		 {/loop}
+    </ul>
+  </div>
+  <div id="" class="col-md-4 col-sm-12">
+    <h5 class="tuijian">一周热点</h5>
+    <div id="" class="line"></div>
+    <ul id="" class="tuijian-con">
+      {loop type="arclist" row="8"}
+        <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		 {/loop}
+    </ul>
+  </div>
+</div>
+<div id="" class="container footer text-center">
+{include file="footer.html" }
+</div>
+</body>
+</html>

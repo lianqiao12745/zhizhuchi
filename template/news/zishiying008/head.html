@@ -1,0 +1,20 @@
+<header>
+  <div class="main_daohang container bj">
+    <ul id="main_daohang" class="">
+      <li><a href="#">设为首页</a></li>
+      <li>|</li>
+      <li><a href="#">加入收藏</a></li>
+    </ul>
+  </div>
+  <div class="logo container bj"> <a href="/" title="{网站名称}"> <img class="logo" src="{$theme_path}/img/icon1.png" alt="{网站名称}"/> </a> </div>
+  <div class="Nav">
+    <div class="container">
+      <ul class="Navigation">
+        <li><a class="selected" href="/">首页</a></li>
+          {loop type="typename" type1="top" row="10"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+      </ul>
+    </div>
+  </div>
+</header>

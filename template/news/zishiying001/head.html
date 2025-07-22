@@ -1,0 +1,23 @@
+<header class="container" id="">
+  <div class="top" id=""> <span class="float-left">欢迎来到{$toptitle}网站!!!</span>
+    <ul id="top-login">
+      <li id=""><a href="#" title="">中文</a></li>
+      <li id="">|</li>
+      <li id=""><a href="#" title="">EN</a></li>
+    </ul>
+  </div>
+  <div class="header plr" id="">
+    <h1 class="float-left logo" id=""><a href="{$web_url}">{网站名称}</a></h1>
+    <div class="float-right qr" id=""> <img src="{$theme_path}/images/u71.png" alt="{$toptitle}"> <span>扫描左侧二维码访问本站手机端</span> </div>
+  </div>
+  <nav class="navbar" role="navigation" id="">
+    <div class="head-nav" id="">
+      <ul id="top-nav" class="nav navbar-nav">
+        <li class="active" id=""><a href="/">首页</a></li>
+        {loop type="typename" type1="top" row="10"}
+        <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+      </ul>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,12 @@
+<footer class="container bottom">
+  <div class="clearfix">
+    <ul class="link_box">
+      <li class="">友情链接</li>
+       {loop type="link"}
+      <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+      {/loop}
+    </ul>
+  </div>
+ <p>copyright &copy; 2016 powered by <a href="{$web_url}">{$web_name}</a>&nbsp;&nbsp;{$web_tongji} <a href="http://{$host}/sitemap.xml">sitemap</a></p>
+  <p>{$web_share}{$web_bdpush}{统计代码}{百度推送代码}{分享代码}</p>
+</footer>

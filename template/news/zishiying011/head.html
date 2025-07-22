@@ -1,0 +1,16 @@
+<header>
+  <div class="container"> <a href="/" title="{网站名称}"> <img class="bz_bianzhi" src="{$theme_path}/img/bz_bianzhi.png" alt="{网站名称}"/> </a> </div>
+  <nav class="navbar" role="navigation">
+    <div class="dh_daohang">
+      <div class="container">
+        <ul class="dh_daoh light">
+          <li><a class="selected" href="/">首页</a></li>
+          {loop type="typename" type1="top" row="10"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container gg_g"> <a href="{网站地址}" title="{网站名称}"> <img class="gg_guanggao" src="{$theme_path}/img/gg_guanggao.jpg" alt="{网站名称}"> </a> </div>

@@ -1,0 +1,25 @@
+<header>
+  <div class="top-nav">
+    <div class="container">
+      <ul class="top-set">
+        <li><a href="#">设为首页</a></li>
+        <li>|</li>
+        <li><a href="#">加入收藏</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container bj"> <a href="/" title="{网站名称}"> <img class="yx-logo" src="{$theme_path}/img/yx-logo.png" alt="{网站名称}"/> </a> </div>
+  <nav class="navbar" role="navigation">
+    <div class="top_nav">
+      <div class="container">
+        <ul class="topNav light">
+          <li><a class="selected" href="/">首页</a></li>
+           {loop type="typename" type1="top" row="10"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container ban"> <img class="ban-img" src="{$theme_path}/img/ban.jpg" alt="{网站名称}"> </div>

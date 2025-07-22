@@ -1,0 +1,13 @@
+<div id="" class="header container"> <a href="/" id=""> <img id="" class="logo" src="{$theme_path}/images/logo.png" alt="{网站名称}"/> </a> <span class="c79">本站提倡有节制游戏，合理安排游戏时间，注意劳逸结合。</span> </div>
+<nav id="" class="navbar" role="navigation">
+  <div id="" class="head-nav">
+    <div id="" class="container">
+      <ul id="top-nav" class="nav navbar-nav">
+        <li id="" class="active"><a href="/">首页</a></li>
+       {loop type="typename" type1="top" row="10"}
+        <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+      </ul>
+    </div>
+  </div>
+</nav>

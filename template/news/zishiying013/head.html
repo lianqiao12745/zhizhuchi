@@ -1,0 +1,18 @@
+<div class="head_tb">
+  <div class="container"> <span>{网站名称}</span> </div>
+</div>
+<div class="nav_dh">
+  <div class="container navFlex">
+    <div class="flexItem"> <a href="/" title="{网站名称}"> <img  class="nav_dh_logo" src="{$theme_path}/images/logo_bz.gif"  alt="{网站名称}"/> </a> </div>
+    <div class="flexItem hiden"> <img class="btnImg" src="{$theme_path}/images/navBtn.png" /> </div>
+    <div class="flexItem show nav_dh_li">
+      <ul>
+        <li><a href="/">首页</a></li>
+         {loop type="typename" type1="top" row="10"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container banner_gg"> <img class="banner_gg-img" src="{$theme_path}/images/bz.jpg" alt="{随机关键词}"> </div>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<meta name="mobile-agent" content="">
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/home.css">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/nav.css">
+</head>
+<body>
+{include file="head.html" }
+<div class="container">
+  <div class="col-md-9 col-sm-12 padlr">
+    <div class="row clearfix">
+      <div class="carousel slide" id="carousel-465504">
+        <ol class="carousel-indicators">
+          <li class="active" data-slide-to="0" data-target="#carousel-465504"> </li>
+          <li data-slide-to="1" data-target="#carousel-465504"> </li>
+          <li data-slide-to="2" data-target="#carousel-465504"> </li>
+        </ol>
+        <div class="carousel-inner">
+		
+		 {loop type="arclist" row="3"  image=1}
+          <div class="item {if $vo.i==1} active{else} {/if}"> <img alt="{$vo.title}" src="{$vo.pic}" width="880" height="185" />
+            <div class="carousel-caption">
+              <h4>{$vo.title}</h4>
+            </div>
+          </div>
+		   {/loop}
+        </div>
+        <a class="left carousel-control" href="#carousel-465504" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a> <a class="right carousel-control" href="#carousel-465504" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a> </div>
+    </div>
+  </div>
+</div>
+<div class="container home_l plr">
+  <div class="row clearfix">
+    <div class="col-md-4 col-sm-12">
+      <h4 class="text-left"><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="home_ls">
+         {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <h4 class="text-left"><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="home_ls">
+         {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <h4 class="text-left"><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="home_ls">
+         {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <h4 class="text-left"><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="home_ls">
+         {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <h4 class="text-left"><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="home_ls">
+        {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <h4 class="text-left"><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="home_ls">
+         {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container links">
+  <div class="clearfix">
+    <h4><span class="links-tit">友情链接</span></h4>
+    <ul class="links-list">
+      {loop type="link"}
+	<li ><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+	  {/loop}
+    </ul>
+  </div>
+</div>
+{include file="footer.html" }
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.js"></script>
+<script src="{$theme_path}/js/navbar.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('.headNav').pgwMenu({
+			dropDownLabel: '菜单',
+			viewMoreLabel: '更多<span class="icon"></span>'
+		});
+
+	});
+</script>
+</body>
+</html>

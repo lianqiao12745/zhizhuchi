@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+<script src="{$theme_path}/js/jquery.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+<script>
+      $(document).ready(function(){
+        $('#carousel').carousel({interval:3000});  //每隔5秒自动轮播
+      });
+    </script>
+</head>
+<body>
+{include file="head.html"}
+<div class="container mar_t10">
+  <div class="row clearfix">
+    <div class="col-md-4 col-sm-12">
+      <div class="lo-slide">
+        <div class="carousel slide" id="carousel">
+          <ol class="carousel-indicators">
+            <li class="" data-slide-to="0" data-target="#carousel"> </li>
+            <li data-slide-to="1" data-target="#carousel" class=""> </li>
+            <li data-slide-to="2" data-target="#carousel" class="active"> </li>
+          </ol>
+          <div class="carousel-inner">
+		  {loop type="arclist" row="3"  image=1}
+            <div class="item  {if $vo.i==1} active{else} {/if}"> <a href="{$vo.url}" title="{$vo.title}" target="_blank"> <img alt="{$vo.title}" src="{$vo.pic}">
+              <div class="carousel-caption">
+                <h4>{$vo.title}</h4>
+              </div>
+              </a> </div>
+           {/loop}  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <ul class="cap-ne-items mar_t5">
+	   {loop type="arclist" row="8" }
+        <li><a href="{随机栏目URL}" title="{随机栏目}"><i>[<span>{随机栏目}</span>]</i></a><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+        {/loop}  
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12 cap-ne-ipp">
+	 {loop type="arclist" row="2" image=1 }
+      <div class="cap-ne-items1"> <a href="{$vo.url}" title="{$vo.title}"> <img src="{$vo.pic}" alt="{$vo.title}">
+        <p>{$vo.title}</p>
+        </a> </div>
+      {/loop}  
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="ne-items-li">
+    <div class="row clearfix">
+      <div class="col-md-4 col-sm-12">
+        <div class="ne-items-list">
+          <h5 class="text-left"><span>{随机栏目}</span><a href="{随机栏目URL}">更多</a></h5>
+          <ul class="ne-items-list_i">
+            {loop type="arclist" row="8" }
+           <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		  {/loop}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="ne-items-list">
+          <h5 class="text-left"><span>{随机栏目}</span><a href="{随机栏目URL}">更多</a></h5>
+          <ul class="ne-items-list_i">
+            {loop type="arclist" row="8" }
+           <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		  {/loop}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="ne-items-list">
+          <h5 class="text-left"><span>{随机栏目}</span><a href="{随机栏目URL}">更多</a></h5>
+          <ul class="ne-items-list_i">
+            {loop type="arclist" row="8" }
+           <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		  {/loop}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="ne-items-list">
+          <h5 class="text-left"><span>{随机栏目}</span><a href="{随机栏目URL}">更多</a></h5>
+          <ul class="ne-items-list_i">
+            {loop type="arclist" row="8" }
+           <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		  {/loop}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="ne-items-list">
+          <h5 class="text-left"><span>{随机栏目}</span><a href="{随机栏目URL}">更多</a></h5>
+          <ul class="ne-items-list_i">
+            {loop type="arclist" row="8" }
+           <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		  {/loop}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="ne-items-list">
+          <h5 class="text-left"><span>{随机栏目}</span><a href="{随机栏目URL}">更多</a></h5>
+          <ul class="ne-items-list_i">
+            {loop type="arclist" row="8" }
+           <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		  {/loop}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12 col-sm-12">
+      <div class="item_xwlb_items">
+        <ul class="links_yqlj">
+          <li>友情链接</li>
+          {loop type="link"}
+		   <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+		  {/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container bo-foot text-center">
+{include file="footer.html" }
+</div>
+<script type="text/javascript">
+    //用于判断导航栏的状态
+    var toggle = true;
+
+    //导航栏按钮
+    $('.btnImg').click(function() {
+      if (toggle) {
+        $('.btnImg').css("border", "1px solid #b0ccf3");
+        toggle = false
+      } else {
+        $('.btnImg').css("border", "1px solid transparent");
+        toggle = true;
+      }
+      $(".show").slideToggle(300);
+    })
+
+    //窗口大小发生改变
+    $(window).resize(function() {
+      //获取窗口宽度
+      var windSize = $(window).width();
+
+      if (windSize > 576) {
+        $(".show").slideDown(0);
+      } else {
+        $(".show").slideUp(0);
+      }
+    });
+  </script>
+</body>
+</html>
