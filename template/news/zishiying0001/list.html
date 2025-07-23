@@ -12,13 +12,27 @@
 {include file="header.html"}
 <main class="site-main">
   <section class="primary-content">
-    <h2 class="section-title">{当前位置}</h2>
+    <h2 style="height:30px; font-size:14px; line-height:30px; margin:0 0 18px 0; text-indent:13px; border-bottom:3px #4e8100 solid; background:url(images/ico-3.jpg) 0 13px no-repeat; font-weight:normal;">
+      当前位置：<a href="/">首页</a> &gt; <a href="{$thisurl}">{$typename}</a>
+    </h2>
     <ul class="article-list">
       {loop type="arclist" row="20"}
         <li><a href="{$vo.url}">{$vo.title}</a><span class="date">{$vo.postdate}</span></li>
       {/loop}
     </ul>
-    <div class="pager">{page}</div>
+    <div class="text-center">
+      <ul style="display:flex;justify-content:center;list-style:none;padding-left:0;margin:18px 0;">
+        {loop type="page" tpl="list"}
+        <li style="margin:0 3px;">
+          <a href="{$vo.url}" style="display:block;padding:6px 14px;border-radius:4px;background:#f6f6f8;color:#2779d2;text-decoration:none;font-size:13px;">
+            {$vo.title}
+          </a>
+        </li>
+        {/loop}
+      </ul>
+    </div>
+
+
   </section>
   <aside class="sidebar">
     <div class="focus-box">

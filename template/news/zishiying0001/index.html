@@ -18,6 +18,19 @@
         <li><a href="{$vo.url}">{$vo.title}</a><span class="date">{$vo.postdate}</span></li>
       {/loop}
     </ul>
+    <div class="text-center">
+      <ul style="display:flex;justify-content:center;list-style:none;padding-left:0;margin:18px 0;">
+        {loop type="page" tpl="list"}
+        <li style="margin:0 3px;">
+          <a href="{$vo.url}" style="display:block;padding:6px 14px;border-radius:4px;background:#f6f6f8;color:#2779d2;text-decoration:none;font-size:13px;">
+            {$vo.title}
+          </a>
+        </li>
+        {/loop}
+      </ul>
+    </div>
+
+
   </section>
   <aside class="sidebar">
     <div class="focus-box">
