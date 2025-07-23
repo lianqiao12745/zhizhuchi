@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="applicable-device" content="pc,mobile" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link rel="stylesheet" id="wpfp-css" href="{$theme_path}/style/css/wpfp.css" type="text/css" />
+<link rel="stylesheet" id="wp-block-library-css" href="{$theme_path}/style/css/style.min.css?ver=5.2.1" type="text/css" media="all" />
+<link rel="stylesheet" id="affwp-forms-css" href="{$theme_path}/style/css/forms.min.css?ver=2.2.15" type="text/css" media="all" />
+<link rel="stylesheet" id="edd-styles-css" href="{$theme_path}/style/css/edd.min.css?ver=2.9.14" type="text/css" media="all" />
+<link rel="stylesheet" id="font-awesome-css" href="{$theme_path}/style/css/font-awesome.min.css?ver=1.1.8" type="text/css" media="all" />
+<link rel="stylesheet" id="jquery.webui-popover-css" href="{$theme_path}/style/css/jquery.webui-popover.min.css?ver=1.1.8" type="text/css" media="all" />
+<link rel="stylesheet" id="ulc_main-css" href="{$theme_path}/style/css/style.css?ver=1.1.8" type="text/css" media="all" />
+<link rel="stylesheet" id="wedocs-styles-css" href="{$theme_path}/style/css/frontend.css?ver=1.4.1" type="text/css" media="all" />
+<link rel="stylesheet" id="wpdx-follow-author-css" href="{$theme_path}/style/css/style01.css?ver=5.2.1" type="text/css" media="all" />
+<link rel="stylesheet" id="wp-syntax-css-css" href="{$theme_path}/style/css/wp-syntax.css?ver=1.1" type="text/css" media="all" />
+<link rel="stylesheet" id="edd-points-public-style-css" href="{$theme_path}/style/css/style-public.css?ver=2.1.4" type="text/css" media="all" />
+<link rel="stylesheet" id="dashicons-css" href="{$theme_path}/style/css/dashicons.min.css?ver=5.2.1" type="text/css" media="all" />
+<link rel="stylesheet" id="edd-reviews-css" href="{$theme_path}/style/css/edd-reviews.min.css?ver=2.1.10" type="text/css" media="all" />
+<link rel="stylesheet" id="bootstrap-css" href="{$theme_path}/style/css/bootstrap.min.css?ver=5.2.1" type="text/css" media="all" />
+<link rel="stylesheet" id="slick-theme-css" href="{$theme_path}/style/css/slick-theme.css?ver=5.2.1" type="text/css" media="all" />
+<link rel="stylesheet" id="wpsun-style-css" href="{$theme_path}/style/css/style02.css?ver=5.2.1" type="text/css" media="all" />
+<link rel="stylesheet" id="child-style-css" href="{$theme_path}/style/css/style03.css?ver=5.2.1" type="text/css" media="all" />
+<script type="text/javascript" src="{$theme_path}/style/js/jquery.js?ver=1.12.4-wp"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jquery.cookie.min.js?ver=1.4.0"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/tracking.min.js?ver=2.2.15"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/edd-points-public.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/wpfp.js?ver=5.2.1"></script>
+<script type="text/javascript">
+        var AFFWP = AFFWP || {};
+        AFFWP.referral_var = 'ref';
+        AFFWP.expiration = 7;
+        AFFWP.debug = 0;
+        AFFWP.referral_credit_last = 1;
+  </script>
+<style>
+            ul.wpuf_packs li{
+                background-color: #eeeeee !important;
+            }
+            ul.wpuf_packs .wpuf-sub-button a, ul.wpuf_packs .wpuf-sub-button a{
+                background-color: #4fbbda !important;
+                color: #eeeeee !important;
+            }
+            ul.wpuf_packs h3, ul.wpuf_packs h3{
+                background-color:  #52B5D5 !important;
+                border-bottom: 1px solid #52B5D5 !important;
+                color: #eeeeee !important;
+            }
+            ul.wpuf_packs .wpuf-pricing-wrap .wpuf-sub-amount, ul.wpuf_packs .wpuf-pricing-wrap .wpuf-sub-amount{
+                background-color:  #4fbbda !important;
+                border-bottom: 1px solid #4fbbda !important;
+                color: #eeeeee !important;
+            }
+            ul.wpuf_packs .wpuf-sub-body{
+                background-color:  #eeeeee !important;
+            }
+
+            .wpuf-success {
+                background-color:  !important;
+                border: 1px solid  !important;
+            }
+            .wpuf-error {
+                background-color:  !important;
+                border: 1px solid  !important;
+            }
+            .wpuf-message {
+                background:  !important;
+                border: 1px solid  !important;
+            }
+            .wpuf-info {
+                background-color:  !important;
+                border: 1px solid  !important;
+            }
+			.post-thumbnail{height:100%;max-height:200px;;overflow:hidden;
+			.post-thumbnail img{height:auto;max-height:90%;overflow:hidden;}
+        </style>
+<!--[if lt IE 9]>
+      <script src="{$theme_path}/style/js/html5shiv.min.js"></script>
+      <script src="{$theme_path}/style/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="archive category category-themes category-2 wp-custom-logo hfeed no-sidebar">
+<div id="wrapper">
+<aside id="slide-out">
+  <div id="mobile-menu" class="mobile-hide-icons"></div>
+</aside>
+<!-- #slide-out /-->
+<div id="page" class="site">
+  <div class="inner-wrapper">
+    {include file="head.html"}
+    <div id="content" class="site-content">
+      <div class="container">
+        <div class="row">
+          <div id="primary" class="col-lg-8 content-area">
+            <main id="main" class="site-main theiaStickySidebar"> 
+			
+			{loop type="arclist" row="6"  image=1 info=1}
+			<article class="post-box box-shadow archives post type-post status-publish format-standard has-post-thumbnail hentry category-themes tag-113"> 
+			<header class="entry-header"> 
+			<h2 class="entry-title"><a href="{$vo.url}" rel="bookmark">{$vo.title}</a></h2> 
+			</header>
+			<!-- .entry-header --> 
+			<div class="thumbnail media-object post-thumbnail">
+			<a href="{$vo.url}" title="{$vo.title}"><img width="216" height="130" src="{$vo.pic}" class="attachment-wpdx-middle size-wpdx-middle wp-post-image" /></a>
+			</div> 
+			<div class="entry-content"> 
+			<p>{$vo.info}…</p> 
+			</div>
+			<!-- .entry-content --> 
+			<footer class="entry-footer"> 
+			<div class="entry-meta"> 
+			<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+			<span class="posted-on">{$vo.postdate}</span> 
+			<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+			<span class="byline"> {随机关键词}</span> 
+			<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+			<span class="cat-links"><a href="{随机栏目URL}" rel="category tag">{随机栏目}</a></span> 
+			</div>
+			<!-- .entry-meta --> 
+			<div class="read-more"> 
+			<a href="{$vo.url}" title="">阅读全文 +</a> 
+			</div> 
+			</footer>
+			<!-- .entry-footer --> 
+			</article>
+			{/loop}	
+			
+              <div class="wpkj-pagenavi">
+                <ul class="pagenavi" role="navigation">
+                  {loop type="typename" }<a href="{$vo.typeurl}" class="page-numbers">{$k+1}</a> {/loop}
+                </ul>
+              </div>
+            </main>
+            <!-- #main -->
+          </div>
+          <!-- #primary -->
+          <aside id="secondary" class="col-lg-4 widget-area">
+            <div class="theiaStickySidebar">
+              <section id="edd_most_recent-10" class="widget box-shadow widget_edd_most_recent">
+                <h3 class="widget-title">精品推荐</h3>
+                <ul class="widget-most-recent">
+                  {loop type="arclist" row="8" image=1}
+				<li> <a href="{$vo.url}" title="{$vo.title}" class="widget-download-title" rel="bookmark">{$vo.title}</a> </li> 
+				{/loop}	
+                </ul>
+              </section>
+              <section id="posts-list-widget-2" class="widget box-shadow widget-posts">
+                <h3 class="widget-title">热门文章</h3>
+                <ul>
+                {loop type="arclist" row="8" image=1}
+				<li>
+				<div class="thumbnail media-object post-thumbnail">
+				<a href="{$vo.url}" title="{$vo.title}">
+				<img width="90" height="54" src="{$vo.pic}" class="attachment-wpdx-small size-wpdx-small wp-post-image" alt="{$vo.title}" /></a>
+				</div>
+				<a class="post-link" href="{$vo.url}" title="{$vo.title}">{$vo.title}</a>
+				</li>
+				{/loop}	
+                </ul>
+                <div class="clear"></div>
+              </section>
+                       <div class="widget-wrapper">
+            <section id="recent-comments-3" class="widget widget_recent_comments">
+              <h3 class="widget-title"><span>友情链接</span></h3>
+             			<ul>
+				{loop type="domain" row=10}<li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>{/loop}
+	{if $links_open}
+   {loop type="link" row=10}
+   <li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+   {/loop}
+   {/if}
+              </ul>
+            </section>
+          </div>
+        </div>
+      </aside>
+          <!-- #secondary -->
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- #content -->
+  {include file="footer.html" }
+      <!-- #colophon -->
+    </div>
+    <!-- .inner-wrapper -->
+  </div>
+  <!-- #page -->
+</div>
+<!-- #wrapper -->
+<script type="text/javascript" src="{$theme_path}/style/js/edd-ajax.min.js?ver=2.9.14"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/anchor.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/frontend.js?ver=1.4.1"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/wp-syntax.js?ver=1.1"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/wp-syntax-admin.js?ver=1.1"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/bootstrap.min.js?ver=5.2.1"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/navigation.js?ver=5.2.1"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/slick.min.js?ver=1.9.0"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/theia-sticky-sidebar.min.js?ver=1.7.0"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/wp-embed.min.js?ver=5.2.1"></script>
+<script type="text/javascript">
+      jQuery(document).ready(function() {
+        jQuery('#primary, #secondary').theiaStickySidebar({
+      // Settings
+      additionalMarginTop: 160
+  });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<header>
+  <div class="container"> <a href="/" title="{网站名称}"> <img class="si_sign" src="{$theme_path}/img/biaozhi_logo.png" alt="{网站名称}"/> </a> </div>
+  <nav class="nav-bar" role="navigation">
+    <div class="index_dh">
+      <div class="container">
+        <ul class="nav_daohang light">
+          <li><a class="selected" href="/">首页</a></li>
+          {loop type="typename" type1="top" row="8"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		 {/loop}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

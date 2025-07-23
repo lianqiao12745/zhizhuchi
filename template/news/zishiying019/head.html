@@ -1,0 +1,20 @@
+<header>
+  <div class="apex">
+    <div class="container"> <span class="apex_h">欢迎来到{网站名称}网站！</span>
+      <div class="apex_head_r text-right"> <span class="apex_head_r0"><a href="#">注册</a></span> <span class="apex_head_r0">|</span> <span class="apex_head_r0"><a href="#">登录</a></span> </div>
+    </div>
+  </div>
+  <div class="apex_head_bz container"> <a href="/" title="{网站名称}">
+    <div class="txt-logo">{网站名称}</div>
+    </a> </div>
+  <div class="navL">
+    <div class="container">
+      <ul class="nav_n">
+        <li><a class="selected" href="/">首页</a></li>
+        {loop type="typename" type1="top" row="8"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		 {/loop}
+      </ul>
+    </div>
+  </div>
+</header>

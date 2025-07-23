@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<meta name="applicable-device" content="pc,mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<link rel="stylesheet" id="sytle-css" href="{$theme_path}/style/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" id="wp-block-library-css" href="{$theme_path}/style/css/style.min.css" type="text/css" media="all" />
+<script type="text/javascript" src="{$theme_path}/style/js/swiper.min.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/html5shiv.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/selectivizr-min.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jquery.min.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jiazai.js" charset="utf-8"></script>
+</head>
+<body>
+{include file="head.html"}
+<!--header-web-->
+<div id="container-page">
+  <aside id="sitebar">
+    <div class="sitebar_list">
+      <h4 class="sitebar_title">推荐文章</h4>
+      <ul id="randomposts">
+        {loop type="arclist" row="8" image=1}
+          <li> <a href="{$vo.url}" title="{$vo.title}" >{$vo.title}</a> </li> 
+        {/loop}
+      </ul>
+    </div>
+    <div class="sitebar_list">
+      <h4 class="sitebar_title">热门排行</h4>
+      <ul id="randomposts">
+        {loop type="arclist" row="8" image=1}
+          <li> <a href="{$vo.url}" title="{$vo.title}" >{$vo.title}</a> </li> 
+        {/loop}
+      </ul>
+    </div>
+    <div class="sitebar_list">
+      <h4 class="sitebar_title">友情链接</h4>
+      <ul id="friendlinks">
+        {if $links_open}
+          {loop type="link" row=10}
+            <li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+          {/loop}
+        {/if}
+        {loop type="domain" row=5}
+          <li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+        {/loop}
+      </ul>
+    </div>
+  </aside>
+  <article class="box">
+    <script language="javascript">
+      var swiper = new Swiper('.hmFocus .swiper-container', {
+        pagination: '.swiper-pagination',
+        loop: true,
+        autoplay: 5500,
+        paginationClickable: true
+      });
+    </script>
+    {loop type="arclist" row="6"  image=1 info=1}
+      <section class="list">
+        <h2 class="mecctitle"><a href="{$vo.url}" target="_blank">{$vo.title}</a></h2>
+        <span class="titleimg"><a href="{$vo.url}" target="_blank"><img width="1000" height="556" src="{$vo.pic}" class="attachment-thumbnail size-thumbnail wp-post-image" sizes="(max-width: 1000px) 100vw, 1000px" alt="{$vo.title}" /></a></span>
+        <time class="">{$vo.postdate}</time> | <time><a href="{当前栏目URL}">{当前栏目}</a></time>
+        <div class="zaiyao ">
+          <p>{$vo.info}...</p>
+        </div>
+      </section>
+    {/loop}
+  </article>
+  <div id="post-read-more" style="text-align: center; margin-top: 5rem;">
+    {loop type="typename"}
+      <a href="{$vo.typeurl}" class="page-numbers">{$k+1}</a>
+    {/loop}
+  </div>
+</div>
+<footer id="dibu-main">
+  <style>
+    p{margin:10px 0}
+  </style>
+  {include file="footer.html"}
+  <div class="off">
+    <div class="scroll" id="scroll" style="display:none;"> ︿ </div>
+  </div>
+  <script type="text/javascript">
+    $(function(){
+      showScroll();
+      function showScroll(){
+        $(window).scroll( function() { 
+          var scrollValue=$(window).scrollTop();
+          scrollValue >500 ? $('div[class=scroll]').fadeIn():$('div[class=scroll]').fadeOut();
+        } );  
+        $('#scroll').click(function(){
+          $("html,body").animate({scrollTop:0},1224); 
+        }); 
+      }
+    })
+  </script>
+</footer>
+<!--dibu-->
+<script type="text/javascript" src="{$theme_path}/style/js/wp-embed.min.js"></script>
+</body>
+</html>

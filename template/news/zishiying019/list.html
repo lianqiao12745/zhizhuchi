@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/import.css">
+</head>
+<body>
+{include file="head.html" }
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-8 col-sm-12">
+      <div class="text-left h-news">最新文章</div>
+      <ul class="h-newslist">
+	    {loop type="arclist" row="20"  }
+        <li><a href="{$vo.url}" title="{$vo.title}">{随机栏目}| {$vo.title}</a><span>{$vo.postdate}</span></li>
+         {/loop} 
+      </ul>
+      <div class="text-center">
+        <ul class="pagination">
+          <li><a href="#">上一页</a></li>
+          {loop type="typename" }
+            <li><a href="{$vo.typeurl}">{$k+1}</a></li>
+			{/loop}
+          <li class="dn"><a href="#">下一页</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="trends">
+        <h4 class="text-left">重点关注</h4>
+        <ul class="xgtj-side xgtj-side-list">
+		 {loop type="arclist" row="4"  image=1}
+		 <li class="item">
+            <div class="item-con">
+              <div class="pic"> <a href="{$vo.url}" target="_blank" class="avatar"> <img src="{$vo.pic}" alt="{$vo.title}"> </a> </div>
+              <div class="text">
+                <h5 class="tit"><a href="{$vo.url}" target="_blank">{$vo.title}</a></h5>
+                <div class="info">
+                  <div class="c2"> <span class="date">{$vo.postdate}</span> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+		  {/loop}
+        </ul>
+      </div>
+      <div class="trends-ad">
+        <h4 class="text-left">编辑推荐</h4>
+        <ul class="trends-ads">
+		  {loop type="arclist" row="8" }
+          <li class="item"> <a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a> </li>
+           {/loop}
+        </ul>
+      </div>
+      {include file="link.html"}
+    </div>
+  </div>
+</div>
+<footer class="container tail text-center">
+  {include file="footer.html" }
+</footer>
+<script src="{$theme_path}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{$theme_path}/js/nav.min.js"></script>
+<script type="text/javascript">
+		$(function() {
+			$('.nav_n').pgwMenu({
+				mainClassName: 'nav_n',
+				dropDownLabel: '导航',
+				viewMoreLabel: '更多<span class="icon"></span>'
+			});
+		});
+	</script>
+</body>
+</html>

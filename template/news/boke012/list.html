@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="applicable-device" content="pc,mobile"/>
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link rel="alternate" type="application/rss+xml" title="Wimple Pro &raquo; Feed" href="{$theme_path}/style/css/feed.css/" />
+<link rel="alternate" type="application/rss+xml" title="Wimple Pro &raquo; Comments Feed" href="{$theme_path}/style/css/feed01.css/" />
+<link rel="alternate" type="application/rss+xml" title="Wimple Pro &raquo; City Category Feed" href="{$theme_path}/style/css/feed02.css/" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="wimplepro-awsome-font-style-css" href="{$theme_path}/style/css/font-awesome.min.css?ver=4.7.13" type="text/css" media="all" />
+<link rel="stylesheet" id="wimplepro-style-css" href="{$theme_path}/style/css/style.css?ver=4.7.13" type="text/css" media="all" />
+<link rel="stylesheet" id="wimplepro-slide-css" href="{$theme_path}/style/css/slick.css?ver=4.7.13" type="text/css" media="all" />
+<link rel="stylesheet" id="wimplepro-responsive-css" href="{$theme_path}/style/css/responsive.css?ver=4.7.13" type="text/css" media="all" />
+<link rel="stylesheet" id="google-typography-font-css" href="{$theme_path}/style/css/css.css?family=Open+Sans:700|Merriweather:normal|Open+Sans:normal|Open+Sans:300" type="text/css" media="all" />
+<script type="text/javascript" src="{$theme_path}/style/js/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/script.js?ver=4.7.13"></script>
+<style type="text/css">
+.site-header .site-branding a, .top-site-branding .site-title a, .line-layout .site-header .site-title a, .line-layout .line-logo .line-site-title a{ font-family: "Open Sans"; font-weight: 700; font-size: 30px;  }
+.main-navigation .nav-menu li a{ font-family: "Merriweather"; font-weight: normal; font-size: 14px; color: #ffffff;  }
+.entry-header .entry-title a{ font-family: "Open Sans"; font-weight: 700; font-size: 24px; color: #333333;  }
+.page .entry-title, .single-post .entry-title{ font-family: "Open Sans"; font-weight: 700; font-size: 32px; color: #333333;  }
+body, .widget ul li a,.f-widget ul li a .site-footer .textwidget{ font-family: "Merriweather"; font-weight: normal; font-size: 14px; color: #333333;  }
+.widget-title, .site-footer-widget .widget-title{ font-family: "Open Sans"; font-weight: normal; font-size: 20px; color: #333333;  }
+h1{ font-family: "Open Sans"; font-weight: 700; font-size: 32px; color: #333333;  }
+h2{ font-family: "Open Sans"; font-weight: 700; font-size: 32px; color: #333333;  }
+h3{ font-family: "Open Sans"; font-weight: 700; font-size: 24px; color: #333333;  }
+h4{ font-family: "Open Sans"; font-weight: 700; font-size: 20px; color: #333333;  }
+h5{ font-family: "Open Sans"; font-weight: 700; font-size: 18px; color: #333333;  }
+h6{ font-family: "Open Sans"; font-weight: 300; font-size: 16px; color: #333333;  }
+</style>
+<style type="text/css">
+		#calendar-2 #wp-calendar caption {
+			background: #53aa39;
+		}
+		.search-form .search-submit {
+			background: #53aa39;
+		}
+		.search-form .search-submit:hover {
+			background: #81c84f;
+		}
+		.back-to-top {
+			background: #81c84f;
+		}
+
+		/*.line-layout .main-navigation,*/
+		.wrap-site-info,
+		.site-header1,
+		.header-content,
+		.pagination a,
+		.blog .nav-previous a, 
+		.blog .nav-next a  {
+			background: #53aa39;
+		}
+		span.page-numbers.dots {
+			color: #53aa39;
+		}
+		
+		/**********************
+			Navigation Menu
+		***********************/
+		.back-to-top,
+		//.main-navigation .menu-main-menu-container ul ul li,
+		//.main-navigation .menu-main-menu-container ul ul li a,
+		//.main-navigation .nav-menu li:hover a,
+		//.main-navigation .nav-menu .current_page_item > a,
+		//.main-navigation .nav-menu .current-menu-item > a,
+		//.main-navigation .nav-menu .current_page_ancestor > a,
+		.pagination a:hover,
+		.page-numbers.current,
+		.blog .nav-previous a:hover,
+		.blog .nav-next a:hover {
+			background: #81c84f;
+		}
+		//.main-navigation .menu-main-menu-container ul ul li:hover > a {
+			background: #53aa39;
+		}
+		//.main-navigation .menu-main-menu-container ul ul:before {
+			border-bottom: 10px solid #81c84f;
+		}
+		.line-layout .site-header .site-title a,
+		.line-layout .line-logo .line-site-title a {
+			color: #81c84f;
+		}
+		.pagination a:hover,
+		.page-numbers.current,
+		.blog .nav-previous a:hover,
+		.blog .nav-next a:hover {
+			background: #81c84f;
+		}
+		a:hover,
+		.nav-previous a:hover,
+		.entry-title a:hover,
+		.widget ul li a:hover,
+		.f-widget ul li a:hover,
+		.entry-meta a:hover,
+		.nav-next a:hover,
+		.related-posts ul li a:hover
+		 {
+			color: #81c84f;
+		}
+		.blog .nav-previous a,
+		.blog .nav-next a {
+			background: #81c84f;
+		}
+		.blog .nav-previous a:hover,
+		.blog .nav-next a:hover {
+			color: #ffffff;
+		}
+
+		/* Pagination Blog */
+		.pagination .nav-links .page-numbers {
+			background: #53aa39;
+		}
+		.pagination .nav-links .page-numbers.dots {
+			background: none;
+		}
+		.blog .nav-previous a,
+		.blog .nav-next a {
+			background: #53aa39;
+		}
+		.pagination .nav-links .page-numbers.current {
+			background: #81c84f		}
+		.pagination .nav-links .page-numbers:hover {
+			background: #81c84f		}
+		.blog .nav-previous a:hover,
+		.blog .nav-next a:hover {
+			background: #81c84f		}
+		.widget_calendar table tr #today {
+			background: #81c84f;
+			color: #fff;
+		}
+		a, .more-link, .line-layout .site-header .site-description, .nav-previous a, .nav-next a {
+			color: #53aa39;
+		}
+		//.main-navigation ul ul,
+		.site-footer .widget-title {
+			border-color: #53aa39;
+		}
+		.comments-area p.form-submit input,
+		.entry .post-thumbnail .entry-meta {
+			background: #53aa39;
+		}
+					.bypostauthor article {
+				border: 1px solid #53aa39;
+				padding: 5px;
+			}
+        .post-thumbnail img{min-width:200px;height:auto;max-height:150px;min-height:150px;}			
+	    .post-img img{height:auto;max-height:100px;min-height:100px;}			
+	
+	</style>
+</head>
+<body class="archive category category-city category-16">
+<div id="page" class="hfeed site stick-layout"> <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+  {include file="head.html"}
+  <!-- #masthead -->
+  <div id="content" class="site-content ">
+    <div id="primary" class="content-area" itemprop="mainContentOfPage">
+      <main id="main" class="site-main" role="main">
+        <header class="page-header">
+          <h1 class="page-title">栏目: {当前栏目}</h1>
+        </header>
+        <!-- .page-header -->
+        {loop type="arclist" row="12"  image=1 info=1}
+		 <article class="post type-post status-publish format-standard has-post-thumbnail hentry category-country"> 
+		   <header class="entry-header"> 
+			<h2 class="entry-title" itemprop="headline"><a href="{$vo.url}" rel="bookmark">{$vo.title}</a></h2> 
+			<div class="entry-meta"> 
+			 <span class="posted-on"> <i class="fa fa-calendar"></i>{$vo.postdate}</span>
+			 <span class="cat-links"><span class="cat-inner"><i class="fa fa-archive" aria-hidden="true"></i> <a href="{随机栏目URL}" rel="category tag">{随机栏目}</a></span></span>
+			</div>
+			<!-- .entry-meta --> 
+		   </header>
+		   <!-- .entry-header --> 
+		   <div class="entry-content"> 
+			<div class="entry clear" itemprop="text"> 
+			 <div class="post-thumbnail"> 
+			  <a href="{$vo.url}" rel="bookmark"> <img src="{$vo.pic}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="{$vo.title}" /> </a> 
+			 </div> 
+			 <div class="post-excerpt"> 
+			  <p>{$vo.info}...</p> 
+			  <a class="more-link" href="{$vo.url}" rel="bookmark" title="{$vo.title}">[查看更多]</a> 
+			 </div> 
+			</div> 
+		   </div>
+		   <!-- .entry-content --> 
+		  </article>
+		 {/loop} 
+
+       <!-- #post-## -->
+        <nav class="navigation pagination" role="navigation">
+          <h2 class="screen-reader-text">Posts navigation</h2>
+          <div class="nav-links"> {loop type="typename" }<a href="{$vo.typeurl}">{$k+1}</a> {/loop}</div>
+        </nav>
+      </main>
+      <!-- #main -->
+      <div class="scroll-loading"> <img src="{$theme_path}/style/img/loading.gif" alt="Loading..." /> </div>
+    </div>
+    <!-- #primary -->
+    <div id="secondary" class="widget-area" role="complementary">
+      <aside id="tc-popular-posts-4" class="widget tc-popular-posts-widget">
+        <h2 class="widget-title">热门排行</h2>
+        <ul class="tc-popular-posts tc-sidebar-widget">
+          {loop type="arclist" row="6" image=1}
+			<li> 
+			<div class="post-img"> 
+			<a href="{$vo.url}"> <img width="100" height="80" src="{$vo.pic}" alt="{$vo.title}" class="attachment-widget-thumbnail size-widget-thumbnail wp-post-image" /> </a> 
+			</div> 
+			<div class="post-data"> 
+			<a href="{$vo.url}" alt="{$vo.title}">{$vo.title}</a> 
+			<div class="popular-post-meta">
+			{$vo.postdate}
+			</div> 
+			<!--end .entry-meta--> 
+			</div> <span class="clear"></span> </li> 
+			 {/loop} 
+        </ul>
+      </aside>
+    </div>
+    <!-- #secondary -->
+  </div>
+  <!-- #content -->
+ 
+ {include file="footer.html" }
+  <!-- #colophon -->
+</div>
+<!-- #page -->
+<script type="text/javascript" src="{$theme_path}/style/js/slick.min.js?ver=20150115"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/wp-embed.min.js?ver=4.7.13"></script>
+<span class="back-to-top"><i class="fa fa-sort-asc fa-lg"></i></span> 
+</body>
+</html>

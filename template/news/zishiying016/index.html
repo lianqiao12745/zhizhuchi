@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/base.css">
+</head>
+<body>
+{include file="head.html"}
+<div class="container">
+  <div class="row clearfix">
+    <div class="mid_zj">
+      <div class="mid_zj-h5"></div>
+    </div>
+    <div class="mid_zj-top">
+	 {loop type="arclist" row="4"  image=1}
+      <div class="col-md-3 col-sm-12">
+        <div class="title"> <a href="{$vo.url}" target="_blank" title="{$vo.title}"> <img class="imgbox" src="{$vo.pic}" alt="{$vo.title}"> <span class="txt">{$vo.title}</span>
+          <div class="info_mark"><span>分类：{随机栏目}</span><span>{$vo.postdate}</span></div>
+          </a> </div>
+      </div>
+     {/loop}
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-4 col-sm-12 xw_list_xwl">
+      <h5><span>{随机栏目}</span></h5>
+      <div class="xw_list_xwlb">
+        <dl>
+           {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> </dd>
+		   {/loop}
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 xw_list_xwl">
+      <h5><span>{随机栏目}</span></h5>
+      <div class="xw_list_xwlb">
+        <dl>
+          {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> </dd>
+		   {/loop}
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 xw_list_xwl">
+      <h5><span>{随机栏目}</span></h5>
+      <div class="xw_list_xwlb">
+        <dl>
+          {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> </dd>
+		   {/loop}
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 xw_list_xwl">
+      <h5><span>{随机栏目}</span></h5>
+      <div class="xw_list_xwlb">
+        <dl>
+          {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> </dd>
+		   {/loop}
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 xw_list_xwl">
+      <h5><span>{随机栏目}</span></h5>
+      <div class="xw_list_xwlb">
+        <dl>
+          {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> </dd>
+		   {/loop}
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 xw_list_xwl">
+      <h5><span>{随机栏目}</span></h5>
+      <div class="xw_list_xwlb">
+        <dl>
+          {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> </dd>
+		   {/loop}
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="clearfix friendship_yqlj">
+    <h5 class="col-md-12 h4">友情链接</h5>
+    <ul class="friendship_yqlj_b">
+      <li>友情链接</li>
+          {loop type="link"}
+		   <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+		  {/loop}
+    </ul>
+  </div>
+</div>
+<footer class="container end_db">
+{include file="footer.html" }
+</footer>
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="{$theme_path}/js/nav.min.js"></script>
+<script type="text/javascript">
+		$(function() {
+			$('.nav_nav').pgwMenu({
+				mainClassName: 'nav_nav',
+				dropDownLabel: '导航',
+				viewMoreLabel: '更多<span class="icon"></span>'
+			});
+		});
+	</script>
+</body>
+</html>

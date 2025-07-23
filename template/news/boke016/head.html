@@ -1,0 +1,30 @@
+ <header id="masthead" role="banner" class="site-header">
+    <!-- .skip-link -->
+    <div class="header-items aligned left">
+      <div class="site-branding"> <a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="220" height="48" src="{$theme_path}/style/img/manta-logo-5.png" class="custom-logo" id="" alt="{网站名称}" /></a>
+        <div class="title-area">
+          <h1 class="site-title" itemprop="headline"><a href="/" rel="home">{网站名称}</a></h1>
+        </div>
+        <!-- .title-area -->
+      </div>
+    </div>
+    <nav id="main-navigation" class="main-navigation aligned left">
+      <h2 class="screen-reader-text">Main Navigation</h2>
+      <button aria-controls="primary-menu" aria-expanded="false" class="menu-toggle">
+      <svg class="icon icon-bars" aria-hidden="true" role="img" focusable="false">
+        <use href="#icon-bars" xlink:href="#icon-bars"></use>
+      </svg>
+      <svg class="icon icon-close" aria-hidden="true" role="img" focusable="false">
+        <use href="#icon-close" xlink:href="#icon-close"></use>
+      </svg>
+      导航</button>
+      <div class="wrap">
+        <ul id="primary-menu" class="nav-menu nav-menu--primary">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><span itemprop="name">首页</span></a></li> 
+			 {loop type="typename" row="6"}
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{$vo.typeurl}"><span itemprop="name">{$vo.typename}</span></a></li> 
+			{/loop}
+        </ul>
+      </div>
+    </nav>
+  </header>

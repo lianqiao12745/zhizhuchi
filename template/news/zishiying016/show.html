@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/base.css">
+</head>
+<body>
+{include file="head.html" }
+<div class="container content">
+  <div class="row clearfix">
+    <div class="col-md-12 col-sm-12 navmap">
+      <ul class="breadcrumb">
+        <span>位置：</span>
+        <li><a href="/">首页</a></li>
+        <li><a href="{当前栏目URL}">{当前栏目}</a></li>
+        <li class="active">内容</li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <div class="xw_news_xq">
+        <h2>{$title}</h2>
+        <div class="xw_news_div_xq"> <span class="article-date">{$postdate}</span> <span class="article-source">来源：{随机关键词}</span> <span class="article-author">分类：{当前栏目}</span> </div>
+        <div class="xw_news_div_xqc">
+          <p>{$body} </p>
+        </div>
+        <div class="more text-center">文章所属分类：<a href="{当前栏目URL}" title="{当前栏目}">{当前栏目}频道，点击进入>></a></div>
+      </div>
+      <div class="xw_news_div_xq-m">
+        <ul>
+          {loop type="arclist" row="1" }
+          <li><a href="{$vo.url}" title="{$vo.title}">【上一篇】{$vo.title}</a></li>
+		  {/loop}
+		  {loop type="arclist" row="1" }
+          <li><a href="{$vo.url}" title="{$vo.title}">【下一篇】{$vo.title}</a></li>
+		  {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="atten-tion">
+        <h5>重点关注</h5>
+        <ul class="attention">
+           {loop type="arclist" row="6" }
+            <li class=""><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+			{/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="container end_db">
+  {include file="footer.html" }
+</footer>
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="{$theme_path}/js/nav.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+      $('.nav_nav').pgwMenu({
+        mainClassName: 'nav_nav',
+        dropDownLabel: '导航',
+        viewMoreLabel: '更多<span class="icon"></span>'
+      });
+    });
+  </script>
+</body>
+</html>

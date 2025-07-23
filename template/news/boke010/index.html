@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="applicable-device" content="pc,mobile"/>
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="pintoboxpro-awsome-font-style-css" href="{$theme_path}/style/css/font-awesome.min.css?ver=4.7.13" type="text/css" media="all" />
+<link rel="stylesheet" id="pintoboxpro-style-css" href="{$theme_path}/style/css/style.css?ver=4.7.13" type="text/css" media="all" />
+<link rel="stylesheet" id="pintoboxpro-owl-carousel-css" href="{$theme_path}/style/css/owl.carousel.css?ver=4.7.13" type="text/css" media="all" />
+<link rel="stylesheet" id="pintoboxpro-responsive-css" href="{$theme_path}/style/css/responsive.css?ver=4.7.13" type="text/css" media="all" />
+<link rel="stylesheet" id="kirki_google_fonts-css" href="{$theme_path}/style/css/css.css?family=Sintony%3A700%7CDroid+Sans%3A700&amp;subset" type="text/css" media="all" />
+<script type="text/javascript" src="{$theme_path}/style/js/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jquery-migrate.min.js?ver=1.4.1"></script>
+<link href="{$theme_path}/style/css/wp-json.css/" />
+<style type="text/css">
+					
+			.header-inner,
+			.site-footer,
+			.pagination .nav-links a,
+			.pagination .nav-links span.current,
+			.tagcloud a,
+			.comments-area p.form-submit input,
+			.post-navigation .nav-previous a,
+			.post-navigation .nav-next a,
+			.social-icons-bio li a,
+			.widget_search .search-form:after,
+			.page-content .search-form:after,
+			.pagination-default .nav-previous a, 
+			.pagination-default .nav-next a,
+			#load-more-wrap,
+			#wp-calendar caption,
+			.search-form .search-submit {
+				background-color: #000000;
+			}
+			
+			.widget-area .widget .widget-title,
+			.page-header .page-title,
+			.page article .entry-title,
+			.lastest-title,
+			.related-posts h3,
+			.comments-area .comment-respond .comment-reply-title {
+				border-color: #000000;
+			}
+
+			.comments-area .comments-title {
+				border-left-color: #000000;
+			}
+
+			.search-row .search-form #s,
+			.secondary-navigation .current_page_item > a:after,
+			.secondary-navigation .current-menu-item > a:after,
+			.secondary-navigation .current_page_ancestor > a:after,
+			.secondary-navigation .current-menu-ancestor > a:after,
+			.secondary-navigation .menu li a:hover:after,
+			.feature-thumbnail .cat-links > a,
+			.post-grid .cat-links a,
+			.back-to-top,
+			.pagination .nav-links span.current:after,
+			.pagination .nav-links a:after,
+			.primary-navigation ul li:hover > a,
+			.tagcloud a:after,
+			.post-navigation .nav-previous a:before,
+			.post-navigation .nav-next a:before,
+			.pagination-default  .nav-links .meta-nav,
+			#load-more-wrap a:before,
+			.search-form .search-submit:hover {
+				background-color: #e01e2d;
+			}
+
+			.post-grid  .cat-links a:after,
+			.primary-navigation ul {
+				border-top-color: #e01e2d;
+			}
+
+			.feature-thumbnail .cat-links > a:after,
+			.comments-area p.form-submit input,
+			#mobile-menu-wrapper > ul {
+				border-left-color: #e01e2d;
+			}
+
+			a,
+			.entry-title a:hover,
+			.feature-title a:hover,
+			.widget ul li a:hover,
+			.entry-meta span a:hover,
+			.entry-meta span a:hover *,
+			.la-ball-spin-clockwise.la-dark,
+			.comments-area .reply .comment-reply-link:hover,
+			.related-posts ul li a:hover,
+			.comments-area .comment-respond .logged-in-as a:hover,
+			.btn-hide.active,
+			.btn-hide:hover {
+				color: #e01e2d;
+			}
+
+		
+			
+					</style>
+<style type="text/css">
+.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+</style>
+</head>
+<body class="home blog post-layout-small">
+<div id="page" class="site-container">
+{include file="head.html"}
+  <!-- #masthead -->
+  <div id="content" class="site-content ">
+    <div class="inner clearfix">
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+          <h2 class="lastest-title">全部文章</h2>
+          <div class="post-wrap clearfix"> 
+		  
+		 {loop type="arclist" row="12"  image=1 info=1}
+		<article id="post-166" class="post-grid clearfix post-166 post type-post status-publish format-standard has-post-thumbnail hentry category-entertainment tag-soccer"> 
+		<div class="post-thumbnail"> 
+		<a href="{$vo.url}" rel="bookmark"> <img src="{$vo.pic}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" /> </a> 
+		</div>
+		<!-- .post-thumbnail --> 
+		<div class="post-content"> 
+		<span class="cat-links"><a href="{随机栏目URL}">{随机栏目}</a></span> 
+		<header class="entry-header"> 
+		<h2 class="entry-title"><a href="{$vo.url}" rel="bookmark">{$vo.title}</a></h2> 
+		<div class="entry-meta"> 
+		<span class="posted-on">{$vo.postdate}</span>
+		<span class="byline">By {随机关键词}</span></span>
+		</div>
+		<!-- .entry-meta --> 
+		</header>
+		<!-- .entry-header --> 
+		<div class="entry-content"> 
+		<p>{$vo.info}...</p> 
+		<a class="btn-read-more" href="{$vo.url}" rel="bookmark" title="{$vo.title}"><span>More Detail</span></a> 
+		</div>
+		<!-- .entry-content --> 
+		</div>
+		<!-- .post-content --> 
+		</article>
+	 {/loop} 
+		  
+		   </div>
+          <nav class="navigation pagination" role="navigation">
+            <h2 class="screen-reader-text">Posts navigation</h2>
+            <div> {loop type="typename" }<a href="{$vo.typeurl}">{$k+1}</a> {/loop}</div>
+          </nav>
+          <div class="infinite-scroll clearfix">
+            <div class="la-ball-spin-clockwise la-dark la-2x">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </main>
+        <!-- #main -->
+      </div>
+      <!-- #primary -->
+      <aside id="secondary" class="widget-area" role="complementary">
+        <div id="tc-recent-posts-2" class="widget tc-recent-posts-widget">
+          <h2 class="widget-title">热门排行</h2>
+          <ul class="tc-recent-posts tc-sidebar-widget have-thumbnail">
+           {loop type="arclist" row="6" image=1}
+			<li> 
+			<div class="post-img"> 
+			<a href="{$vo.url}"> <img width="100" height="100" src="{$vo.pic}" class="attachment-widget-thumbnails size-widget-thumbnails wp-post-image" alt="{$vo.title}" sizes="(max-width: 100px) 100vw, 100px" /> </a> 
+			</div> 
+			<div class="post-data"> 
+			<a href="{$vo.url}">{$vo.title}</a> 
+			<div class="post-meta"> 
+			</div> 
+			<!--end .entry-meta--> 
+			</div> <span class="clear"></span> </li> 
+			{/loop}
+          </ul>
+        </div>
+        <div id="tc-category-posts-2" class="widget tc-category-posts-widget">
+          <h2 class="widget-title">推荐文章</h2>
+          <ul class="tc-category-posts tc-sidebar-widget have-thumbnail">
+           
+		    {loop type="arclist" row="6" image=1}
+			<li> 
+			<div class="post-img"> 
+			<a href="{$vo.url}"> <img width="100" height="100" src="{$vo.pic}" class="attachment-widget-thumbnails size-widget-thumbnails wp-post-image" alt="{$vo.title}" sizes="(max-width: 100px) 100vw, 100px" /> </a> 
+			</div> 
+			<div class="post-data"> 
+			<a href="{$vo.url}">{$vo.title}</a> 
+			<div class="post-meta"> 
+			</div> 
+			<!--end .entry-meta--> 
+			</div> <span class="clear"></span> </li> 
+			{/loop}
+          </ul>
+        </div>
+      </aside>
+      <!-- #secondary -->
+    </div>
+    <!-- .inner -->
+  </div>
+  <!-- #content -->
+{include file="footer.html" }
+</div>
+<script type="text/javascript" src="{$theme_path}/style/js/jqSocialSharer.js?ver=20151215"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/navigation.js?ver=20151215"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/skip-link-focus-fix.js?ver=20151215"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/script.js?ver=20151215"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/wp-embed.min.js?ver=4.7.13"></script>
+<span class="back-to-top"> <i class="fa fa-angle-up" aria-hidden="true"></i> </span>
+</body>
+</html>

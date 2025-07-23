@@ -1,0 +1,13 @@
+<nav class="header-web">
+  <div class="ed"> <a href="/" class="logo" title="{网站名称}" rel="home"><img src="{$theme_path}/style/img/logo.png" id="" alt="{网站名称}" /></a>
+    <div class="nav-menu"> ... </div>
+    <p id="cover"></p>
+    <ul class="nav-list">
+     <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><i class="zm zm-shouye"></i><span class="font-text">网站首页</span></a></li> 
+	 {loop type="typename" row="6"}
+	<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{$vo.typeurl}">{$vo.typename}</a></li> 
+	{/loop}
+    </ul>
+    <script type="text/javascript" src="{$theme_path}/style/js/index.js"></script>
+  </div>
+</nav>

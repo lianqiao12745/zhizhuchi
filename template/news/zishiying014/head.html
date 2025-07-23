@@ -1,0 +1,18 @@
+<div class="capital_t">
+  <div class="capital_tb">
+    <div class="container"> <span>欢迎访问{网站名称}官网</span>
+      <div class="tp_r text-right"> <span class="tp_r0"><a href="#">中文版</a></span> <span class="tp_r0">|</span> <span class="tp_r0"><a href="#">ENGLISH</a></span> </div>
+    </div>
+  </div>
+  <div class="container"> <a href="/" title="{网站名称}"> <img class="capital_t_p" src="{$theme_path}/images/logo_box_b.png" alt="{网站名称}"/> </a> </div>
+</div>
+<div class="Navigation_n">
+  <div class="container">
+    <ul class="Navigation_nLi">
+      <li><a class="selected" href="/">首页</a></li>
+       {loop type="typename" type1="top" row="8"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+    </ul>
+  </div>
+</div>

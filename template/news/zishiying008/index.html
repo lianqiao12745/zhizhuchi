@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/commet.css">
+</head>
+<body>
+{include file="head.html" }
+<div class="container mt20">
+  <div class="col-md-4 col-sm-12">
+    <div class="carousel slide" id="carousel-8">
+      <div class="carousel-inner">
+	    {loop type="arclist" row="3"  image=1}
+        <div class="item {if $vo.i==1} active{else} {/if}"> <a href="{$vo.url}" title="{$vo.title}" target="_blank"><img alt="{$vo.title}" src="{$vo.pic}"  alt="{$vo.title}"/></a> </div>
+        {/loop}
+        <a class="left carousel-control" href="#carousel-8" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-8" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-12">
+    <ul class="ptlist ptlist-news">
+	{loop type="arclist" row="3"  image=1}
+      <li class="item">
+        <div class="item-con">
+          <div class="pic"> <a href="{$vo.url}" target="_blank" class="avatar" title="{$vo.title}"> <img src="{$vo.pic}" alt="{$vo.title}" > </a> </div>
+          <div class="text">
+            <h5 class="tit"><a href="{$vo.url}" target="_blank">{$vo.title}</a></h5>
+            <div class="info">
+              <div class="c2"> <span class="date"> <i class="glyphicon glyphicon-time"></i>{$vo.postdate}</span> </div>
+            </div>
+          </div>
+        </div>
+      </li>
+	  {/loop}
+    </ul>
+  </div>
+  <div class="col-md-4 col-sm-12">
+    <ul class="ptlist ptlist-news">
+     {loop type="arclist" row="3"  image=1}
+      <li class="item">
+        <div class="item-con">
+          <div class="pic"> <a href="{$vo.url}" target="_blank" class="avatar" title="{$vo.title}"> <img src="{$vo.pic}" alt="{$vo.title}" > </a> </div>
+          <div class="text">
+            <h5 class="tit"><a href="{$vo.url}" target="_blank">{$vo.title}</a></h5>
+            <div class="info">
+              <div class="c2"> <span class="date"> <i class="glyphicon glyphicon-time"></i>{$vo.postdate}</span> </div>
+            </div>
+          </div>
+        </div>
+      </li>
+	  {/loop}
+    </ul>
+  </div>
+</div>
+<div class="container lr">
+  <div class="row clearfix">
+    <div class="col-md-4 col-sm-12 news_box">
+      <h4><span>{随机栏目}</span></h4>
+      <div class="news_box_b">
+        <dl>
+		   {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> <span>{$vo.postdate}</span> </dd>
+          {/loop}
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 news_box">
+      <h4><span>{随机栏目}</span></h4>
+      <div class="news_box_b">
+        <dl>
+           {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> <span>{$vo.postdate}</span> </dd>
+          {/loop}
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 news_box">
+      <h4><span>{随机栏目}</span></h4>
+      <div class="news_box_b">
+        <dl>
+           {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> <span>{$vo.postdate}</span> </dd>
+          {/loop}
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 news_box">
+      <h4><span>{随机栏目}</span></h4>
+      <div class="news_box_b">
+        <dl>
+           {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> <span>{$vo.postdate}</span> </dd>
+          {/loop}
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 news_box">
+      <h4><span>{随机栏目}</span></h4>
+      <div class="news_box_b">
+        <dl>
+           {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> <span>{$vo.postdate}</span> </dd>
+          {/loop}
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 news_box">
+      <h4><span>{随机栏目}</span></h4>
+      <div class="news_box_b">
+        <dl>
+           {loop type="arclist" row="8" }
+          <dd> <i>.</i> <a href="{$vo.url}" target="_blank" title="{$vo.title}">{$vo.title}</a> <span>{$vo.postdate}</span> </dd>
+          {/loop}
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="clearfix respect_box">
+    <h4 class="col-md-12 h4"><strong class="respect_box-tit">关于本站</strong></h4>
+    <ul class="respect_box_b">
+      <li class="">域名：{网站地址}</li>
+      <li class="">名称：{网站名称}</li>
+      <li class="">内容：{随机关键词}，{随机关键词}，{随机关键词}</li>
+    </ul>
+  </div>
+</div>
+{include file="footer.html" }
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{$theme_path}/js/Nav.min.js"></script>
+<script type="text/javascript">
+		$(function() {
+			$('.Navigation').pgwMenu({
+				mainClassName: 'Navigation',
+				dropDownLabel: '菜单',
+				viewMoreLabel: '更多<span class="icon"></span>'
+			});
+		});
+	</script>
+<script>
+		$(document).ready(function(){
+			$('#carousel-8').carousel({interval:5000});  //每隔5秒自动轮播
+		});
+	</script>
+</body>
+</html>

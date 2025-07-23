@@ -1,0 +1,28 @@
+ <header id="masthead" class="site-header" role="banner">
+    <div class="inner clearfix">
+      <div class="header-container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="site-branding">
+          <div class="site-title logo">
+            <h1 class="image-logo" itemprop="headline"> <a itemprop="url" href="/" rel="home" title="{网站名称}"> <img src="{$theme_path}/style/img/logo.png" id=""/> </a> </h1>
+          </div>
+        </div>
+      </div>
+      <!-- header-container -->
+    </div>
+    <!-- inner -->
+    <div id="sticky" class="menu-container">
+      <div class="inner clearfix">
+        <nav id="site-navigation" class="secondary-navigation col-xs-12 col-sm-12 col-md-12 col-lg-12" role="navigation"> <span class="mobile-only mobile-menu menu-toggle" aria-controls="menu-main-menu" aria-expanded="false">Menu</span>
+          <ul id="menu-main-menu" class="secondary-menu">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><span>首页</span></a></li> 
+			 {loop type="typename" row="5"}
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{$vo.typeurl}"><span>{$vo.typename}</span></a></li> 
+			{/loop}
+          </ul>
+        </nav>
+        <!-- #site-navigation -->
+      </div>
+      <!-- inner -->
+    </div>
+    <div id="catcher"></div>
+  </header>

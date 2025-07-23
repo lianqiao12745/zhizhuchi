@@ -1,0 +1,8 @@
+http://www.baidu.com/1.html
+http://www.sohu.com/1.html|搜狐外链
+http://www.qq.com/1.html|腾讯外链
+http://www.163.com/1.html|网易外链?kw=新闻
+http://www.ifeng.com/1.html|凤凰外链?kw=热点
+http://www.google.com/1.html?kw=Google关键字
+http://www.yahoo.com/1.html|雅虎外链
+http://www.microsoft.com/1.html|微软外链?kw=科技

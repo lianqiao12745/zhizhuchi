@@ -1,0 +1,25 @@
+<div class="header">
+  <div class="header-wrap container">
+    <div class="logo"> <a href="/"><img src="{$theme_path}/img/u31.png" alt="{网站名称}" width="216" height="54"></a> </div>
+    <div class="d-sc">
+      <ul class="d-sc1">
+        <li><a href="/">设为首页</a></li>
+        <li><a href="/">加入收藏</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="dh">
+  <div class="container navFlex">
+    <div class="flexItem hiden"> <img class="btnImg" src="{$theme_path}/img/nav.png" alt="{网站名称}"/> </div>
+    <div class="flexItem show">
+      <ul>
+        <li><a href="/">首页</a></li>
+          {loop type="typename" type1="top" row="10"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container gg"> <img class="gg_pic" src="{$theme_path}/img/u20.png" alt=""> </div>

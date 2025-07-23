@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/commet.css">
+</head>
+<body>
+{include file="head.html"}
+<div class="container content"> <strong class="gonggao">公告：本站除主站外别无分站，敬请留意！</strong> </div>
+<div class="container content">
+  <div class="col-md-4 col-sm-12">
+    <div class="carousel slide" id="carousel-862752">
+      <ol class="carousel-indicators">
+        <li class="active" data-slide-to="0" data-target="#carousel-862752"> </li>
+        <li data-slide-to="1" data-target="#carousel-862752"> </li>
+        <li data-slide-to="2" data-target="#carousel-862752"> </li>
+      </ol>
+      <div class="carousel-inner">
+	  {loop type="arclist" row="1"  image='1'}
+        <div class="item active"> <a href="{$vo.url}" title="{$vo.title}" target="_blank"> <img alt="" src="{$vo.pic}" alt="{$vo.title}"/>
+          <div class="carousel-caption">
+            <h4>{$vo.title}</h4>
+          </div>
+          </a> </div>
+       {/loop}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-12">
+    <ul class="sy_content">
+       {loop type="arclist" row="2"  image='1' info=1}
+      <li><a href="{$vo.url}" title="{$vo.title}" target="_blank">
+        <p class="sy_content_tit">{$vo.title}</p>
+        <p class="sy_content_con">{$vo.info}</p>
+        </a></li>
+		{/loop}
+    </ul>
+  </div>
+   {loop type="arclist" row="1"  image='1' info=1}
+  <div class="col-md-4 col-sm-12 sy_img"> <a href="{$vo.url}" title="{$vo.title}" target="_blank"> <img  src="{$vo.pic}" alt="{$vo.title}">
+    <p>{$vo.title}</p>
+    </a> </div>
+	{/loop}
+</div>
+<div class="container lr content">
+  <div class="row clearfix">
+    <div class="col-md-4 col-sm-12 lanmu">
+      <h4><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="lanmu_c">
+        {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12 lanmu">
+      <h4><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="lanmu_c">
+         {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12 lanmu">
+      <h4><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="lanmu_c">
+         {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12 lanmu">
+      <h4><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="lanmu_c">
+         {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12 lanmu">
+      <h4><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="lanmu_c">
+         {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+    <div class="col-md-4 col-sm-12 lanmu">
+      <h4><a href="{随机栏目URL}">{随机栏目}</a></h4>
+      <ul class="lanmu_c">
+        {loop type="arclist" row="6" }
+      <li><a href="{$vo.url}" id="" title="{$vo.title}">{$vo.title}</a></li>
+       {/loop}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container gy content">
+  <div class="clearfix">
+    <h4 class="col-md-12 h4"><strong class="gu">关于本站</strong></h4>
+    <ul class="gy_ll">
+      <li class="">域名：{网站地址}</li>
+      <li class="">名称：{网站名称}</li>
+      <li class="">内容：{随机关键词}，{随机关键词}，{随机关键词}</li>
+    </ul>
+  </div>
+  <div class="clearfix">
+    <ul class="lianjie">
+      <li class="">友情链接</li>
+      {loop type="link"}
+	<li ><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+	  {/loop}
+    </ul>
+  </div>
+</div>
+{include file="footer.html" }
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+		//用于判断导航栏的状态
+		var toggle = true;
+
+		//导航栏按钮
+		$('.btnImg').click(function() {
+			if (toggle) {
+				$('.btnImg').css("border", "1px solid none");
+				toggle = false
+			} else {
+				$('.btnImg').css("border", "1px solid transparent");
+				toggle = true;
+			}
+			$(".show").slideToggle(300);
+		})
+
+		//窗口大小发生改变
+		$(window).resize(function() {
+			//获取窗口宽度
+			var windSize = $(window).width();
+
+			if (windSize > 576) {
+				$(".show").slideDown(0);
+			} else {
+				$(".show").slideUp(0);
+			}
+		});
+	</script>
+</body>
+</html>

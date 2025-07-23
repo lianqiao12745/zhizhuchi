@@ -1,0 +1,23 @@
+<div id="top">
+  <div class="top container">
+    <div class="text left">
+      <p>非常荣幸您莅临{网站名称}的首页</p>
+    </div>
+  </div>
+</div>
+<div id="header">
+  <div class="header container">
+    <div class="logo"> <a href="/"><img src="{$theme_path}/style/img/logo.png" alt="{网站名称}" id="" /></a> </div>
+    <div class="mnav"> <i class="fa fa-bars"></i> </div>
+  </div>
+</div>
+<div id="nav">
+  <div id="monavber" class="nav container" data-type="index" data-infoid="">
+    <ul class="navbar ">
+        <li class="navto-home "><a href="/">首页</a></li> 
+	{loop type="typename" row="8"}
+	<li class="navto-front "><a href="{$vo.typeurl}">{$vo.typename}</a></li>
+	{/loop}
+    </ul>
+  </div>
+</div>

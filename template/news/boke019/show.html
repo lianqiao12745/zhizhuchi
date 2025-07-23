@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<meta name="applicable-device" content="pc,mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<link rel="stylesheet" id="sytle-css" href="{$theme_path}/style/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" id="wp-block-library-css" href="{$theme_path}/style/css/style.min.css" type="text/css" media="all" />
+<script type="text/javascript" src="{$theme_path}/style/js/html5shiv.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/selectivizr-min.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jquery.min.js"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jiazai.js" charset="utf-8"></script>
+</head>
+<body>
+{include file="head.html"}
+<!--header-web-->
+<div id="container-page">
+  <aside id="sitebar">
+    <div class="sitebar_list">
+      <h4 class="sitebar_title">推荐文章</h4>
+      <ul id="randomposts">
+        {loop type="arclist" row="8" image=1}
+	  <li> <a href="{$vo.url}" title="{$vo.title}" >{$vo.title}</a> </li> 
+	  {/loop}
+      </ul>
+    </div>
+    <div class="sitebar_list">
+      <h4 class="sitebar_title">热门排行</h4>
+      <ul id="randomposts">
+        {loop type="arclist" row="8" image=1}
+	  <li> <a href="{$vo.url}" title="{$vo.title}" >{$vo.title}</a> </li> 
+	  {/loop}
+      </ul>
+    </div>
+  </aside>
+  </aside>
+  <article class="box">
+    <h1 class="singletitle">{$title}</h1>
+    <p class="p2">{$postdate}- <a href="{当前栏目URL}">{当前栏目}</a></p>
+    <div class="content-text">{$body}
+      <p style="text-align: center;"><strong>- END -</strong></p>
+    </div>
+    <!--content_text-->
+    <div class="comment" id="comments">
+      <div id="respond">
+        <form action="{随机内容URL}" method="post" id="commentform">
+          <textarea name="w" id="comment" rows="3" tabindex="5" placeholder="你有什么要说的 ..."></textarea>
+          <textarea name="comment" cols="100%" rows="4" style="display:none"></textarea>
+          <input name="submit" type="submit" id="submit" tabindex="2" value="回复" />
+          <input type="hidden" name="comment_post_ID" value="{随机数字}{随机数字}" id="comment_post_ID" />
+          <input type="hidden" name="comment_parent" id="comment_parent" value="0" />
+        </form>
+      </div>
+    </div>
+    <!--相关文章-->
+  </article>
+</div>
+<footer id="dibu-main"> 
+{include file="footer.html" }
+  <div class="off">
+    <div class="scroll" id="scroll" style="display:none;"> ︿ </div>
+  </div>
+  <script type="text/javascript">
+  $(function(){
+    showScroll();
+    function showScroll(){
+      $(window).scroll( function() { 
+        var scrollValue=$(window).scrollTop();
+        scrollValue >500 ? $('div[class=scroll]').fadeIn():$('div[class=scroll]').fadeOut();
+      } );  
+      $('#scroll').click(function(){
+        $("html,body").animate({scrollTop:0},1224); 
+      }); 
+    }
+  })
+ </script>
+</footer>
+<!--dibu-->
+<script type="text/javascript" src="{$theme_path}/style/js/wp-embed.min.js"></script>
+</body>
+</html>

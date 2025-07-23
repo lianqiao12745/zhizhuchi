@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="applicable-device" content="pc,mobile"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link rel="stylesheet" href="{$theme_path}/style/css/b222a61255e49b5eeb58b0ff0dd7ad31.css" data-minify="1" />
+<style type="text/css">
+img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important}.tzwb-has-thumbnail img{height:auto;max-height:90px;min-height:90px;}
+</style>
+<style id="maxwell-stylesheet-inline-css" type="text/css">
+.site-description{position:absolute;clip:rect(1px,1px,1px,1px);width:1px;height:1px;overflow:hidden}
+</style>
+<!--[if lt IE 9]> <script type='text/javascript' src='http://{longshao_weburl}/{$theme_path}/style/js/html5shiv.min.js?ver=3.7.3'></script> <![endif]-->
+<style id="rocket-lazyload-nojs-css">
+.rll-youtube-player,[data-lazy-src]{display:none!important}
+</style>
+</head>
+<body class="home blog post-layout-one-column">
+<div id="page" class="hfeed site">
+   {include file="head.html"}
+  <div id="content" class="site-content container clearfix">
+    <section id="primary" class="content-archive content-area">
+      <main id="main" class="site-main" role="main">
+        <div id="post-wrapper" class="post-wrapper clearfix"> 
+		 {loop type="arclist" row="8"  image=1 info=1}
+		<div class="post-column clearfix">
+		  <article class="type-post status-publish format-standard has-post-thumbnail hentry category-building category-city tag-layout tag-mobile-ready tag-responsive tag-theme tag-webdesign"> 
+		   <header class="entry-header">
+			<div class="entry-meta">
+			 <span class="meta-date">{$vo.postdate}</span>
+			 <span class="meta-category"> <a href="{随机栏目URL}" rel="category tag">{随机栏目}</a></span>
+			</div>
+			<h2 class="entry-title"><a href="{$vo.url}" rel="bookmark">{$vo.title}</a></h2>
+		   </header>
+		   <div class="entry-content entry-excerpt clearfix">
+			<p>{$vo.info}} ...</p> 
+			<a href="{$vo.url}" class="more-link">查看全文&raquo;</a>
+		   </div>
+		  </article>
+		 </div>
+		{/loop}
+		</div>
+        <nav class="navigation pagination" role="navigation">
+          <h2 class="screen-reader-text">Posts navigation</h2>
+          <div class="nav-links"> {loop type="typename" }<a href="{$vo.typeurl}">{$k+1}</a> {/loop}</div>
+        </nav>
+      </main>
+    </section>
+    <section id="secondary" class="sidebar widget-area clearfix" role="complementary">
+      <aside class="widget tzwb-tabbed-content clearfix">
+        <div class="widget-header">
+          <h3 class="widget-title">推荐阅读</h3>
+        </div>
+        <div id="tzwb-tabbed-content-1-tab-0" class="tzwb-tabcontent">
+          <ul class="tzwb-tabcontent-recent-posts tzwb-posts-list">
+            {loop type="arclist" row="10" image=1}
+			<li class="tzwb-has-thumbnail"> 
+			<a href="{$vo.url}" title="Responsive Layout"> <img width="90" height="65" src="{$vo.pic}" class="attachment-tzwb-thumbnail size-tzwb-thumbnail wp-post-image" alt="{$vo.title}" /> </a> 
+			<a href="{$vo.url}" title="Responsive Layout">{$vo.title}</a>
+			<div class="tzwb-entry-meta entry-meta"> 
+			<span class="tzwb-meta-date meta-date">{$vo.postdate}</span>
+			</div>
+			</li>
+			{/loop}
+		  </ul>
+        </div>
+      </aside>
+
+      <aside class="widget friend-links clearfix">
+        <div class="widget-header">
+          <h3 class="widget-title">友情链接</h3>
+        </div>
+        <div class="widget-content">
+          <div class="inner friendlinks wow fadeIn">
+            <div class="section-title">友情链接<span>申请要求：同属互联网资讯类网站，并内容充实。</span></div>
+            <ul>
+              {loop type="domain" row=15}<li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>{/loop}
+              {if $links_open}
+              {loop type="link" row=10}
+              <li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+              {/loop}
+              {/if}
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </div>
+ {include file="footer.html" }
+</div>
+</body>
+</html>

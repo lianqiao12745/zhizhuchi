@@ -1,0 +1,17 @@
+<header id="header" class="header">
+  <div class="container">
+    <h1 class="username" id=""><a href="/">{网站名称}的博客</a></h1>
+  </div>
+</header>
+<!--头部区域 ／-->
+<!--导航-->
+<div class="nav">
+  <div class="container"> <a href="javascript:;" class="icon-menu" id="open-menu"> <i class="icon-menu-item"></i> <i class="icon-menu-item"></i> <i class="icon-menu-item"></i> </a>
+    <ul class="menu" id="menu">
+      <li class="menu-item active"> <a href="/">首页</a> </li> 
+	 {loop type="typename" row="6"}
+	<li class="menu-item"> <a href="{$vo.typeurl}">{$vo.typename}</a></li> 
+	{/loop}
+    </ul>
+  </div>
+</div>

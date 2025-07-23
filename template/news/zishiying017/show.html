@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/Public.css">
+<script src="{$theme_path}/js/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="{$theme_path}/js/html5.min.js"></script>
+<![endif]-->
+</head>
+<body>
+{include file="head.html" }
+<div class="container fu_full">
+  <div class="col-md-8 col-sm-12">
+    <ul class="breadcrumb">
+      <span>位置：</span>
+     <li><a href="/">首页</a></li>
+      <li><a href="{当前栏目URL}">{当前栏目}</a></li>
+      <li class="active">正文</li>
+    </ul>
+    <div class="full-conner">
+      <h4 class="text-center"><strong>{$title}</strong></h4>
+      <div class="ti"> <span>时间：{$postdate}</span> <span>来源：{随机关键词}</span> <span>作者：{随机关键词}</span> </div>
+      <div class="fu_full_ml">
+        <p>{$body}</p>
+      </div>
+      <div class="fu_full_id">关键词：{随机关键词}</div>
+      <div class="fu_full_sx">
+        <ul>
+           {loop type="arclist" row="1" }
+          <li><a href="{$vo.url}" title="{$vo.title}">【上一篇】{$vo.title}</a></li>
+		  {/loop}
+		  {loop type="arclist" row="1" }
+          <li><a href="{$vo.url}" title="{$vo.title}">【下一篇】{$vo.title}</a></li>
+		  {/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-12 gz-not">
+    <div class="wonder">
+      <h5 class="text-left"><span>热点关注</span></h5>
+      <ul class="it_items_con_li">
+        {loop type="arclist" row="20" }
+            <li class=""><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+			{/loop}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container la_last text-center">
+  {include file="footer.html" }
+</div>
+<script type="text/javascript" src="{$theme_path}/js/top.js"></script>
+<script type="text/javascript">
+$(function() {
+$('.nar_nav').pgwMenu({
+  dropDownLabel: '导航' +
+  '<li><a href="">首页</a></li>',
+  viewMoreLabel: '导航<span class="icon"></span>'
+});
+});
+</script>
+</body>
+</html>

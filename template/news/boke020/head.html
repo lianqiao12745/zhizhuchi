@@ -1,0 +1,31 @@
+  <div class="header-wrap">
+    <div class="content-wrap">
+      <div class="logo-wrap"> <a href="/">
+        <div class="icon-logo-nav" id=""> </div>
+        </a> </div>
+      <div class="nav-wrap">
+        <ul class="nav" id="main-nav">
+           <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><i class="zm zm-shouye"></i><span class="font-text">网站首页</span></a></li> 
+			 {loop type="typename" row="5"}
+			<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{$vo.typeurl}">{$vo.typename}</a></li> 
+			{/loop}
+          <div class="clear"> </div>
+        </ul>
+        <div class="clear"> </div>
+      </div>
+      <div class="clear"> </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $("#more-nav-channel").mouseover(function(){
+        $("#more-nav-panel").slideDown();
+		$(".active").css({"background-color":"none"});
+        });
+    });
+	$(document).ready(function(){
+	    $("#more-nav-channel").mouseleave(function(){
+        $("#more-nav-panel").hide();
+        });
+    });
+</script>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/common.css">
+</head>
+<body>
+{include file="head.html" }
+<div class="container main_conter">
+  <div class="row clearfix">
+    <div class="col-md-6 col-sm-12 main_items">
+      <h4>{随机栏目}</h4>
+      <ul class="main_items-ms">
+         {loop type="arclist" row="8" }
+        <li><span>{$vo.postdate}</span><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+		 {/loop}  
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-12 main_items">
+      <h4>{随机栏目}</h4>
+      <ul class="main_items-ms">
+        {loop type="arclist" row="8" }
+        <li><span>{$vo.postdate}</span><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+		 {/loop}  
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-12 main_items">
+      <h4>{随机栏目}</h4>
+      <ul class="main_items-ms">
+        {loop type="arclist" row="8" }
+        <li><span>{$vo.postdate}</span><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+		 {/loop}  
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-12 main_items">
+      <h4>{随机栏目}</h4>
+      <ul class="main_items-ms">
+        {loop type="arclist" row="8" }
+        <li><span>{$vo.postdate}</span><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+		 {/loop}  
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-12 main_items">
+      <h4>{随机栏目}</h4>
+      <ul class="main_items-ms">
+        {loop type="arclist" row="8" }
+        <li><span>{$vo.postdate}</span><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+		 {/loop}  
+      </ul>
+    </div>
+    <div class="col-md-6 col-sm-12 main_items">
+      <h4>{随机栏目}</h4>
+      <ul class="main_items-ms">
+        {loop type="arclist" row="8" }
+        <li><span>{$vo.postdate}</span><a href="{$vo.url}" title="{$vo.title}" target="_blank">{$vo.title}</a></li>
+		 {/loop}  
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row clearfix won_pt_news_i">
+    <h4>精彩图文</h4>
+    <div class="won_pt">
+	
+	 {loop type="arclist" row="10" image=1}
+      <div class="col-md-3 col-sm-12">
+        <div class="won_pt_news"> <a href="{$vo.url}" target="_blank" class="pic"><img src="{$vo.pic}" alt="{$vo.title}" width="192" height="127"></a>
+          <div class="sTit"> <a href="{$vo.url}" target="_blank" class="txt">{$vo.title}</a> </div>
+        </div>
+      </div>
+      {/loop}  
+	 
+	 
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="clearfix main_links">
+    <h4>友情链接</h4>
+    <ul class="main_links_ks">
+      {loop type="link"}
+		  <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+		  {/loop}
+    </ul>
+  </div>
+</div>
+<footer class="container main_bottom text-center">
+  {include file="footer.html" }
+</footer>
+<script src="{$theme_path}/js/jquery.min.js"></script>
+<script type="text/javascript">
+		//用于判断导航栏的状态
+		var toggle = true;
+
+		//导航栏按钮
+		$('.btnImg').click(function() {
+			if (toggle) {
+				$('.btnImg').css("border", "1px solid #b0ccf3");
+				toggle = false
+			} else {
+				$('.btnImg').css("border", "1px solid transparent");
+				toggle = true;
+			}
+			$(".show").slideToggle(300);
+		})
+
+		//窗口大小发生改变
+		$(window).resize(function() {
+			//获取窗口宽度
+			var windSize = $(window).width();
+
+			if (windSize > 576) {
+				$(".show").slideDown(0);
+			} else {
+				$(".show").slideUp(0);
+			}
+		});
+	</script>
+</body>
+</html>

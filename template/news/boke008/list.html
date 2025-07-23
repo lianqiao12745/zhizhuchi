@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="applicable-device" content="pc,mobile" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+  display: inline !important;
+  border: none !important;
+  box-shadow: none !important;
+  height: 1em !important;
+  width: 1em !important;
+  margin: 0 .07em !important;
+  vertical-align: -0.1em !important;
+  background: none !important;
+  padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="font-awesome-css" href="{$theme_path}/style/css/font-awesome.min.css?ver=4.9.10" type="text/css" media="all" />
+<link rel="stylesheet" id="bootstrap-css" href="{$theme_path}/style/css/bootstrap.css?ver=4.9.10" type="text/css" media="all" />
+<link rel="stylesheet" id="cleaneadpro-style-css" href="{$theme_path}/style/css/style.css?ver=4.9.10" type="text/css" media="all" />
+<style id="kirki-styles-cleaneadpro_theme_conf-inline-css" type="text/css">
+body{font-family:”Microsoft YaHei”, Helvetica, Arial, sans-serif;font-size:14px;line-height:26px;color:#333333;}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family:”Microsoft YaHei”,Merriweather, Georgia, serif;font-weight:700;font-style:normal;}
+</style>
+<script type="text/javascript" src="{$theme_path}/style/js/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jquery-migrate.min.js?ver=1.4.1"></script>
+<style type="text/css">
+
+    .navbar-default,
+    .top-right .main-nav ul ul,
+    #mobile-menu-wrapper,
+    #mobile-menu-wrapper ul,
+    .site-info
+    {
+      background-color: #0000000;
+    }
+
+    #mobile-menu-wrapper ul li,
+    #mobile-menu-wrapper .arrow-menu,
+    #mobile-menu-wrapper ul ul,
+    #mobile-menu-wrapper ul ul ul
+    {
+      border-color: #333333;
+    }
+
+    .top-right .main-nav ul li:hover > a,
+    .top-right .main-nav ul li a:hover,
+    .top-right .main-nav .current_page_item > a,
+    .top-right .main-nav .current-menu-item > a,
+    .top-right .main-nav .current-menu-parent > a,
+    .top-right .main-nav .current_page_parent > a,
+    .widget_calendar table caption
+    {
+      background-color: #333333;
+    }
+
+    /* Button */
+    input[type="button"],
+    input[type="submit"],
+    a.btn-read-more,
+    .widget_tag_cloud a,
+    .pagination .nav-links > a,
+    .pagination .nav-links > span,
+    .paging-navigation .nav-previous a,
+    .paging-navigation .nav-next a,
+    #load-more-wrap a,
+    .comments-area .reply .comment-reply-link,
+    table th,
+    .back-to-top
+    {
+      background-color: #333333;
+      border-color: #333333;
+    }
+
+    a,
+    a:hover,
+    .widget_calendar table td a,
+    .top-bar a:hover,
+    .widget a:hover,
+    .entry-title a:hover,
+    .entry-meta a:hover *,
+    .entry-meta a:hover,
+    .related-posts a:hover,
+    .post-navigation .nav-previous a:hover,
+    .post-navigation .nav-next a:hover
+    {
+      color: #333;
+    }
+
+    a.btn-read-more:hover,
+    .widget_tag_cloud a:hover,
+    input[type="button"]:hover,
+    input[type="submit"]:hover,
+    .pagination .nav-links .current,
+    .pagination .nav-links > a:hover,
+    .paging-navigation .nav-previous a:hover,
+    .paging-navigation .nav-next a:hover,
+    #load-more-wrap a:hover,
+    .comments-area .reply .comment-reply-link:hover,
+    #load-more-wrap a.active-loading,
+    .back-to-top:hover
+    {
+      background-color: #3399cc;
+      border-color: #3399cc;
+      color: #ffffff;
+    }
+
+    .site-info a {
+      color: #ffffff;
+    }
+
+      </style>
+</head>
+<body class="archive category category-nature-landscapes category-11 wp-custom-logo post-layout-small">
+<div id="page" class="site">
+  {include file="head.html"}
+  <!-- #masthead -->
+  <div id="content" class="site-content">
+    <div class="container">
+      <div id="primary" class="content-area col-md-8">
+        <main id="main" class="site-main" role="main">
+          <header class="page-header">
+            <h1 class="page-title">{当前栏目}</h1>
+          </header>
+          <!-- .page-header -->
+          <div id="main-post"> 
+		   {loop type="arclist" row="6"  image=1 info=1}
+			<article class="post-item post-item-grid post type-post status-publish format-standard has-post-thumbnail category-nature-landscapes tag-place"> 
+			   <header class="entry-header"> 
+				<h2 class="entry-title"><a href="{$vo.url}" rel="bookmark">{$vo.title}</a></h2> 
+			   </header> 
+			   <!-- .entry-header --> 
+			   <div class="entry-content"> 
+				<div class="home-desc clearfix"> 
+				 <div class="post-thumbnail"> 
+				  <a href="{longshao_url}" rel="bookmark"> <img width="200" height="180" src="{$vo.pic}" class="attachment-post-thumbnails-grid size-post-thumbnails-grid wp-post-image" alt="{$vo.title}" /> </a> 
+				 </div> 
+				 <div class="home-excerpt"> 
+				  <p>{$vo.info}...</p> 
+				  <a class="btn-read-more" href="{$vo.url}" rel="bookmark">Read more</a> 
+				 </div> 
+				</div> 
+				<div class="home-entry-footer clearfix"> 
+				 <div class="entry-meta">{随机关键词}发布于：{$vo.postdate} in <a href="{随机栏目URL}">{随机栏目}</a>专栏.</div> 
+				 <!-- .entry-meta --> 
+				</div> 
+			   </div> 
+			   <!-- .entry-content --> 
+			  </article> 
+			{/loop} 
+            <!-- #post-## -->
+          </div>
+          <nav class="navigation pagination" role="navigation">
+            <div class="nav-links">{loop type="typename" }<a href="{$vo.typeurl}">{$k+1}</a> {/loop}</div>
+          </nav>
+          <div class="infinite-scroll clearfix">
+            <div class="la-ball-spin-clockwise la-dark la-2x">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </main>
+        <!-- #main -->
+      </div>
+      <!-- #primary -->
+      <aside id="secondary" class="widget-area col-md-4" role="complementary">
+        <section id="tc-category-posts-4" class="widget tc-category-posts-widget">
+          <h2 class="widget-title">推荐文章</h2>
+          <ul class="tc-related-posts tc-sidebar-widget">
+           {loop type="arclist" row="12" }
+			<li> 
+			<div class="post-data"> 
+			<a target="_blank" href="{$vo.url}" title="{$vo.title}">{$vo.title}</a>
+			<div class="tc-sidebar-meta-info"> 
+			<span class="posted-on">{$vo.postdate}</span> 
+			</div> 
+			<!--end .entry-meta--> 
+			</div> 
+			</li>
+		  {/loop} 
+          </ul>
+        </section>
+      </aside>
+      <!-- #secondary -->
+    </div>
+    <!-- .container -->
+  </div>
+  <!-- #content -->
+{include file="footer.html" }
+  <!-- #colophon -->
+</div>
+<!-- #page -->
+<script type="text/javascript" src="{$theme_path}/style/js/bootstrap.min.js?ver=20151215"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/jqSocialSharer.js?ver=20151215"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/script.js?ver=20151215"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/navigation.js?ver=20151215"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/skip-link-focus-fix.js?ver=20151215"></script>
+<script type="text/javascript" src="{$theme_path}/style/js/wp-embed.min.js?ver=4.9.10"></script>
+<span class="back-to-top"><i class="fa fa-angle-double-up"></i></span>
+</body>
+</html>

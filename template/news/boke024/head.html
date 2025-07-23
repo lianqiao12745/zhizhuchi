@@ -1,0 +1,30 @@
+<div id="around">
+  <div id="toubu">
+    <div id="logo">
+      <h1 id=""><a href="/" title="{网站名称}">{网站名称}博客</a></h1>
+    </div>
+  </div>
+</div>
+<div id="daohangbg" class="div1">
+  <div id="daohang">
+    <div class="zuo">
+      <ul id="caidan" class="caidan">
+        <li><a href="/">首页</a></li>
+		 {loop type="typename" row="6"}
+		<li><a href="{$vo.typeurl}">{$vo.typename}</a></li>
+		 {/loop}
+      </ul>
+    </div>
+  </div>
+</div>
+<nav id="daohangs-around">
+  <div id="logos">
+    <h2><a href="/" title="{网站名称}">{网站名称}博客</a></h2>
+  </div>
+  <ul id="daohangs" class="caidan">
+    <li><a href="/">首页</a></li>
+		 {loop type="typename" row="6"}
+		<li><a href="{$vo.typeurl}">{$vo.typename}</a></li>
+		 {/loop}
+  </ul>
+</nav>

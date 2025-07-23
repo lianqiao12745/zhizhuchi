@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/Public.css">
+<script src="{$theme_path}/js/jquery.min.js"></script>
+<!--[if lt IE 9]>
+    <script src="{$theme_path}/js/html5.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+{include file="head.html"}
+<div class="container mt-20">
+  <div class="row clearfix">
+    <div class="col-md-4 col-sm-12">
+      <div class="it_items_con">
+        <h5 class="text-left"><span>精彩导读</span></h5>
+        <ul class="it_items_con_li">
+            {loop type="arclist" row="10" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+        </ul>
+      </div>
+      <div class="wonder">
+        <h5 class="text-left"><span>图文资讯</span></h5>
+        <ul class="wonder_ful">
+         
+		  {loop type="arclist" row="5" image=1 }
+		  <li class="wonder_ful_l">
+            <div class="wonder_ful_l_m">
+              <div class="wonder_ful_l_i"> <a href="{$vo.url}" title="{$vo.title}"> <img src="{$vo.pic}" alt="{$vo.title}"> </a> </div>
+              <div class="wonder_ful_l_c"> <a href="{$vo.url}" title="{$vo.title}"> {$vo.title} </a> <span class="rq">{$vo.postdate}</span> </div>
+            </div>
+          </li>
+		  {/loop}
+          
+        </ul>
+      </div>
+      <div class="wonder dis-n">
+        <h5 class="text-left"><span>友情链接</span></h5>
+        <ul class="fr_friend_con">
+           {loop type="link"}
+		   <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+		  {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <div class="row clearfix">
+        <div class="col-md-6 col-sm-12 ">
+          <div class="it_items_con_slol">
+            <h5 class="text-left"><span class="it_items_con_slot">{随机栏目}</span></h5>
+            <ul class="it_items_con_slo">
+              {loop type="arclist" row="10" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 ">
+          <div class="it_items_con_slol">
+            <h5 class="text-left"><span class="it_items_con_slot">{随机栏目}</span></h5>
+            <ul class="it_items_con_slo">
+             {loop type="arclist" row="10" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 ">
+          <div class="it_items_con_slol">
+            <h5 class="text-left"><span class="it_items_con_slot">{随机栏目}</span></h5>
+            <ul class="it_items_con_slo">
+             {loop type="arclist" row="10" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 ">
+          <div class="it_items_con_slol">
+            <h5 class="text-left"><span class="it_items_con_slot">{随机栏目}</span></h5>
+            <ul class="it_items_con_slo">
+              {loop type="arclist" row="10" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 ">
+          <div class="it_items_con_slol">
+            <h5 class="text-left"><span class="it_items_con_slot">{随机栏目}</span></h5>
+            <ul class="it_items_con_slo">
+              {loop type="arclist" row="10" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 ">
+          <div class="it_items_con_slol">
+            <h5 class="text-left"><span class="it_items_con_slot">{随机栏目}</span></h5>
+            <ul class="it_items_con_slo">
+              {loop type="arclist" row="10" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		   {/loop}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wonder dis-b">
+    <h5 class="text-left"><span>友情链接</span></h5>
+    <ul class="fr_friend_con">
+       {loop type="link"}
+		   <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+		  {/loop}
+    </ul>
+  </div>
+</div>
+<div class="container la_last text-center">
+  {include file="footer.html" }
+</div>
+<script type="text/javascript" src="{$theme_path}/js/top.js"></script>
+<script type="text/javascript">
+          $(function() {
+            $('.nar_nav').pgwMenu({
+              dropDownLabel: '导航' +
+            '<li><a href="">首页</a></li>',
+              viewMoreLabel: '导航<span class="icon"></span>'
+            });
+          });
+        </script>
+</body>
+</html>

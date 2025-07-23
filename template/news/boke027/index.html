@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="applicable-device" content="pc,mobile" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link rel="stylesheet" id="da-bootstrap-css" href="{$theme_path}/style/css/bootstrap.css" type="text/css" media="all" />
+<link rel="stylesheet" id="da-fontawesome-css" href="{$theme_path}/style/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" id="da-main-css" href="{$theme_path}/style/css/main.css" type="text/css" media="all" />
+<!--[if lt IE 9]><script src="{$theme_path}/style/js/html5.min.js"></script><![endif]-->
+</head>
+<body class="archive category category-htmlcss category-61">
+{include file="head.html"}
+<section class="container">
+  <div class="content-wrap">
+    <div class="content">
+      <div class="title"></div>
+       {loop type="arclist" row="9"  image=1 info=1}
+	<article class="excerpt excerpt-1">
+	  <a class="focus" href="{$vo.url}"><img src="{$vo.pic}" class="thumb"  alt="{$vo.url}"/></a> 
+	  <header> 
+	   <h2><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></h2> 
+	  </header> 
+	  <p class="meta"> <time><i class="fa fa-clock-o"></i>{$vo.postdate}</time> <span class="pv"><i class="fa fa-eye"></i>{随机栏目}</span></p> 
+	  <p class="note"> {$vo.info} ...</p> 
+	 </article>
+    {/loop}
+      <div class="pagination">
+        <ul>
+          <div class="pager"> {loop type="typename"} <a href="{$vo.typeurl}" class="page-numbers">{$k+1}</a>{/loop} </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <aside class="sidebar">
+    <div class="title"></div>
+    <div class="widget widget_ui_posts">
+      <h3>站长推荐</h3>
+      <ul>
+        {loop type="arclist" row="9"  image=1 info=1}
+          <li><a href="{$vo.url}"><span class="thumbnail"><img src="{$vo.pic}" alt="{$vo.title}" class="thumb" /></span><span class="text">{$vo.title}</span><span class="muted">{$vo.postdate}</span></a></li> 
+        {/loop}
+      </ul>
+    </div>
+    <div class="widget widget_ui_posts">
+      <h3>友情链接</h3>
+      <ul>
+        {loop type="domain" row=6}
+          <li class="m-b-xs text-small link-box"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+        {/loop}
+        {if $links_open}
+          {loop type="link" row=10}
+            <li class="m-b-xs text-small link-box"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+          {/loop}
+        {/if}
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </aside>
+</section>
+{include file="footer.html"}
+<script>
+window.jsui={
+    www: '',
+    uri: '',
+    ver: '8.0.1'
+};
+</script>
+<script type="text/javascript" src="{$theme_path}/style/js/loader.js"></script>
+</body>
+</html>

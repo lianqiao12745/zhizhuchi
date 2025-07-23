@@ -1,0 +1,21 @@
+<div class="header">
+  <div class="container"> <span>欢迎来到{网站名称}网首页</span>
+    <div class="header_r"> <span><a href="#">设为首页</a></span> <span><a href="#">加入收藏</a></span> </div>
+  </div>
+</div>
+<div class="container"> <a href="/">
+  <div class="logo text-left">{网站名称}</div>
+  </a> </div>
+<!--导航-->
+<div class="pgwgNav">
+  <div class="container">
+    <ul class="pgwNav">
+      <li><a class="selected" href="/">首页</a></li>
+       {loop type="typename" type1="top" row="10"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+    </ul>
+  </div>
+</div>
+<!--banner-->
+<div class="container banner"> <img class="bannerImg" src="{$theme_path}/images/banner.jpg" alt="{网站名称}"> </div>

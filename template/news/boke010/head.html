@@ -1,0 +1,29 @@
+  <header id="masthead" class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="inner clearfix">
+        <div id="header">
+          <div class="site-branding">
+            <div class="site-title">
+              <h1 class="site-title" itemprop="headline" id=""> <a itemprop="url" href="/" rel="home" title="{网站名称}">{网站名称}</a> </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- inner -->
+    </div>
+    <!-- header-inner -->
+    <div class="main-meu">
+      <div class="inner clearfix">
+        <nav id="site-navigation" class="secondary-navigation" role="navigation"> <a class="mobile-only menu-toggle" aria-controls="menu-main-menu" aria-expanded="false">Menu</a>
+          <ul id="menu-main-menu" class="menu">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><span>首页</span></a></li> 
+			 {loop type="typename" row="5"}
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{$vo.typeurl}"><span>{$vo.typename}</span></a></li> 
+			{/loop}
+          </ul>
+        </nav>
+      </div>
+      <!-- inner -->
+    </div>
+    <div id="catcher"></div>
+  </header>

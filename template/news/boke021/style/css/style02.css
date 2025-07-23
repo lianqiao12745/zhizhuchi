@@ -1,0 +1,14 @@
+﻿.hideConBox{
+	border:1px dashed #ff9a9a;
+	background:#ffffe0 url("img/locked.gif") no-repeat 9px 12px;
+	padding: 5px 0 5px 25px;
+	margin:5px auto;
+	color:#666;
+	line-height:26px;
+}
+
+.hideConBox img{
+	vertical-align: middle;
+	margin:0 5px;
+	border:none;
+}

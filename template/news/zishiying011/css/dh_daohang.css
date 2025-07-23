@@ -1,0 +1,46 @@
+
+.dh_daoh { height: 40px; position: relative; list-style: none;padding-inline-start: 0; -webkit-padding-start: 0;}
+.dh_daoh ul { list-style: none; white-space: nowrap; margin: 0; padding: 0;}
+.dh_daoh li { float: left;}
+.dh_daoh li a:hover{ background: #797979; text-decoration: none;}
+.dh_daoh a{ display: block; color: #fff; line-height: 40px; padding: 0 15px; text-decoration: none;font-size: 15px;font-weight: bold;}
+.dh_daoh a.selected { background: #797979;}
+.dh_daoh .pm-links.mobile,
+.dh_daoh .pm-viewMore > ul { background: #333; box-shadow: 2px 2px 4px #797979; position: absolute; left: 0; top: 100%; z-index: 1000;}
+.dh_daoh .pm-viewMore { display: none; position: relative;}
+.dh_daoh .pm-viewMore > a { display: inline-block;}
+.dh_daoh .pm-viewMore > ul { left: auto; right: 0;}
+.dh_daoh .pm-viewMore li { float: none;}
+.dh_daoh .pm-viewMore span.icon,
+.dh_daoh .pm-viewMore span.white { border-color: #fff transparent; border-style: solid; border-width: 8px 6px 0; margin-left: 3px; display: inline-block;}
+.dh_daoh .pm-viewMore span.black { border-color: #000 transparent; border-style: solid; border-width: 8px 6px 0; margin-left: 3px; display: inline-block;}
+.dh_daoh .pm-links.mobile li,
+.dh_daoh .pm-viewMore > ul > li { display: block; clear: both; width: 175px;}
+.dh_daoh .pm-dropDown,
+.dh_daoh .pm-viewMore,
+.dh_daoh .pm-viewMore > ul { display: none;}
+.dh_daoh .pm-dropDown a { display: inline-block; background: #797979;}
+.dh_daoh .pm-dropDown a.active,
+.dh_daoh .pm-viewMore a.active { background: #797979;}
+.dh_daoh .pm-dropDown span.icon,
+.dh_daoh .pm-dropDown span.white {display: block;height: 22px;width: 22px;margin: 9px 5px;}
+.dh_daoh .pm-dropDown span.black {display: block;height: 22px;width: 22px;margin: 9px 5px;}
+
+.dh_daoh.light .pm-dropDown span.icon{display: block;height: 22px;width: 22px;margin: 9px 5px;  }
+.dh_daoh.light .pm-viewMore span.icon{ border-color: #000 transparent; border-style: solid; border-width: 8px 6px 0; margin-left: 3px; display: inline-block;}
+.dh_daoh.light {background: #797979;}
+.dh_daoh.light .pm-viewMore > ul {background-color:#797979;}
+
+.dh_daoh.light .pm-links.mobile {background: #797979;}
+.dh_daoh.light li a:hover{background: #ff852e;}
+.dh_daoh.light a {color: #fff;}
+.dh_daoh.light a.selected {background: #ff852e;}
+.dh_daoh.light .pm-dropDown a {background: #ff852e;}
+.dh_daoh.light .pm-dropDown a.active,
+.dh_daoh.light .pm-viewMore a.active {
+    background: #ff852e;
+}
+.dh_daoh.light .pm-dropDown a.active {
+    background: #ff852e;
+}
+

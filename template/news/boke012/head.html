@@ -1,0 +1,22 @@
+ <header id="masthead" class="site-header has-logo" role="banner" itemscope="itemscope">
+    <div class="header-content clear">
+      <div class="inner clearfix">
+        <div class="site-branding">
+          <meta itemprop="logo" content="{$theme_path}/style/img/wimplepro.png" id=""/>
+          <h1 class="site-title logo" itemprop="headline"> <a itemprop="url" href="/" rel="home"> <img src="{$theme_path}/style/img/wimplepro.png" id="" alt="{网站名称}"/> </a> </h1>
+        </div>
+        <!-- .site-branding -->
+        <nav id="site-navigation" class="main-navigation" role="navigation"> <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+          <div class="menu-main-menu-container">
+            <ul id="menu-main-menu" class="menu nav-menu clear">
+              <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><span>首页</span></a></li> 
+			 {loop type="typename" row="5"}
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{$vo.typeurl}"><span>{$vo.typename}</span></a></li> 
+			{/loop}
+            </ul>
+          </div>
+        </nav>
+        <!-- #site-navigation -->
+      </div>
+    </div>
+  </header>

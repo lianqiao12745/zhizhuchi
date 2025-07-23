@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+</head>
+<body>
+{include file="head.html" }
+<div class="container lm">
+  <div class="row clearfix">
+    <div class="col-md-8 col-sm-12">
+      <div class="row clearfix">
+        <div class="col-md-6 col-sm-12">
+          <div class="lm-xx">
+            <h5 class="text-left">{随机栏目}</h5>
+            <ul class="lm-lie">
+              {loop type="arclist" row="8" }
+              <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}<span>{$vo.postdate}</span></a></li>
+			   {/loop}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="lm-xx">
+            <h5 class="text-left">{随机栏目}</h5>
+            <ul class="lm-lie">
+              {loop type="arclist" row="8" }
+              <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}<span>{$vo.postdate}</span></a></li>
+			   {/loop}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="lm-xx">
+            <h5 class="text-left">{随机栏目}</h5>
+            <ul class="lm-lie">
+             {loop type="arclist" row="8" }
+              <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}<span>{$vo.postdate}</span></a></li>
+			   {/loop}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="lm-xx">
+            <h5 class="text-left">{随机栏目}</h5>
+            <ul class="lm-lie">
+              {loop type="arclist" row="8" }
+              <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}<span>{$vo.postdate}</span></a></li>
+			   {/loop}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="lm-xx">
+            <h5 class="text-left">{随机栏目}</h5>
+            <ul class="lm-lie">
+              {loop type="arclist" row="8" }
+              <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}<span>{$vo.postdate}</span></a></li>
+			   {/loop}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="lm-xx">
+            <h5 class="text-left">{随机栏目}</h5>
+            <ul class="lm-lie">
+              {loop type="arclist" row="8" }
+              <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}<span>{$vo.postdate}</span></a></li>
+			   {/loop}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <ul class="index_tu_list">
+       {loop type="arclist" row="5"  image=1}
+	   <li> <a href="{$vo.url}" title="{$vo.title}" class="pic"><img src="{$vo.pic}" alt="{$vo.title}"></a>
+          <div class="sTit"> <a href="{$vo.url}" target="_blank" class="txt">{$vo.title}</a> </div>
+        </li>
+        {/loop}
+      </ul>
+	  
+	   {loop type="arclist" row="4"  image=1}
+      <div class="tj"> <img  src="{$vo.pic}" alt="{$vo.title}">
+        <p>{$vo.title}</p>
+      </div>
+      {/loop}
+      <div class="col-md-12 col-sm-12">
+        <div class="gywm row">
+          <h5 class="text-left">关于我们</h5>
+          <ul class="gy">
+            <li class="">域名：{网站地址}</li>
+            <li class="">名称：{网站名称}</li>
+            <li class="">内容：{随机关键词}，{随机关键词}，{随机关键词}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row clearfix">
+    <div class="col-md-12 col-sm-12">
+      <div class="lm-xx">
+        <ul class="yq">
+          <li class="">友情链接</li>
+           {loop type="link"}
+		  <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+		   {/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="footer.html" }
+<script src="{$theme_path}/js/jquery.min.js"></script>
+<script type="text/javascript">
+    //用于判断导航栏的状态
+    var toggle = true;
+
+    //导航栏按钮
+    $('.btnImg').click(function() {
+      if (toggle) {
+        $('.btnImg').css("border", "1px solid #b0ccf3");
+        toggle = false
+      } else {
+        $('.btnImg').css("border", "1px solid transparent");
+        toggle = true;
+      }
+      $(".show").slideToggle(300);
+    })
+
+    //窗口大小发生改变
+    $(window).resize(function() {
+      //获取窗口宽度
+      var windSize = $(window).width();
+
+      if (windSize > 576) {
+        $(".show").slideDown(0);
+      } else {
+        $(".show").slideUp(0);
+      }
+    });
+  </script>
+</body>
+</html>

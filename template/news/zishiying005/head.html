@@ -1,0 +1,16 @@
+<header class="container">
+  <div class="te-c"> <a href="/" title="{网站名称}"> <img class="logo" src="{$theme_path}/image/logo.jpg" alt="{网站名称}"/> </a> <span class="topl">本站提供最佳{随机关键词}服务，欢迎转载和分享。</span> </div>
+</header>
+<nav class="navbar" role="navigation">
+  <div class="head-nav">
+    <div class="container">
+      <ul class="headNav light">
+        <li><a class="selected" href="/">首页</a></li>
+       {loop type="typename" type1="top" row="10"}
+          <li><a href="{$vo.typeurl}" target="_self">{$vo.typename}</a></li>
+		{/loop}
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container banner mb-10"> <a href="/"> <img class="banner-img" src="{$theme_path}/image/u4.png" alt="{网站名称}"> </a> </div>

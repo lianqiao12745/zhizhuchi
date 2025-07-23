@@ -1,0 +1,25 @@
+  <header id="masthead" class="site-header " role="banner">
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="top-left col-md-3">
+          <div class="site-branding">
+            <h1 class="site-title" itemprop="headline" id=""><a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="250" height="60" src="{$theme_path}/style/img/Cleanead-Logo.png" class="custom-logo" alt="{网站名称}" itemprop="logo" /></a></h1>
+          </div>
+          <!-- .site-branding -->
+        </div>
+        <div class="top-right col-md-9">
+          <div class="main-nav">
+            <ul id="main-menu" class="main-menu clearfix">
+             <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="/" aria-current="page"><span>首页</span></a></li> 
+			 {loop type="typename" row="6"}
+			<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{$vo.typeurl}"><span>{$vo.typename}</span></a></li> 
+			{/loop}
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="menu-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+    </div>
+    <!-- .container -->
+    <div id="catcher"></div>
+  </header>

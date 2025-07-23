@@ -1,0 +1,90 @@
+﻿/**********????????**********/
+.nextpagebar {
+text-align:center;
+padding:20px;
+font-size:0px;
+}
+
+.nextpagebar span,.nextpagebar a {
+    font-size: 14px;
+}
+
+.nextpagebar > a,.nextpagebar span.page.now-page{
+padding:4px 12px 3px;
+text-decoration:none;
+margin:0 1px;
+line-height:20px;
+color:#666;
+background-color:#eee;
+}
+.nextpagebar > a:hover{
+color:#444;
+background-color:#ccc;
+}
+.nextpagebar span.page.now-page{
+cursor:default;
+background-color:#428bca;
+color:#fff;
+}
+.pageTips {
+    background: none repeat scroll 0 0 #fffbef;
+    border: 1px solid #f5ce9d;
+    color: #777;
+    display: none;
+    height: 22px;
+    line-height: 22px;
+    margin: 20px auto 25px;
+    padding: 0 25px 0 10px;
+    position: relative;
+    width: 250px;
+}
+.pageTips i {
+    background: url(img/close.png) no-repeat scroll -4px -3px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: block;
+    height: 11px;
+    position: absolute;
+    right: 7px;
+    top: 6px;
+    width: 10px;
+}
+.pagelast {
+    margin-bottom: 25px;
+}
+/**********????????????**********/
+/*????????*/
+.art_nav_box { padding:15px; border-bottom:1px dashed #ccc; border-top:1px dashed #ccc;margin:0 10px 25px;}
+.art_nav_box table { width:100%; background:none}
+.art_nav_box table td { line-height:24px;}
+.art_nav_box .art_nav_t { padding-bottom:3px; background:none #fff; text-align:left}
+.art_nav_box .art_nav_t strong { font-size:14px;}
+.art_nav_box .article_brief_tb { color:#777;}
+.art_nav_box .article_brief_tb a{ color:#038;text-decoration:none;}
+.art_nav_box .article_brief_tb a:hover{ color:#f60}
+.art_nav_box .article_brief_tb .current_page { font-weight:bold; color:#c00}
+
+
+.nextpage_contentpage {
+    background-color: #fdfdfd;
+    border: 1px solid #ececec;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    height: 33px;
+    margin: 13px 10px;
+}
+.nextpage_contentpage span {
+    color: #999;
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    width: 33%;
+}
+.nextpage_contentpage span:nth-child(2) {
+    width: 34%;
+}
+.nextpage_contentpage i {
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    display: block;
+}

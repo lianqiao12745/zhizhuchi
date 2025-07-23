@@ -1,0 +1,22 @@
+<footer id="colophon" class="footer" role="contentinfo">
+  <div class="site-info">
+    <div class="inner">
+      <div class="copyright">
+        <p class="fl_link">友情链接：
+          {loop type="domain" row=5}
+          <li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+          {/loop}
+          {if $links_open}
+          {loop type="link" row=10}
+          <li class="m-b-xs text-small"><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+          {/loop}
+          {/if}
+    Copyright &copy; 2024 Powered by <a href="{$thisurl}">{$title}</a>,
+    <a href="{$web_url}">{$web_name}</a> {$web_tongji}
+    <a href="http://{$host}/sitemap.xml">sitemap</a>
+    {nocache}{_runtime('loadTime','end')}s , {$usememory} kb{/nocache}
+      </div>
+    </div>
+  </div>
+  <!-- .site-info -->
+</footer>

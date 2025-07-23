@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title>{$toptitle}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link href="{$theme_path}/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/base.css">
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/dh_daohang.css">
+</head>
+<body>
+{include file="head.html" }
+<div class="container zj-mb10">
+  <div class="row clearfix">
+    <div class="col-md-4 col-sm-12">
+      <div class="zj_zhongjian">
+        <h4><span>{随机栏目}</span></h4>
+        <ul class="zj_zhongjian-con">
+          {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		 {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="zj_zhongjian">
+        <h4><span>{随机栏目}</span></h4>
+        <ul class="zj_zhongjian-con">
+          {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		 {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="zj_zhongjian">
+        <h4><span>{随机栏目}</span></h4>
+        <ul class="zj_zhongjian-con">
+          {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		 {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="zj_zhongjian">
+        <h4><span>{随机栏目}</span></h4>
+        <ul class="zj_zhongjian-con">
+          {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		 {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="zj_zhongjian">
+        <h4><span>{随机栏目}</span></h4>
+        <ul class="zj_zhongjian-con">
+          {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		 {/loop}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="zj_zhongjian">
+        <h4><span>{随机栏目}</span></h4>
+        <ul class="zj_zhongjian-con">
+          {loop type="arclist" row="8" }
+          <li><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+		 {/loop}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container tw_tuwen">
+  <h4>图文资讯</h4>
+  <div class="row clearfix">
+    <div class="tw_tuwen_item">
+	
+	{loop type="arclist" row="9"  image=1 info=1}
+      <div class="col-md-4 col-sm-12">
+        <div class="lis_a"> <a href="{$vo.url}" class="bt" target="_blank">{$vo.title}</a> <a href="{$vo.url}" class="img" target="_blank"><img alt="{$vo.title}" class="lazy" src="{$vo.pic}"></a>
+          <p class="miaoshu">{$vo.info}</p>
+        </div>
+      </div>
+	  {/loop}
+      
+    </div>
+  </div>
+</div>
+<footer class="container db_dibu text-center">
+  <ul class="yq_youqinglianjie">
+    <li class="">友情链接：</li>
+     {loop type="link"}
+		  <li class=""><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+		   {/loop}
+  </ul>
+  {include file="footer.html" }
+</footer>
+<script src="{$theme_path}/js/jquery-3.2.1.min.js"></script>
+<script src="{$theme_path}/js/bootstrap.min.js"></script>
+<script src="{$theme_path}/js/dh_daohang.min.js"></script>
+<script type="text/javascript">
+		$(function() {
+			$('.dh_daoh').pgwMenu({
+				dropDownLabel: '导航',
+				viewMoreLabel: '更多<span class="icon"></span>'
+			});
+
+		});
+	</script>
+</body>
+</html>
