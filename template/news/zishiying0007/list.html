@@ -17,7 +17,7 @@
     <section class="article-section">
       <h1 class="section-heading">{$typename}</h1>
       <ul class="post-list">
-        {loop type="arclist" row="20"}
+        {loop type="arclist" row="20" islist="1"}
           <li class="post-item"><a href="{$vo.url}">{$vo.title}</a><time>{$vo.postdate}</time></li>
         {/loop}
       </ul>
