@@ -1,0 +1,11 @@
+<div class="brand-area">
+  <a class="brand" href="/">{$site_name}</a>
+  <button id="navSwitcher" class="nav-switcher">&#9776;</button>
+</div>
+<nav class="main-nav" id="navMenu">
+  <ul class="nav-list">
+    {loop type="typename"}
+      <li><a href="{$vo.typeurl}">{$vo.typename}</a></li>
+    {/loop}
+  </ul>
+</nav>
