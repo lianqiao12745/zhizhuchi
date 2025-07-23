@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{$typename}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+</head>
+<body>
+<header class="main-header">
+  {include file="header.html"}
+</header>
+<div class="container">
+  <div class="content-grid">
+    <section class="article-section">
+      <h1 class="section-heading">{$typename}</h1>
+      <ul class="post-list">
+        {loop type="arclist" row="20"}
+          <li class="post-item"><a href="{$vo.url}">{$vo.title}</a><time>{$vo.postdate}</time></li>
+        {/loop}
+      </ul>
+      <div class="paging">{page}</div>
+    </section>
+    <aside class="side-panel">
+      <div class="editor-box">
+        <h2 class="box-title">热门推荐</h2>
+        <ul class="editor-list">
+          {loop type="arclist" row="8"}
+            <li><a href="{$vo.url}">{$vo.title}</a></li>
+          {/loop}
+        </ul>
+      </div>
+      {include file="link.html"}
+    </aside>
+  </div>
+</div>
+<footer class="main-footer">
+  {include file="footer.html"}
+</footer>
+<script src="{$theme_path}/js/app.js"></script>
+</body>
+</html>

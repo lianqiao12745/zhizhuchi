@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{$title}</title>
+<meta name="description" content="{$description}" />
+<meta name="keywords" content="{$keywords}" />
+<link rel="stylesheet" type="text/css" href="{$theme_path}/css/style.css">
+</head>
+<body>
+<header class="main-header">
+  {include file="header.html"}
+</header>
+<main class="article-container">
+  <article class="article-content">
+    <h1 class="article-title">{$title}</h1>
+    <div class="article-meta"><span class="time">{$postdate}</span></div>
+    <div class="article-body">{$content}</div>
+  </article>
+  <aside class="side-panel">
+    <div class="related-box">
+      <h3 class="box-title">相关文章</h3>
+      <ul class="related-list">
+        {loop type="arclist" row="8"}
+          <li><a href="{$vo.url}">{$vo.title}</a></li>
+        {/loop}
+      </ul>
+    </div>
+    {include file="link.html"}
+  </aside>
+</main>
+<footer class="main-footer">
+  {include file="footer.html"}
+</footer>
+<script src="{$theme_path}/js/app.js"></script>
+</body>
+</html>
